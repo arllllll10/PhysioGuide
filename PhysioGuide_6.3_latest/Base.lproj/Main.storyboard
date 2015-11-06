@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bce-f4-BT5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="182" y="-341"/>
         </scene>
-        <!--StatsVC-->
+        <!--Stats-->
         <scene sceneID="kuZ-KO-orj">
             <objects>
                 <viewController id="ciJ-KT-Bk3" customClass="StatsVC" customModule="PhysioGuide_6_3_latest" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJD-ZU-Lcl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJD-ZU-Lcl">
                                 <rect key="frame" x="280" y="77" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -48,25 +48,13 @@
                             <constraint firstItem="vJD-ZU-Lcl" firstAttribute="centerX" secondItem="ZnL-qH-wbx" secondAttribute="centerX" id="Xe0-4q-hkU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Stats" id="jFy-0y-agN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k79-iJ-SPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="-333"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="n1e-Fs-0BI">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D6l-yC-XKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="xvb-sP-hVx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZE3-yQ-Sn9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-783" y="286"/>
-        </scene>
-        <!--Log InVC-->
+        <!--PhysioGuide-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="LogInVC" customModule="PhysioGuide_6_3_latest" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,23 +66,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhysioGuide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haj-FA-jXD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PhysioGuide" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haj-FA-jXD">
                                 <rect key="frame" x="251" y="82" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rg-AE-Khw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4rg-AE-Khw">
                                 <rect key="frame" x="252" y="150" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O31-HV-3xS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O31-HV-3xS">
                                 <rect key="frame" x="252" y="218" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yH-2b-TnM">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yH-2b-TnM">
                                 <rect key="frame" x="279" y="291" width="43" height="30"/>
                                 <state key="normal" title="Log in">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,7 +91,7 @@
                                     <segue destination="T0b-cn-fEb" kind="show" id="khp-Iw-fOs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFh-A1-8cv">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFh-A1-8cv">
                                 <rect key="frame" x="247" y="348" width="107" height="30"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,7 +100,7 @@
                                     <segue destination="eXd-tb-QHi" kind="show" id="0dO-LB-MHj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-BY-zfS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-BY-zfS">
                                 <rect key="frame" x="292" y="324" width="16" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -137,13 +125,15 @@
                             <constraint firstItem="Nkc-BY-zfS" firstAttribute="top" secondItem="9yH-2b-TnM" secondAttribute="bottom" constant="3" id="xz3-Vw-pCq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZRg-M5-FtS"/>
+                    <navigationItem key="navigationItem" title="PhysioGuide" id="ZRg-M5-FtS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="EyF-hu-7NO"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="345"/>
+            <point key="canvasLocation" x="994" y="345"/>
         </scene>
-        <!--Title-->
+        <!--PhysioGuide-->
         <scene sceneID="WK9-Z9-0nO">
             <objects>
                 <viewController id="T0b-cn-fEb" customClass="MainMenuVC" customModule="PhysioGuide_6_3_latest" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,7 +172,7 @@
                                     <segue destination="ciJ-KT-Bk3" kind="show" id="14e-wd-LxP"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wG-vg-lq8" colorLabel="IBBuiltInLabel-Red">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wG-vg-lq8" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
@@ -204,13 +194,15 @@
                             <constraint firstItem="3wG-vg-lq8" firstAttribute="leading" secondItem="tC5-KS-KS0" secondAttribute="leading" id="sjJ-T8-qg9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bEY-SB-zgH"/>
+                    <navigationItem key="navigationItem" title="PhysioGuide" id="bEY-SB-zgH">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="8pL-A3-KG3"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thQ-cf-oOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="345"/>
+            <point key="canvasLocation" x="1641" y="345"/>
         </scene>
-        <!--RoutinesVC-->
+        <!--Routines-->
         <scene sceneID="g0W-be-ASe">
             <objects>
                 <viewController id="Ogi-as-DHk" customClass="RoutinesVC" customModule="PhysioGuide_6_3_latest" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,12 +223,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Routines" id="LFj-2g-VF6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JhX-Gk-OyJ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVD-AO-WQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="1017"/>
+            <point key="canvasLocation" x="829" y="1086"/>
         </scene>
-        <!--ExercisesVC-->
+        <!--Exercises-->
         <scene sceneID="pfi-X8-P7w">
             <objects>
                 <viewController id="trS-a8-uHc" customClass="ExercisesVC" customModule="PhysioGuide_6_3_latest" customModuleProvider="target" sceneMemberID="viewController">
@@ -257,10 +252,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Exercises" id="onz-TP-Lj6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="MIZ-wu-sJF"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="za9-6I-6hp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1503" y="345"/>
+            <point key="canvasLocation" x="2315" y="345"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="snR-Pk-niS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bce-f4-BT5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXA-d1-Vde">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="NhB-hn-LSF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIS-PZ-liy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="345"/>
         </scene>
     </scenes>
 </document>
