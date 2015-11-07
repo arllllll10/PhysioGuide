@@ -9,48 +9,34 @@
 import UIKit
 
 class LogInVC: UIViewController, UITextFieldDelegate {
-    //Mark: Propertities
-    @IBOutlet weak var usernameUITextField: UITextField!
-    @IBOutlet weak var passwardUITextField: UITextField!
+
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        passwardUITextField.delegate = self
-        usernameUITextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.usernameTextField.delegate = self
     }
-    //Dismiss keyboard for UITestField
+    
+    //function to hide keyboard when user presses return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        return false
+        return true
     }
-
+    
+    
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    @IBAction func ExitKeyboard(sender: UITapGestureRecognizer) {
+    //hide the keyboard when the user touches somewhere other than a text field
+    @IBAction func exitKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    @IBAction func LogInButtom(sender: AnyObject) {
-        let username=usernameUITextField.text
-        let password=passwardUITextField.text
-        
-        //check for empty information
-        if (username.isEmpty || password.isEmpty)
-        { //display alert to tell user fill in the information
-            displayAlertMessage ("All fields are required")
-            return
-        }
-    }
-    func displayAlertMessage(UserMessage :String)
-    {
-        var alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
-        let passCondition = UIAlertAction(title: "Copy That", style: UIAlertActionStyle.Default, handler: nil);
-        alert.addAction(passCondition)
-        self.presentViewController (alert, animated : true, completion: nil);
-    }
-
-   
 }
+
