@@ -18,7 +18,6 @@
 		2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */; };
 		2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */; };
 		2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */; };
-		2FFBC9481BED5D2C00333BF7 /* CustomLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBC9471BED5D2C00333BF7 /* CustomLaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesVC.swift; sourceTree = "<group>"; };
 		2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesVC.swift; sourceTree = "<group>"; };
 		2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
-		2FFBC9471BED5D2C00333BF7 /* CustomLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomLaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
 				2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */,
 				2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */,
-				2FFBC9471BED5D2C00333BF7 /* CustomLaunchScreen.xib */,
 				2F9C35E01BEC5AF600FF14B3 /* Supporting Files */,
 			);
 			path = PhysioGuide_6.3_latest;
@@ -211,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9C35E81BEC5AF600FF14B3 /* Main.storyboard in Resources */,
-				2FFBC9481BED5D2C00333BF7 /* CustomLaunchScreen.xib in Resources */,
 				2F9C35ED1BEC5AF600FF14B3 /* LaunchScreen.xib in Resources */,
 				2F9C35EA1BEC5AF600FF14B3 /* Images.xcassets in Resources */,
 			);
@@ -364,7 +360,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,7 +370,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +429,6 @@
 				2F9C35FE1BEC5AF600FF14B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		2F9C35FF1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_6.3_latestTests" */ = {
 			isa = XCConfigurationList;
@@ -444,7 +437,6 @@
 				2F9C36011BEC5AF600FF14B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

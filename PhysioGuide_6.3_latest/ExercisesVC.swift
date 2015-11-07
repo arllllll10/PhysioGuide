@@ -8,14 +8,11 @@
 
 import UIKit
 
-class ExercisesVC: UITableViewController {
-    
-    @IBOutlet weak var label: UILabel!
-    
+class ExercisesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,12 +20,5 @@ class ExercisesVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func changeText(sender: UIButton) {
-        if label.text == "changed" {
-            label.text = "Label"
-        } else {
-            label.text = "changed"
-        }
-    }
-        
+    
 }
