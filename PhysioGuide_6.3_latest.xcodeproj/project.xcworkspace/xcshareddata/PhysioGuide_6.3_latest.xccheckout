@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>35109A0AA141DCE692C7EF26ECF8023348F9F794</key>
-		<string>https://github.com/teamstarcmpt275/PhysioGuide</string>
+		<string>https://github.com/teamstarcmpt275/PhysioGuide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PhysioGuide_6.3_latest.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/teamstarcmpt275/PhysioGuide</string>
+	<string>https://github.com/teamstarcmpt275/PhysioGuide.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>35109A0AA141DCE692C7EF26ECF8023348F9F794</string>
 			<key>IDESourceControlWCCName</key>
-			<string>build</string>
+			<string>PhysioGuide</string>
 		</dict>
 	</array>
 </dict>

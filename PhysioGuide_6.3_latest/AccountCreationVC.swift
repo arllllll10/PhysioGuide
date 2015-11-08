@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountCreationVC: UIViewController {
+class AccountCreationVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var UsernameUITextField: UITextField!
     @IBOutlet weak var passwordUItextField: UITextField!
@@ -53,6 +53,7 @@ class AccountCreationVC: UIViewController {
             return
         }
     }
+    
     func displayAlertMessage(UserMessage :String)
     {
         var alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
@@ -60,4 +61,13 @@ class AccountCreationVC: UIViewController {
         alert.addAction(passCondition)
         self.presentViewController (alert, animated : true, completion: nil);
     }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if range.length + range.location > count(UsernameUITextField.text){
+            return false
+        }
+        let NewLength = count(UsernameUITextField.text) + count(string) - range.length
+        return NewLength<=10
+    }
+
 }

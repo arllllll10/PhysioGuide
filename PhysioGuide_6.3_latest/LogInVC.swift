@@ -33,6 +33,12 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     @IBAction func ExitKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    
+    
+    var arrayOfUsername: [String] = ["arlene", "rohn", "scott","thomas"]
+    var arrayOfPassword: [String] = ["arlene", "rohn", "scott","thomas"]
+
+    
     @IBAction func LogInButtom(sender: AnyObject) {
         let username=usernameUITextField.text
         let password=passwardUITextField.text
@@ -43,7 +49,19 @@ class LogInVC: UIViewController, UITextFieldDelegate {
             displayAlertMessage ("All fields are required")
             return
         }
+        if(contains(arrayOfUsername,username))
+        {
+            if( find(arrayOfUsername,username) != find(arrayOfPassword,password))
+            {   // Login is successfull
+                displayAlertMessage ("username or password failed")
+                return
+            }
+        }
+        if (!contains(arrayOfUsername, username)){
+            displayAlertMessage ("username or password failed")
+            return}
     }
+    
     func displayAlertMessage(UserMessage :String)
     {
         var alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
@@ -52,5 +70,13 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         self.presentViewController (alert, animated : true, completion: nil);
     }
 
-   
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if range.length + range.location > count(usernameUITextField.text){
+            return false
+        }
+        let NewLength = count(usernameUITextField.text) + count(string) - range.length
+        return NewLength<=10
+    }
+    
+    
 }
