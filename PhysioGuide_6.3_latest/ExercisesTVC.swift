@@ -4,26 +4,29 @@
 //
 //  Created by Rohm Laxton on 2015-11-07.
 //  Copyright (c) 2015 Team STAR. All rights reserved.
-//
+//  
+//  Version 1.0 : Rohm Laxton : Created the view controller
 
 import UIKit
 
 class ExercisesTVC: UITableViewController {
 
+    // video players
     @IBOutlet var webViewSquats: UIWebView!
     @IBOutlet var webViewJogging: UIWebView!
     @IBOutlet var webViewLunges: UIWebView!
     
+    // URLs for the videos - todo store in database
     let urlList: [String] = ["_NVoHKFDyL4","3ZTzH6dkR1s","B-K8NO84W98"]
-    let squatsURL = "_NVoHKFDyL4"
-    let joggingURL = "3ZTzH6dkR1s"
-    let lungeURL = "B-K8NO84W98"
+    //let squatsURL = "_NVoHKFDyL4"
+    //let joggingURL = "3ZTzH6dkR1s"
+    //let lungeURL = "B-K8NO84W98"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        // display videos
         self.webViewSquats.loadHTMLString(setupWebplayer(urlList[0]), baseURL: nil)
         self.webViewJogging.loadHTMLString(setupWebplayer(urlList[1]), baseURL: nil)
         self.webViewLunges.loadHTMLString(setupWebplayer(urlList[2]), baseURL: nil)
@@ -43,6 +46,7 @@ class ExercisesTVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // setup videoplayers
     func setupWebplayer(urlAddress: String) -> String
     {
         let height = 100

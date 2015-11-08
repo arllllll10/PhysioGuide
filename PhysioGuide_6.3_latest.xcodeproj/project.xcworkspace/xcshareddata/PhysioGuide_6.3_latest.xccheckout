@@ -12,12 +12,16 @@
 	<dict>
 		<key>35109A0AA141DCE692C7EF26ECF8023348F9F794</key>
 		<string>https://github.com/teamstarcmpt275/PhysioGuide.git</string>
+		<key>8A38D1ACEE24943D5DBE9C55503937D8CB852B85</key>
+		<string>https://github.com/teamstarcmpt275/PhysioGuide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PhysioGuide_6.3_latest.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>35109A0AA141DCE692C7EF26ECF8023348F9F794</key>
+		<string>../../../PhysioGuide</string>
+		<key>8A38D1ACEE24943D5DBE9C55503937D8CB852B85</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,9 +29,17 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>35109A0AA141DCE692C7EF26ECF8023348F9F794</string>
+	<string>8A38D1ACEE24943D5DBE9C55503937D8CB852B85</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A38D1ACEE24943D5DBE9C55503937D8CB852B85</string>
+			<key>IDESourceControlWCCName</key>
+			<string>master</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
