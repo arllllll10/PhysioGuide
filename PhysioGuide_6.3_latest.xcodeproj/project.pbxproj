@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C35E21BEC5AF600FF14B3 /* AppDelegate.swift */; };
+		2F9C35E51BEC5AF600FF14B3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C35E41BEC5AF600FF14B3 /* LogInVC.swift */; };
+		2F9C35E81BEC5AF600FF14B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */; };
+		2F9C35EA1BEC5AF600FF14B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */; };
+		2F9C35ED1BEC5AF600FF14B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */; };
+		2F9C35F91BEC5AF600FF14B3 /* PhysioGuide_6_3_latestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C35F81BEC5AF600FF14B3 /* PhysioGuide_6_3_latestTests.swift */; };
+		2F9C36031BEC5B3000FF14B3 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36021BEC5B3000FF14B3 /* MainMenuVC.swift */; };
+		2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36041BEC5C4B00FF14B3 /* AccountCreationVC.swift */; };
+		2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */; };
+		2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */; };
+		2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */; };
+		9521D8AF1BEEEF38008F71C9 /* ExercisesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */; };
+		9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F9C35F31BEC5AF600FF14B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F9C35D51BEC5AF600FF14B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F9C35DC1BEC5AF600FF14B3;
+			remoteInfo = PhysioGuide_6.3_latest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F9C35DD1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysioGuide_6.3_latest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9C35E11BEC5AF600FF14B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F9C35E21BEC5AF600FF14B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F9C35E41BEC5AF600FF14B3 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		2F9C35E71BEC5AF600FF14B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2F9C35EC1BEC5AF600FF14B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2F9C35F21BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysioGuide_6.3_latestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9C35F71BEC5AF600FF14B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F9C35F81BEC5AF600FF14B3 /* PhysioGuide_6_3_latestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysioGuide_6_3_latestTests.swift; sourceTree = "<group>"; };
+		2F9C36021BEC5B3000FF14B3 /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
+		2F9C36041BEC5C4B00FF14B3 /* AccountCreationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCreationVC.swift; sourceTree = "<group>"; };
+		2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesVC.swift; sourceTree = "<group>"; };
+		2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesVC.swift; sourceTree = "<group>"; };
+		2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesTVC.swift; sourceTree = "<group>"; };
+		9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F9C35DA1BEC5AF600FF14B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9C35EF1BEC5AF600FF14B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F9C35D41BEC5AF600FF14B3 = {
+			isa = PBXGroup;
+			children = (
+				2F9C35DF1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */,
+				2F9C35F51BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests */,
+				2F9C35DE1BEC5AF600FF14B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F9C35DE1BEC5AF600FF14B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C35DD1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest.app */,
+				2F9C35F21BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F9C35DF1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C35E21BEC5AF600FF14B3 /* AppDelegate.swift */,
+				2F9C35E41BEC5AF600FF14B3 /* LogInVC.swift */,
+				2F9C36021BEC5B3000FF14B3 /* MainMenuVC.swift */,
+				2F9C36041BEC5C4B00FF14B3 /* AccountCreationVC.swift */,
+				2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */,
+				2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */,
+				2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */,
+				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
+				9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */,
+				9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */,
+				2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */,
+				2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */,
+				2F9C35E01BEC5AF600FF14B3 /* Supporting Files */,
+			);
+			path = PhysioGuide_6.3_latest;
+			sourceTree = "<group>";
+		};
+		2F9C35E01BEC5AF600FF14B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C35E11BEC5AF600FF14B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F9C35F51BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C35F81BEC5AF600FF14B3 /* PhysioGuide_6_3_latestTests.swift */,
+				2F9C35F61BEC5AF600FF14B3 /* Supporting Files */,
+			);
+			path = PhysioGuide_6.3_latestTests;
+			sourceTree = "<group>";
+		};
+		2F9C35F61BEC5AF600FF14B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C35F71BEC5AF600FF14B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F9C35DC1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F9C35FC1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_6.3_latest" */;
+			buildPhases = (
+				2F9C35D91BEC5AF600FF14B3 /* Sources */,
+				2F9C35DA1BEC5AF600FF14B3 /* Frameworks */,
+				2F9C35DB1BEC5AF600FF14B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhysioGuide_6.3_latest;
+			productName = PhysioGuide_6.3_latest;
+			productReference = 2F9C35DD1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F9C35F11BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F9C35FF1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_6.3_latestTests" */;
+			buildPhases = (
+				2F9C35EE1BEC5AF600FF14B3 /* Sources */,
+				2F9C35EF1BEC5AF600FF14B3 /* Frameworks */,
+				2F9C35F01BEC5AF600FF14B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F9C35F41BEC5AF600FF14B3 /* PBXTargetDependency */,
+			);
+			name = PhysioGuide_6.3_latestTests;
+			productName = PhysioGuide_6.3_latestTests;
+			productReference = 2F9C35F21BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F9C35D51BEC5AF600FF14B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Team STAR";
+				TargetAttributes = {
+					2F9C35DC1BEC5AF600FF14B3 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					2F9C35F11BEC5AF600FF14B3 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 2F9C35DC1BEC5AF600FF14B3;
+					};
+				};
+			};
+			buildConfigurationList = 2F9C35D81BEC5AF600FF14B3 /* Build configuration list for PBXProject "PhysioGuide_6.3_latest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F9C35D41BEC5AF600FF14B3;
+			productRefGroup = 2F9C35DE1BEC5AF600FF14B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F9C35DC1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */,
+				2F9C35F11BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F9C35DB1BEC5AF600FF14B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9C35E81BEC5AF600FF14B3 /* Main.storyboard in Resources */,
+				2F9C35ED1BEC5AF600FF14B3 /* LaunchScreen.xib in Resources */,
+				2F9C35EA1BEC5AF600FF14B3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9C35F01BEC5AF600FF14B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F9C35D91BEC5AF600FF14B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */,
+				9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */,
+				2F9C35E51BEC5AF600FF14B3 /* LogInVC.swift in Sources */,
+				2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */,
+				2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */,
+				2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */,
+				9521D8AF1BEEEF38008F71C9 /* ExercisesTVC.swift in Sources */,
+				2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */,
+				2F9C36031BEC5B3000FF14B3 /* MainMenuVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9C35EE1BEC5AF600FF14B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9C35F91BEC5AF600FF14B3 /* PhysioGuide_6_3_latestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F9C35F41BEC5AF600FF14B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F9C35DC1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */;
+			targetProxy = 2F9C35F31BEC5AF600FF14B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F9C35E71BEC5AF600FF14B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F9C35EC1BEC5AF600FF14B3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F9C35FA1BEC5AF600FF14B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F9C35FB1BEC5AF600FF14B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F9C35FD1BEC5AF600FF14B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F9C35FE1BEC5AF600FF14B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2F9C36001BEC5AF600FF14B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhysioGuide_6.3_latestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhysioGuide_6.3_latest.app/PhysioGuide_6.3_latest";
+			};
+			name = Debug;
+		};
+		2F9C36011BEC5AF600FF14B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhysioGuide_6.3_latestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhysioGuide_6.3_latest.app/PhysioGuide_6.3_latest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F9C35D81BEC5AF600FF14B3 /* Build configuration list for PBXProject "PhysioGuide_6.3_latest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9C35FA1BEC5AF600FF14B3 /* Debug */,
+				2F9C35FB1BEC5AF600FF14B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F9C35FC1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_6.3_latest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9C35FD1BEC5AF600FF14B3 /* Debug */,
+				2F9C35FE1BEC5AF600FF14B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F9C35FF1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_6.3_latestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9C36001BEC5AF600FF14B3 /* Debug */,
+				2F9C36011BEC5AF600FF14B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F9C35D51BEC5AF600FF14B3 /* Project object */;
+}
