@@ -30,7 +30,8 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
     
     func myVCDidFinish(controller: RoutineTVC, value: NSInteger) {
         routineIndex = value
-        controller.navigationController?.popViewControllerAnimated(true)
+        // Rohm - pops back to the previous screen, unnecessary atm
+        //controller.navigationController?.popViewControllerAnimated(true)
         print(routineIndex)
     }
     
