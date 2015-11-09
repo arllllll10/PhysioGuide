@@ -35,8 +35,8 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    var arrayOfUsername: [String] = ["arlene", "rohn", "scott","thomas"]
-    var arrayOfPassword: [String] = ["arlene", "rohn", "scott","thomas"]
+    var arrayOfUsername: [String] = ["arlene", "rohm", "scott","thomas"]
+    var arrayOfPassword: [String] = ["arlene", "rohm", "scott","thomas"]
 
     
     @IBAction func LogInButtom(sender: AnyObject) {

@@ -18,6 +18,8 @@
 		2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */; };
 		2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */; };
 		2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */; };
+		9521D8AF1BEEEF38008F71C9 /* ExercisesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */; };
+		9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesVC.swift; sourceTree = "<group>"; };
 		2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesVC.swift; sourceTree = "<group>"; };
 		2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesTVC.swift; sourceTree = "<group>"; };
+		9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */,
 				2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */,
 				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
+				9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */,
+				9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */,
 				2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */,
 				2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */,
 				2F9C35E01BEC5AF600FF14B3 /* Supporting Files */,
@@ -228,10 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */,
+				9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */,
 				2F9C35E51BEC5AF600FF14B3 /* LogInVC.swift in Sources */,
 				2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */,
 				2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */,
 				2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */,
+				9521D8AF1BEEEF38008F71C9 /* ExercisesTVC.swift in Sources */,
 				2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */,
 				2F9C36031BEC5B3000FF14B3 /* MainMenuVC.swift in Sources */,
 			);
@@ -429,6 +437,7 @@
 				2F9C35FE1BEC5AF600FF14B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F9C35FF1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_6.3_latestTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +446,7 @@
 				2F9C36011BEC5AF600FF14B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
