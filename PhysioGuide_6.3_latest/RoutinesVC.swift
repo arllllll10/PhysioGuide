@@ -2,9 +2,10 @@
 //  RoutinesVC.swift
 //  PhysioGuide_6.3_latest
 //
-//  Created by Thomas Breen on 2015-11-05.
+//  Author: Scott Mao, Thomas Breen, Arlene Fu, Rohm Laxton
+//  Date created : 2015-11-05.
 //  Copyright (c) 2015 Team STAR. All rights reserved.
-//
+//  Description:
 
 import UIKit
 
@@ -13,15 +14,18 @@ import UIKit
 class RoutinesVC: UIViewController, RoutineTVCDelegate {
     
     var routineIndex : NSInteger?
+    var exercises : [String] = ["", ""]
     
-    @IBAction func runRoutineButton(sender: AnyObject) {
-        
-    }
+    @IBOutlet var runRoutineButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Rohm - Hide the button, should only be visible on selecting a routine.
+        self.runRoutineButton.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,9 +34,18 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
     
     func myVCDidFinish(controller: RoutineTVC, value: NSInteger) {
         routineIndex = value
-        // Rohm - pops back to the previous screen, unnecessary atm
+        self.runRoutineButton.hidden = false
+        // Rohm - returns us to the previous screen, not needed as we are
+        // still in the correct screen
         //controller.navigationController?.popViewControllerAnimated(true)
         print(routineIndex)
+        
+        // Rohm - Had this previously in the button, but apparently the seque is tracked before the button press
+        let routinesClass = Routines()
+        routinesClass.updateExerciseList(routineIndex!)
+        exercises[0] = routinesClass.exerciseList[0]
+        exercises[1] = routinesClass.exerciseList[1]
+        print(exercises[0] + exercises[1])
     }
     
     
@@ -40,11 +53,25 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "mySegue"{
+        if segue.identifier == "routineInternalSegue"{
             let vc = segue.destinationViewController as! RoutineTVC
             vc.selectedIndex = routineIndex
             vc.delegate = self
         }
+        
+        if segue.identifier == "routineRunSeque"{
+            let vc = segue.destinationViewController as! RunRoutineVC
+            vc.label1Text = exercises[0]
+            vc.label2Text = exercises[1]
+        }
+        
     }
     
+    @IBAction func runRoutineButton(sender: AnyObject) {
+        
+    }
+    
+    
 }
+    
+

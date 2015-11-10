@@ -2,10 +2,12 @@
 //  RoutineTVC.swift
 //  PhysioGuide_6.3_latest
 //
-//  Created by Rohm Laxton on 2015-11-07.
+//  Author: Scott Mao, Thomas Breen, Arlene Fu, Rohm Laxton
+//  Date created : 2015-11-07.
 //  Copyright (c) 2015 Team STAR. All rights reserved.
-//  
-//  Version 1.0 : Rohm Laxton : Created the container, linked through the selected routine
+//  Description:
+//
+//  Version 0.1 : Rohm Laxton : Created the container, linked through the selected routine
 
 import UIKit
 

@@ -2,9 +2,10 @@
 //  StatsVC.swift
 //  PhysioGuide_6.3_latest
 //
-//  Created by Thomas Breen on 2015-11-05.
+//  Author: Scott Mao, Thomas Breen, Arlene Fu, Rohm Laxton
+//  Date created : 2015-11-05.
 //  Copyright (c) 2015 Team STAR. All rights reserved.
-//
+//  Description:
 
 import UIKit
 

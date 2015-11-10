@@ -338,12 +338,13 @@
                                 </state>
                                 <connections>
                                     <action selector="runRoutineButton:" destination="Ogi-as-DHk" eventType="touchUpInside" id="bzi-Yj-K77"/>
+                                    <segue destination="vPp-i4-pDu" kind="show" identifier="routineRunSeque" id="IFz-qZ-Llf"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-K0-aw9">
                                 <rect key="frame" x="0.0" y="64" width="600" height="464"/>
                                 <connections>
-                                    <segue destination="nSK-JW-oOz" kind="embed" identifier="mySegue" id="cr7-74-Bkp"/>
+                                    <segue destination="nSK-JW-oOz" kind="embed" identifier="routineInternalSegue" id="cr7-74-Bkp"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-6c-6fQ">
@@ -364,10 +365,55 @@
                     <navigationItem key="navigationItem" title="Routines" id="LFj-2g-VF6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="JhX-Gk-OyJ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="runRoutineButton" destination="4I5-GI-B9p" id="mbS-hU-4eb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVD-AO-WQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="829" y="1086"/>
+        </scene>
+        <!--RunRoutineVC-->
+        <scene sceneID="N1W-VU-Cch">
+            <objects>
+                <viewController title="Run Routine" id="vPp-i4-pDu" userLabel="RunRoutineVC" customClass="RunRoutineVC" customModule="PhysioGuide_6_3_latest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NQQ-hd-fhu"/>
+                        <viewControllerLayoutGuide type="bottom" id="KIU-qH-DXP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oIk-Vw-r6O">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1V-is-Igh">
+                                <rect key="frame" x="279" y="233" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBY-w9-5PK">
+                                <rect key="frame" x="279" y="267" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rBY-w9-5PK" firstAttribute="leading" secondItem="U1V-is-Igh" secondAttribute="leading" id="PkY-Bv-C7z"/>
+                            <constraint firstItem="U1V-is-Igh" firstAttribute="top" secondItem="NQQ-hd-fhu" secondAttribute="bottom" constant="169" id="T1T-Jc-Jyp"/>
+                            <constraint firstItem="rBY-w9-5PK" firstAttribute="top" secondItem="U1V-is-Igh" secondAttribute="bottom" constant="13" id="U0u-HP-j0q"/>
+                            <constraint firstItem="rBY-w9-5PK" firstAttribute="centerX" secondItem="oIk-Vw-r6O" secondAttribute="centerX" id="s8z-Af-KxQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="U1V-is-Igh" id="K0p-0t-ilB"/>
+                        <outlet property="label2" destination="rBY-w9-5PK" id="IN1-tw-1Yf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxL-6K-DwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="1789"/>
         </scene>
         <!--RoutineTVC-->
         <scene sceneID="TlL-KQ-QSp">
