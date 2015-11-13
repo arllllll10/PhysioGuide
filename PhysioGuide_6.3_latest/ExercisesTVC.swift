@@ -11,12 +11,12 @@ import UIKit
 
 class ExercisesTVC: UITableViewController {
 
-    // video players
+    // video players - turn into one video player that the others update
     @IBOutlet var webViewSquats: UIWebView!
     @IBOutlet var webViewJogging: UIWebView!
     @IBOutlet var webViewLunges: UIWebView!
     
-    // URLs for the videos - todo store in database
+    // URLs for the videos - todo store in dictionary (key - url)
     let urlList: [String] = ["_NVoHKFDyL4","3ZTzH6dkR1s","B-K8NO84W98"]
     //let squatsURL = "_NVoHKFDyL4"
     //let joggingURL = "3ZTzH6dkR1s"
