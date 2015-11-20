@@ -132,7 +132,20 @@
                             <constraint firstItem="vJD-ZU-Lcl" firstAttribute="centerX" secondItem="ZnL-qH-wbx" secondAttribute="centerX" id="Xe0-4q-hkU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stats" id="jFy-0y-agN"/>
+                    <navigationItem key="navigationItem" title="Stats" id="jFy-0y-agN">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="dia-g9-njv">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vGR-9B-cZU">
+                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o2z-w0-OtH" kind="show" id="xYT-ai-JfY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k79-iJ-SPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,9 +297,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="810-gc-l7f">
-                                <rect key="frame" x="139" y="72" width="360" height="468"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="810-gc-l7f">
+                                <rect key="frame" x="137" y="66" width="360" height="468"/>
+                                <mutableString key="text">PhysioGuide is an iOS application promoting proper form in a range of physiotherapeutic exercises. PhysioGuide accomplishes this by giving the helping the user set up an exercise routine, provide video guides on the individual exercises and provide tracking and feedback, when available, through device sensors on correct form. PhysioGuide is targeted at users who have suffered debilitating injuries and seek to recover full movement or healthy users seeking knowledge on how to perform an exercise properly. Apple’s HealthKit provides the backbone that allows us to store and compare physical activities performed. Special thanks to FIRST LAST, our health consultant for this project.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -543,6 +556,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Routines" id="LFj-2g-VF6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="JhX-Gk-OyJ"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="w6z-Wo-Pw1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fAw-qb-wpG">
+                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="o2z-w0-OtH" kind="show" id="FHN-VE-7X7"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="runRoutineButton" destination="4I5-GI-B9p" id="mbS-hU-4eb"/>
@@ -823,4 +848,7 @@
             <point key="canvasLocation" x="-330" y="320"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xYT-ai-JfY"/>
+    </inferredMetricsTieBreakers>
 </document>
