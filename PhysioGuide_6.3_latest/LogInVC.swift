@@ -1,6 +1,6 @@
 //
 //  LogInVC.swift
-//  PhysioGuide_6.3_latest
+//  PhysioGuide_7
 //
 //  Author: Scott Mao, Thomas Breen, Arlene Fu, Rohm Laxton
 //  Date created : 2015-11-05.
@@ -41,8 +41,8 @@ class LogInVC: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func LogInButtom(sender: AnyObject) {
-        let username=usernameUITextField.text
-        let password=passwardUITextField.text
+        let username=usernameUITextField.text!
+        let password=passwardUITextField.text!
         
         //check for empty information
         if (username.isEmpty || password.isEmpty)
@@ -50,32 +50,32 @@ class LogInVC: UIViewController, UITextFieldDelegate {
             displayAlertMessage ("All fields are required")
             return
         }
-        if(contains(arrayOfUsername,username))
+        if(arrayOfUsername.contains(username))
         {
-            if( find(arrayOfUsername,username) != find(arrayOfPassword,password))
+            if( arrayOfUsername.indexOf(username) != arrayOfPassword.indexOf(password))
             {   // Login is successfull
                 displayAlertMessage ("username or password failed")
                 return
             }
         }
-        if (!contains(arrayOfUsername, username)){
+        if (!arrayOfUsername.contains(username)){
             displayAlertMessage ("username or password failed")
             return}
     }
     
     func displayAlertMessage(UserMessage :String)
     {
-        var alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
         let passCondition = UIAlertAction(title: "Copy That", style: UIAlertActionStyle.Default, handler: nil);
         alert.addAction(passCondition)
         self.presentViewController (alert, animated : true, completion: nil);
     }
 
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if range.length + range.location > count(usernameUITextField.text){
+        if range.length + range.location > usernameUITextField.text!.characters.count{
             return false
         }
-        let NewLength = count(usernameUITextField.text) + count(string) - range.length
+        let NewLength = usernameUITextField.text!.characters.count + string.characters.count - range.length
         return NewLength<=10
     }
     

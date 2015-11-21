@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8A38D1ACEE24943D5DBE9C55503937D8CB852B85",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "35109A0AA141DCE692C7EF26ECF8023348F9F794" : 0,
+    "8A38D1ACEE24943D5DBE9C55503937D8CB852B85" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "89939A4C-BA9A-4F03-9180-1617422AC7BD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "35109A0AA141DCE692C7EF26ECF8023348F9F794" : "PhysioGuide",
+    "8A38D1ACEE24943D5DBE9C55503937D8CB852B85" : "master"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PhysioGuide_6.3_latest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PhysioGuide_6.3_latest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/teamstarcmpt275\/PhysioGuide.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35109A0AA141DCE692C7EF26ECF8023348F9F794"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/teamstarcmpt275\/PhysioGuide.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8A38D1ACEE24943D5DBE9C55503937D8CB852B85"
+    }
+  ]
+}
