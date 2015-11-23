@@ -24,19 +24,18 @@ class ExerciseListTVC: UITableViewController {
         let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "youtube.com/joggingexample")!
         
         exercises += [exercise1, exercise2, exercise3]
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //load sample data
-        //loadSampleExercises()
+        loadSampleExercises()
     }
     
     //how many sections should be in the table view controller? Perhaps 3, one for each of Strech/Strength/Cardio
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     //how many rows are in each section. Currently placing the number of exercises to be safe - could be different though.
@@ -46,10 +45,15 @@ class ExerciseListTVC: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Table view cels are reused and should be dequeued using a cell identifier
-        //let cellIdentifier = "ExercisesListTVCCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "ExerciseListTVCCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ExerciseListTVCCell
         
-        //config cell
+        // Fetches the appropriate exerecise for the data source layout.
+        let exercise = exercises[indexPath.row]
+        
+        cell.name.text = exercise.name
+        cell.icon.image = exercise.icon
+        
         
         return cell
     }

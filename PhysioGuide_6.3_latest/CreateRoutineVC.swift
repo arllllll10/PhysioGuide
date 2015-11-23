@@ -10,9 +10,9 @@
 import UIKit
 
 
-class CreateRoutineVC: UIViewController, UICollectionViewDelegate {
+class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // MARK: Vars
+    // MARK: Properties
     
     @IBOutlet weak var ListContainer: UIView!
     @IBOutlet weak var CurrentRoutineContainer: UIView!
@@ -28,14 +28,27 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // handle the test field's user inut through delegate callbacks
+        routineName.delegate = self
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide keyboard
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func testFieldDidEndEditing(textField: UITextField) {
+        
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Functions
+    // MARK: Actions
     
     @IBAction func nameRoutine(sender: UIButton) {
         //user has clicked Done button after selecting their exercises
