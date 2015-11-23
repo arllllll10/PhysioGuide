@@ -6,6 +6,7 @@ use_frameworks!
 target 'PhysioGuide_7' do
     pod 'Alamofire'
     pod 'SwiftyJSON'
+	pod 'YouTubePlayer'
 end
 
 target 'PhysioGuide_7Tests' do

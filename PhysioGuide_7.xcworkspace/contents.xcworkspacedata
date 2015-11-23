@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:YouTubePlayer/YouTubePlayer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PhysioGuide_7.xcodeproj">
    </FileRef>
    <FileRef

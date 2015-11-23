@@ -8,6 +8,7 @@
 //  Description:
 
 import UIKit
+import YouTubePlayer
 
 class ExercisesTVC: UITableViewController {
 
