@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29F948E5C299359FC3074261 /* Pods_PhysioGuide_7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889AA6AAA55FAD65420352E4 /* Pods_PhysioGuide_7.framework */; };
 		2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C35E21BEC5AF600FF14B3 /* AppDelegate.swift */; };
 		2F9C35E51BEC5AF600FF14B3 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C35E41BEC5AF600FF14B3 /* LogInVC.swift */; };
 		2F9C35E81BEC5AF600FF14B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */; };
@@ -57,10 +58,13 @@
 		2FE886B91C014142004AB66E /* CreateRoutineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoutineVC.swift; sourceTree = "<group>"; };
 		2FE886BB1C015855004AB66E /* CurrentRoutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRoutine.swift; sourceTree = "<group>"; };
 		2FE886BD1C015AA0004AB66E /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		6E6B059F3445DA7741D68EF4 /* Pods-PhysioGuide_7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhysioGuide_7.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7.release.xcconfig"; sourceTree = "<group>"; };
+		889AA6AAA55FAD65420352E4 /* Pods_PhysioGuide_7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhysioGuide_7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95015AB61BF67A0200E358D6 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesTVC.swift; sourceTree = "<group>"; };
 		9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineTVC.swift; sourceTree = "<group>"; };
 		953851051BF171C5009BC801 /* Routines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
+		953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhysioGuide_7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7.debug.xcconfig"; sourceTree = "<group>"; };
 		9571ADE21BF168410058FC04 /* RunRoutineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunRoutineVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F948E5C299359FC3074261 /* Pods_PhysioGuide_7.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,8 @@
 				2F9C35DF1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */,
 				2F9C35F51BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests */,
 				2F9C35DE1BEC5AF600FF14B3 /* Products */,
+				E3FD3EF8E69F250F9F47379C /* Pods */,
+				78203992197FE254FADA0CDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +158,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		78203992197FE254FADA0CDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				889AA6AAA55FAD65420352E4 /* Pods_PhysioGuide_7.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3FD3EF8E69F250F9F47379C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */,
+				6E6B059F3445DA7741D68EF4 /* Pods-PhysioGuide_7.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9C35FC1BEC5AF600FF14B3 /* Build configuration list for PBXNativeTarget "PhysioGuide_7" */;
 			buildPhases = (
+				B238B0720E29FEF865C32EE8 /* Check Pods Manifest.lock */,
 				2F9C35D91BEC5AF600FF14B3 /* Sources */,
 				2F9C35DA1BEC5AF600FF14B3 /* Frameworks */,
 				2F9C35DB1BEC5AF600FF14B3 /* Resources */,
+				D11A7244B995F98D521C9281 /* Embed Pods Frameworks */,
+				0009170C1D28D881115D1C80 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,7 +224,7 @@
 			attributes = {
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Team STAR";
 				TargetAttributes = {
 					2F9C35DC1BEC5AF600FF14B3 = {
@@ -247,6 +274,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0009170C1D28D881115D1C80 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B238B0720E29FEF865C32EE8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D11A7244B995F98D521C9281 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F9C35D91BEC5AF600FF14B3 /* Sources */ = {
@@ -330,6 +405,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -392,20 +468,24 @@
 		};
 		2F9C35FD1BEC5AF600FF14B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamSTAR.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PhysioGuide_7;
 			};
 			name = Debug;
 		};
 		2F9C35FE1BEC5AF600FF14B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6B059F3445DA7741D68EF4 /* Pods-PhysioGuide_7.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamSTAR.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PhysioGuide_7;
 			};
 			name = Release;
@@ -424,6 +504,7 @@
 				);
 				INFOPLIST_FILE = PhysioGuide_6.3_latestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamSTAR.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PhysioGuide_7;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhysioGuide_7.app/PhysioGuide_7";
 			};
@@ -439,6 +520,7 @@
 				);
 				INFOPLIST_FILE = PhysioGuide_6.3_latestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.teamSTAR.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PhysioGuide_7;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhysioGuide_7.app/PhysioGuide_7";
 			};
