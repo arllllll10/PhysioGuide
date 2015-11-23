@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8mi-Zd-nTt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bce-f4-BT5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -530,11 +530,11 @@
             <objects>
                 <tableViewController id="8mi-Zd-nTt" customClass="ExerciseListTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="DOK-xV-mEg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="383"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="cdU-EH-bUH" customClass="ExerciseListTVCCell" customModule="PhysioGuide_7" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseListTVCCell" rowHeight="90" id="cdU-EH-bUH" customClass="ExerciseListTVCCell" customModule="PhysioGuide_7" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdU-EH-bUH" id="igv-5y-WZh">
@@ -566,12 +566,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wG6-RF-P6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-730" y="1076"/>
+            <point key="canvasLocation" x="-685" y="1045.5"/>
         </scene>
-        <!--CreateRountineVC-->
+        <!--Create New Routine-->
         <scene sceneID="4hq-3d-hzG">
             <objects>
-                <viewController title="CreateRountineVC" id="M5T-F7-Hqd" customClass="CreateRoutineVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create New Routine" id="M5T-F7-Hqd" customClass="CreateRoutineVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Je4-UN-zQL"/>
                         <viewControllerLayoutGuide type="bottom" id="uBp-vO-OvT"/>
@@ -580,7 +580,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="799-xn-uqn">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="799-xn-uqn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="383"/>
                                 <connections>
                                     <segue destination="8mi-Zd-nTt" kind="embed" id="IVn-Yi-iE0"/>
@@ -593,82 +593,63 @@
                                     <action selector="nameRoutine:" destination="M5T-F7-Hqd" eventType="touchUpInside" id="Rmk-Wm-epK"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Pk-ST-xo6">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="dtV-J4-fc6"/>
-                                </items>
-                            </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-cM-zcu">
                                 <rect key="frame" x="0.0" y="447" width="600" height="125"/>
                                 <connections>
                                     <segue destination="j44-Db-juw" kind="embed" id="5Ns-Wm-jiU"/>
                                 </connections>
                             </containerView>
-                            <view hidden="YES" alpha="0.84999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-Yd-YQs" userLabel="View2">
-                                <rect key="frame" x="-1" y="64" width="600" height="536"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-ap-SRX">
+                                <rect key="frame" x="186" y="185" width="228" height="147"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-ap-SRX">
-                                        <rect key="frame" x="192" y="118" width="228" height="147"/>
-                                        <subviews>
-                                            <button contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-7z-YlA">
-                                                <rect key="frame" x="91" y="103" width="46" height="30"/>
-                                                <state key="normal" title="Create"/>
-                                                <connections>
-                                                    <action selector="createRoutine:" destination="M5T-F7-Hqd" eventType="touchUpInside" id="cXg-0p-87C"/>
-                                                    <segue destination="Ogi-as-DHk" kind="show" id="X8c-TN-u3t"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name your routine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPU-sa-iTj">
-                                                <rect key="frame" x="44" y="20" width="141" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxA-7f-rYY">
-                                                <rect key="frame" x="15" y="59" width="199" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="fHb-7z-YlA" firstAttribute="top" secondItem="IxA-7f-rYY" secondAttribute="bottom" constant="14" id="0wH-G3-lFp"/>
-                                            <constraint firstItem="IxA-7f-rYY" firstAttribute="top" secondItem="KPU-sa-iTj" secondAttribute="bottom" constant="18" id="9XX-wz-hr6"/>
-                                            <constraint firstAttribute="trailing" secondItem="IxA-7f-rYY" secondAttribute="trailing" constant="15" id="VLu-7t-20Q"/>
-                                            <constraint firstItem="IxA-7f-rYY" firstAttribute="leading" secondItem="hxk-ap-SRX" secondAttribute="leading" constant="15" id="XnU-fj-7dY"/>
-                                            <constraint firstItem="fHb-7z-YlA" firstAttribute="centerX" secondItem="IxA-7f-rYY" secondAttribute="centerX" id="kAq-1b-pnn"/>
-                                            <constraint firstItem="IxA-7f-rYY" firstAttribute="centerX" secondItem="KPU-sa-iTj" secondAttribute="centerX" id="kpF-p3-2Gw"/>
-                                        </constraints>
-                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your routine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPU-sa-iTj">
+                                        <rect key="frame" x="44" y="30" width="141" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxA-7f-rYY">
+                                        <rect key="frame" x="15" y="59" width="199" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-7z-YlA">
+                                        <rect key="frame" x="91" y="97" width="46" height="30"/>
+                                        <state key="normal" title="Create"/>
+                                        <connections>
+                                            <action selector="createRoutine:" destination="M5T-F7-Hqd" eventType="touchUpInside" id="cXg-0p-87C"/>
+                                            <segue destination="Ogi-as-DHk" kind="show" id="X8c-TN-u3t"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.94996402138157909" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="hxk-ap-SRX" firstAttribute="top" secondItem="EqQ-Yd-YQs" secondAttribute="top" constant="50" id="AUC-4b-acA"/>
-                                    <constraint firstItem="hxk-ap-SRX" firstAttribute="leading" secondItem="EqQ-Yd-YQs" secondAttribute="leading" constant="35" id="Wgd-2L-9jS"/>
-                                    <constraint firstAttribute="trailing" secondItem="hxk-ap-SRX" secondAttribute="trailing" constant="35" id="hry-5g-Irp"/>
+                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="centerX" secondItem="fHb-7z-YlA" secondAttribute="centerX" id="5TO-Bl-d3X"/>
+                                    <constraint firstItem="KPU-sa-iTj" firstAttribute="top" secondItem="hxk-ap-SRX" secondAttribute="top" constant="30" id="SLI-Ox-wki"/>
+                                    <constraint firstItem="KPU-sa-iTj" firstAttribute="centerX" secondItem="IxA-7f-rYY" secondAttribute="centerX" id="bDw-Kk-zRR"/>
+                                    <constraint firstItem="KPU-sa-iTj" firstAttribute="centerX" secondItem="hxk-ap-SRX" secondAttribute="centerX" id="grK-4t-i0u"/>
+                                    <constraint firstItem="fHb-7z-YlA" firstAttribute="top" secondItem="IxA-7f-rYY" secondAttribute="bottom" constant="8" symbolic="YES" id="iYM-XG-Nyp"/>
+                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="top" secondItem="KPU-sa-iTj" secondAttribute="bottom" constant="8" symbolic="YES" id="mIe-M7-Mdg"/>
+                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="leading" secondItem="hxk-ap-SRX" secondAttribute="leading" constant="15" id="rHi-5Y-kR9"/>
+                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="centerY" secondItem="hxk-ap-SRX" secondAttribute="centerY" id="uPB-h2-8Uf"/>
+                                    <constraint firstItem="KPU-sa-iTj" firstAttribute="leading" secondItem="hxk-ap-SRX" secondAttribute="leading" constant="44" id="zSN-ys-Ls1"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="leading" secondItem="2Pk-ST-xo6" secondAttribute="leading" id="1Lp-6k-ERN"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="top" secondItem="799-xn-uqn" secondAttribute="bottom" id="25F-lc-veL"/>
-                            <constraint firstItem="2Pk-ST-xo6" firstAttribute="leading" secondItem="lrN-2s-FQv" secondAttribute="leading" id="92Y-qp-m95"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="bottom" secondItem="uBp-vO-OvT" secondAttribute="top" id="MBb-SH-VrR"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="centerX" secondItem="ftD-cM-zcu" secondAttribute="centerX" id="PJy-gN-lBQ"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="centerX" secondItem="EqQ-Yd-YQs" secondAttribute="centerX" id="PcE-Fz-Ozu"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="top" secondItem="2Pk-ST-xo6" secondAttribute="bottom" id="XVi-jp-guz"/>
-                            <constraint firstAttribute="trailing" secondItem="ftD-cM-zcu" secondAttribute="trailing" id="YHZ-dI-dIk"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="top" secondItem="lrN-2s-FQv" secondAttribute="top" constant="447" id="ZCx-nt-W5g"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="trailing" secondItem="799-xn-uqn" secondAttribute="trailing" id="cMz-vQ-CMf"/>
-                            <constraint firstItem="uBp-vO-OvT" firstAttribute="top" secondItem="ftD-cM-zcu" secondAttribute="bottom" constant="28" id="gqm-u0-hT6"/>
-                            <constraint firstItem="EqQ-Yd-YQs" firstAttribute="bottom" secondItem="uBp-vO-OvT" secondAttribute="top" id="lFT-ii-3ny"/>
-                            <constraint firstItem="EqQ-Yd-YQs" firstAttribute="top" secondItem="799-xn-uqn" secondAttribute="top" id="mT0-sN-nOK"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="trailing" secondItem="2Pk-ST-xo6" secondAttribute="trailing" id="pGq-az-4ma"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="top" secondItem="Je4-UN-zQL" secondAttribute="bottom" id="rUR-tJ-pRu"/>
-                            <constraint firstItem="EqQ-Yd-YQs" firstAttribute="leading" secondItem="lrN-2s-FQv" secondAttribute="leadingMargin" constant="-21" id="sJU-pu-Ex5"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="leading" secondItem="799-xn-uqn" secondAttribute="leading" id="t0c-De-xQb"/>
+                            <constraint firstAttribute="trailing" secondItem="799-xn-uqn" secondAttribute="trailing" id="Bl0-OK-Jn8"/>
+                            <constraint firstItem="hxk-ap-SRX" firstAttribute="top" secondItem="Je4-UN-zQL" secondAttribute="bottom" constant="165" id="Fjv-kB-FQ5"/>
+                            <constraint firstItem="ftD-cM-zcu" firstAttribute="top" secondItem="799-xn-uqn" secondAttribute="bottom" id="Gut-x4-ZRL"/>
+                            <constraint firstItem="799-xn-uqn" firstAttribute="trailing" secondItem="ftD-cM-zcu" secondAttribute="trailing" id="IVy-Pn-bjp"/>
+                            <constraint firstItem="799-xn-uqn" firstAttribute="top" secondItem="Je4-UN-zQL" secondAttribute="bottom" constant="44" id="OAK-ku-Ijj"/>
+                            <constraint firstItem="799-xn-uqn" firstAttribute="leading" secondItem="lrN-2s-FQv" secondAttribute="leading" id="VAG-IA-KmL"/>
+                            <constraint firstItem="799-xn-uqn" firstAttribute="centerX" secondItem="hxk-ap-SRX" secondAttribute="centerX" id="WBz-7c-wQz"/>
+                            <constraint firstItem="uBp-vO-OvT" firstAttribute="top" secondItem="ftD-cM-zcu" secondAttribute="bottom" constant="28" id="eO9-J4-orw"/>
+                            <constraint firstItem="ftD-cM-zcu" firstAttribute="top" secondItem="lrN-2s-FQv" secondAttribute="top" constant="447" id="f6D-gO-226"/>
+                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="bottom" secondItem="uBp-vO-OvT" secondAttribute="top" id="qCI-5y-kMM"/>
+                            <constraint firstItem="ftD-cM-zcu" firstAttribute="centerX" secondItem="wlH-cY-UdJ" secondAttribute="centerX" id="vkv-p8-8e1"/>
+                            <constraint firstItem="799-xn-uqn" firstAttribute="leading" secondItem="ftD-cM-zcu" secondAttribute="leading" id="yTM-8v-rvy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -680,7 +661,6 @@
                         <outlet property="nameYourRoutine" destination="KPU-sa-iTj" id="2Um-UN-me4"/>
                         <outlet property="routineName" destination="IxA-7f-rYY" id="j2t-TK-eQk"/>
                         <outlet property="view" destination="lrN-2s-FQv" id="PHF-xr-fyF"/>
-                        <outlet property="view2" destination="EqQ-Yd-YQs" id="YL6-Uq-3Ky"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0e-Zt-Ads" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -803,7 +783,7 @@
             <objects>
                 <tableViewController id="nSK-JW-oOz" customClass="RoutineTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iln-Lz-SBt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1109,7 +1089,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X8c-TN-u3t"/>
         <segue reference="FHN-VE-7X7"/>
+        <segue reference="X8c-TN-u3t"/>
     </inferredMetricsTieBreakers>
 </document>

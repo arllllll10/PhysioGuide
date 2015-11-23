@@ -54,15 +54,15 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         //user has clicked Done button after selecting their exercises
         //show the hidden objects so the user can name their routine
         nameViewBox.hidden = false
-        //hide the background items or fade them
-        doneSelectingExercisesButton.hidden = true //don't allow people to click done twice
-        /*view.backgroundColor = UIColor.blackColor()
-        view.alpha = 0.6 // 60% opacity
-        */
-        view2.hidden = false
         
-        
-        
+        //disable the functionality of objects in the background manually
+        doneSelectingExercisesButton.userInteractionEnabled = false
+        ListContainer.userInteractionEnabled = false
+        CurrentRoutineContainer.userInteractionEnabled = false
+        //can i fade them manually too? yep
+        doneSelectingExercisesButton.alpha = 0.4
+        ListContainer.alpha = 0.4
+        CurrentRoutineContainer.alpha = 0.4
     }
     
     @IBAction func createRoutine(sender: UIButton) {

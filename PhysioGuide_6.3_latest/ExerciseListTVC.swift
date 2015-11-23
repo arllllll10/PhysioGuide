@@ -35,7 +35,7 @@ class ExerciseListTVC: UITableViewController {
     
     //how many sections should be in the table view controller? Perhaps 3, one for each of Strech/Strength/Cardio
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 1 // Currently I don't have any way of know which section an exercise would be in. Need to add some logic in a different function and also an attribute to the object (exercise.swift) being placed into the array so that they can be dequeued into the correct section.
     }
     
     //how many rows are in each section. Currently placing the number of exercises to be safe - could be different though.
