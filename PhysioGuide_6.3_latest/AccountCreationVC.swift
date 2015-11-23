@@ -1,6 +1,6 @@
 //
 //  AccountCreationVC.swift
-//  PhysioGuide_6.3_latest
+//  PhysioGuide_7
 //
 //  Author: Scott Mao, Thomas Breen, Arlene Fu, Rohm Laxton
 //  Date created : 2015-11-05.
@@ -36,9 +36,9 @@ class AccountCreationVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func SignUpButton(sender: AnyObject)
     {
-        let username=UsernameUITextField.text
-        let password=passwordUItextField.text
-        let confirmpassword=ConfirmPasswordUITextField.text
+        let username=UsernameUITextField.text!
+        let password=passwordUItextField.text!
+        let confirmpassword=ConfirmPasswordUITextField.text!
     
         //check for empty information
         if (username.isEmpty || password.isEmpty || confirmpassword.isEmpty )
@@ -57,17 +57,17 @@ class AccountCreationVC: UIViewController, UITextFieldDelegate {
     
     func displayAlertMessage(UserMessage :String)
     {
-        var alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
         let passCondition = UIAlertAction(title: "Copy That", style: UIAlertActionStyle.Default, handler: nil);
         alert.addAction(passCondition)
         self.presentViewController (alert, animated : true, completion: nil);
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if range.length + range.location > count(UsernameUITextField.text){
+        if range.length + range.location > UsernameUITextField.text!.characters.count{
             return false
         }
-        let NewLength = count(UsernameUITextField.text) + count(string) - range.length
+        let NewLength = UsernameUITextField.text!.characters.count + string.characters.count - range.length
         return NewLength<=10
     }
 

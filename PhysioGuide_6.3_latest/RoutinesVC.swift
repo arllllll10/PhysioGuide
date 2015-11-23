@@ -1,6 +1,6 @@
 //
 //  RoutinesVC.swift
-//  PhysioGuide_6.3_latest
+//  PhysioGuide_7
 //
 //  Author: Scott Mao, Thomas Breen, Arlene Fu, Rohm Laxton
 //  Date created : 2015-11-05.
@@ -38,14 +38,14 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
         // Rohm - returns us to the previous screen, not needed as we are
         // still in the correct screen
         //controller.navigationController?.popViewControllerAnimated(true)
-        print(routineIndex)
+        print(routineIndex, terminator: "")
         
         // Rohm - Had this previously in the button, but apparently the seque is tracked before the button press
         let routinesClass = Routines()
         routinesClass.updateExerciseList(routineIndex!)
         exercises[0] = routinesClass.exerciseList[0]
         exercises[1] = routinesClass.exerciseList[1]
-        print(exercises[0] + exercises[1])
+        print(exercises[0] + exercises[1], terminator: "")
     }
     
     

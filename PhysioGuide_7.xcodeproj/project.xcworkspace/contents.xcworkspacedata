@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PhysioGuide_6.3_latest.xcodeproj">
+      location = "self:/Users/tbreen/Desktop/PhysioGuide/PhysioGuide_7.xcodeproj">
    </FileRef>
 </Workspace>
