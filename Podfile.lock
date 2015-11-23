@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (3.1.3)
   - SwiftyJSON (2.3.1)
+  - YouTubePlayer (0.3.0)
 
 DEPENDENCIES:
   - Alamofire
   - SwiftyJSON
+  - YouTubePlayer
 
 SPEC CHECKSUMS:
   Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  YouTubePlayer: 88713a96c356f2c88da8925eb61438eda88bcd57
 
 COCOAPODS: 0.39.0
