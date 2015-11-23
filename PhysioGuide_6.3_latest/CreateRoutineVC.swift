@@ -21,13 +21,13 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate {
     @IBOutlet weak var routineName: UITextField! // UITextField for user to enter name into
     @IBOutlet weak var createButton: UIButton! // Button for user to click when they have entered name
     @IBOutlet weak var doneSelectingExercisesButton: UIButton!
+    @IBOutlet weak var nameViewBox: UIView! // white UIView for the naming objects to sit in for a cleaner look
+    @IBOutlet weak var view2: UIView! // this is the view that will darken the background when name nameViewBox appears
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        ListContainer.hidden = false
-        CurrentRoutineContainer.hidden = false
-        //how to make them viewed?
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,11 +40,16 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate {
     @IBAction func nameRoutine(sender: UIButton) {
         //user has clicked Done button after selecting their exercises
         //show the hidden objects so the user can name their routine
-        nameYourRoutine.hidden = false
-        routineName.hidden = false
-        createButton.hidden = false
-        //hide the background items or fade them somehow
-        doneSelectingExercisesButton.hidden = true
+        nameViewBox.hidden = false
+        //hide the background items or fade them
+        doneSelectingExercisesButton.hidden = true //don't allow people to click done twice
+        /*view.backgroundColor = UIColor.blackColor()
+        view.alpha = 0.6 // 60% opacity
+        */
+        view2.hidden = false
+        
+        
+        
     }
     
     @IBAction func createRoutine(sender: UIButton) {
