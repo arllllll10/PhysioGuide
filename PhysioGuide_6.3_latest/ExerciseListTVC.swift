@@ -31,7 +31,7 @@ class ExerciseListTVC: UITableViewController {
         super.viewDidLoad()
         
         //load sample data
-        loadSampleExercises()
+        //loadSampleExercises()
     }
     
     //how many sections should be in the table view controller? Perhaps 3, one for each of Strech/Strength/Cardio
