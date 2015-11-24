@@ -24,6 +24,7 @@ class ExerciseListTVC: UITableViewController {
         let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "youtube.com/joggingexample")!
         
         exercises += [exercise1, exercise2, exercise3]
+        
     }
     
     override func viewDidLoad() {
@@ -48,12 +49,12 @@ class ExerciseListTVC: UITableViewController {
         let cellIdentifier = "ExerciseListTVCCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ExerciseListTVCCell
         
+        
         // Fetches the appropriate exerecise for the data source layout.
         let exercise = exercises[indexPath.row]
         
         cell.name.text = exercise.name
         cell.icon.image = exercise.icon
-        
         
         return cell
     }

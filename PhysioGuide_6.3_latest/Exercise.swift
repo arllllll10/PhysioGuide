@@ -24,10 +24,8 @@ class Exercise {
         self.link = link
         
         // Init fails if there's no name or URL
-        
-        if (name.isEmpty) {//test// || link.isEmpty) {
+        if (name.isEmpty || link.isEmpty) {
             return nil
         }
-        
     }
 }

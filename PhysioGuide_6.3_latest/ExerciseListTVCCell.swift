@@ -11,7 +11,7 @@ import UIKit
 
 class ExerciseListTVCCell: UITableViewCell {
     // MARK: Properties
-    @IBOutlet weak var icon: UIImageView!    
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var name: UILabel!
     
     override func awakeFromNib() {

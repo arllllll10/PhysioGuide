@@ -10,9 +10,9 @@
 import UIKit
 
 
-class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDelegate {
     
-    // MARK: Properties
+    // MARK: Vars
     
     @IBOutlet weak var ListContainer: UIView!
     @IBOutlet weak var CurrentRoutineContainer: UIView!
@@ -22,14 +22,19 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
     @IBOutlet weak var createButton: UIButton! // Button for user to click when they have entered name
     @IBOutlet weak var doneSelectingExercisesButton: UIButton!
     @IBOutlet weak var nameViewBox: UIView! // white UIView for the naming objects to sit in for a cleaner look
-    @IBOutlet weak var view2: UIView! // this is the view that will darken the background when name nameViewBox appears
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         // handle the test field's user inut through delegate callbacks
         routineName.delegate = self
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -38,14 +43,8 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         return true
     }
     
+    //?
     func testFieldDidEndEditing(textField: UITextField) {
-        
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: Actions
@@ -54,15 +53,15 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         //user has clicked Done button after selecting their exercises
         //show the hidden objects so the user can name their routine
         nameViewBox.hidden = false
-        
-        //disable the functionality of objects in the background manually
+        //disable user interaction so they can't add/remove items while naming the routine
         doneSelectingExercisesButton.userInteractionEnabled = false
         ListContainer.userInteractionEnabled = false
         CurrentRoutineContainer.userInteractionEnabled = false
-        //can i fade them manually too? yep
+        //fade them as well to let them know
         doneSelectingExercisesButton.alpha = 0.4
         ListContainer.alpha = 0.4
         CurrentRoutineContainer.alpha = 0.4
+
     }
     
     @IBAction func createRoutine(sender: UIButton) {
