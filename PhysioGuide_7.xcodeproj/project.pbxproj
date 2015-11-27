@@ -29,8 +29,10 @@
 		9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */; };
 		953851061BF171C5009BC801 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953851051BF171C5009BC801 /* Routines.swift */; };
 		9571ADE31BF168410058FC04 /* RunRoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571ADE21BF168410058FC04 /* RunRoutineVC.swift */; };
-		D4E00D881C038F8A00FFB451 /* TryNewExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E00D871C038F8A00FFB451 /* TryNewExercise.swift */; };
-		D4E00D8A1C03A79E00FFB451 /* UpdatedExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E00D891C03A79E00FFB451 /* UpdatedExerciseView.swift */; };
+		D461DAD01C06C79D003166F0 /* UpdatedExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DACF1C06C79D003166F0 /* UpdatedExerciseTableViewCell.swift */; };
+		D461DAD21C06CF49003166F0 /* UpdatedExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD11C06CF49003166F0 /* UpdatedExerciseTableViewController.swift */; };
+		D461DAD41C06D96E003166F0 /* UpdatedExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */; };
+		D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */; };
 		D4FFDD201C037A840022F22E /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFDD1F1C037A840022F22E /* YouTubePlayer.framework */; };
 		D4FFDD231C037B700022F22E /* Pods_PhysioGuide_7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFDD221C037B700022F22E /* Pods_PhysioGuide_7.framework */; };
 /* End PBXBuildFile section */
@@ -75,8 +77,10 @@
 		953851051BF171C5009BC801 /* Routines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 		953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhysioGuide_7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7.debug.xcconfig"; sourceTree = "<group>"; };
 		9571ADE21BF168410058FC04 /* RunRoutineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunRoutineVC.swift; sourceTree = "<group>"; };
-		D4E00D871C038F8A00FFB451 /* TryNewExercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryNewExercise.swift; sourceTree = "<group>"; };
-		D4E00D891C03A79E00FFB451 /* UpdatedExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseView.swift; sourceTree = "<group>"; };
+		D461DACF1C06C79D003166F0 /* UpdatedExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatedExerciseTableViewCell.swift; path = ../UpdatedExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		D461DAD11C06CF49003166F0 /* UpdatedExerciseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseTableViewController.swift; sourceTree = "<group>"; };
+		D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseViewController.swift; sourceTree = "<group>"; };
+		D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseTVC.swift; sourceTree = "<group>"; };
 		D4FFDD1F1C037A840022F22E /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
 		D4FFDD221C037B700022F22E /* Pods_PhysioGuide_7.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PhysioGuide_7.framework; path = "Pods/../build/Debug-iphoneos/Pods_PhysioGuide_7.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,24 +130,26 @@
 			children = (
 				2F9C35E21BEC5AF600FF14B3 /* AppDelegate.swift */,
 				2F9C35E41BEC5AF600FF14B3 /* LogInVC.swift */,
+				95015AB61BF67A0200E358D6 /* Account.swift */,
 				2F9C36021BEC5B3000FF14B3 /* MainMenuVC.swift */,
 				2F9C36041BEC5C4B00FF14B3 /* AccountCreationVC.swift */,
 				2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */,
 				953851051BF171C5009BC801 /* Routines.swift */,
 				9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */,
 				9571ADE21BF168410058FC04 /* RunRoutineVC.swift */,
-				95015AB61BF67A0200E358D6 /* Account.swift */,
+				2FE886B91C014142004AB66E /* CreateRoutineVC.swift */,
+				2FE886BB1C015855004AB66E /* CurrentRoutine.swift */,
 				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
+				D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */,
+				D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */,
+				D461DAD11C06CF49003166F0 /* UpdatedExerciseTableViewController.swift */,
+				D461DACF1C06C79D003166F0 /* UpdatedExerciseTableViewCell.swift */,
 				2F3398681C02E5AC00B22C38 /* ExerciseListTVC.swift */,
 				2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */,
 				2F3398641C02E49300B22C38 /* ExerciseListTVCCell.swift */,
 				2F3398601C02DD9400B22C38 /* Exercise.swift */,
 				9521D8AE1BEEEF38008F71C9 /* ExercisesTVC.swift */,
-				D4E00D871C038F8A00FFB451 /* TryNewExercise.swift */,
-				D4E00D891C03A79E00FFB451 /* UpdatedExerciseView.swift */,
-				2FE886BB1C015855004AB66E /* CurrentRoutine.swift */,
 				2FE886BD1C015AA0004AB66E /* CollectionViewCell.swift */,
-				2FE886B91C014142004AB66E /* CreateRoutineVC.swift */,
 				2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */,
 				2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */,
 				2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */,
@@ -366,15 +372,16 @@
 			files = (
 				2FE886BC1C015855004AB66E /* CurrentRoutine.swift in Sources */,
 				2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */,
+				D461DAD01C06C79D003166F0 /* UpdatedExerciseTableViewCell.swift in Sources */,
+				D461DAD41C06D96E003166F0 /* UpdatedExerciseViewController.swift in Sources */,
 				953851061BF171C5009BC801 /* Routines.swift in Sources */,
 				2F3398611C02DD9400B22C38 /* Exercise.swift in Sources */,
 				2F3398651C02E49300B22C38 /* ExerciseListTVCCell.swift in Sources */,
 				9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */,
 				2F9C35E51BEC5AF600FF14B3 /* LogInVC.swift in Sources */,
+				D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */,
 				2FE886BE1C015AA0004AB66E /* CollectionViewCell.swift in Sources */,
 				2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */,
-				D4E00D881C038F8A00FFB451 /* TryNewExercise.swift in Sources */,
-				D4E00D8A1C03A79E00FFB451 /* UpdatedExerciseView.swift in Sources */,
 				2FE886BA1C014142004AB66E /* CreateRoutineVC.swift in Sources */,
 				95015AB71BF67A0200E358D6 /* Account.swift in Sources */,
 				2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */,
@@ -382,6 +389,7 @@
 				9571ADE31BF168410058FC04 /* RunRoutineVC.swift in Sources */,
 				9521D8AF1BEEEF38008F71C9 /* ExercisesTVC.swift in Sources */,
 				2F3398691C02E5AC00B22C38 /* ExerciseListTVC.swift in Sources */,
+				D461DAD21C06CF49003166F0 /* UpdatedExerciseTableViewController.swift in Sources */,
 				2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */,
 				2F9C36031BEC5B3000FF14B3 /* MainMenuVC.swift in Sources */,
 			);
