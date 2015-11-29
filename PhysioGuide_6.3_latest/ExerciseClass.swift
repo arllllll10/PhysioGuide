@@ -14,10 +14,10 @@ import UIKit
 class exercise
 {
     var title: String
-  //  var image: UIImage
+    var image: UIImage
     var link : String
     
-    /*init(titled: String, link: String, imageName: String)
+    init(titled: String, link: String, imageName: String)
     {
         self.title = titled
         self.link=link
@@ -26,10 +26,6 @@ class exercise
         }
         else {
             image = UIImage(named: "Default")!}
-    }*/
-    init(titled: String, link: String)
-    {
-        self.title = titled
-        self.link=link}
+    }
         
 }

@@ -15,6 +15,11 @@ class UpdatedExerciseTVC: UITableViewCell {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     
+    func configureCellWith(Exercise:exercise){
+        icon.image = Exercise.image
+        labelName.text = Exercise.title
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
