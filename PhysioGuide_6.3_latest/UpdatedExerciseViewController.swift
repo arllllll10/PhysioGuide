@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import YouTubePlayer
 
-class UpdatedExerciseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UpdatedExerciseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableViewField: UITableView!
-    @IBOutlet var videoPlayer: YouTubePlayerView!
     
     // Mark Properties
     let name = ["Squats","Biceps Curl","Calf Raise","Lateral Raise", "Lunge", "pushUp", "Shoulder Shrug"]
@@ -48,28 +46,32 @@ class UpdatedExerciseViewController: UIViewController, UITableViewDataSource, UI
         // Fetches the appropriate exercise for the data source layout.
         cell.labelName.text = name[indexPath.row]
         cell.icon.image = UIImage(named:name[indexPath.row])
-        //deal with UIButton
-        cell.checkmark.tag = indexPath.row
-        cell.checkmark.addTarget(self, action: "playVideo", forControlEvents: .TouchUpInside)
-        
         return cell
     }
-
-     func playVideo(sender: UIButton) {
-        //let linkRow = sender.tag
-        if (sender.tag == 0){
-            videoPlayer.loadVideoID(link[0])
-            videoPlayer.play()}
-    }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        self.performSegueWithIdentifier("showView", sender: self)
+        
     }
-    */
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "showView")
+        {
+            let destination = segue.destinationViewController as! PlayVideoViewController
+            
+            let indexPath = self.tableViewField.indexPathForSelectedRow!
+            
+            let titleString = link[indexPath.row]
+            
+            destination.linkString = titleString
+            
+            self.tableViewField.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        }
+        
+    }
+  
+   
 }

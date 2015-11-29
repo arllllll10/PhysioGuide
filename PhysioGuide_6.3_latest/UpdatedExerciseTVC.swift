@@ -14,7 +14,6 @@ class UpdatedExerciseTVC: UITableViewCell {
     
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var checkmark: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
