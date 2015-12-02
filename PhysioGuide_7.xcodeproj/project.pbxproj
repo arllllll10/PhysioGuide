@@ -21,9 +21,10 @@
 		2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */; };
 		2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */; };
 		2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */; };
+		2FCAB7881C0EA4990022EDA2 /* CurrentRoutineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAB7871C0EA4990022EDA2 /* CurrentRoutineTVC.swift */; };
+		2FCAB78A1C0EA5DD0022EDA2 /* CurrentRoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCAB7891C0EA5DD0022EDA2 /* CurrentRoutineCell.swift */; };
 		2FE886BA1C014142004AB66E /* CreateRoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE886B91C014142004AB66E /* CreateRoutineVC.swift */; };
 		2FE886BC1C015855004AB66E /* CurrentRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE886BB1C015855004AB66E /* CurrentRoutine.swift */; };
-		2FE886BE1C015AA0004AB66E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE886BD1C015AA0004AB66E /* CollectionViewCell.swift */; };
 		95015AB71BF67A0200E358D6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95015AB61BF67A0200E358D6 /* Account.swift */; };
 		9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */; };
 		953851061BF171C5009BC801 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953851051BF171C5009BC801 /* Routines.swift */; };
@@ -117,9 +118,10 @@
 		2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutinesVC.swift; sourceTree = "<group>"; };
 		2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesVC.swift; sourceTree = "<group>"; };
 		2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		2FCAB7871C0EA4990022EDA2 /* CurrentRoutineTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRoutineTVC.swift; sourceTree = "<group>"; };
+		2FCAB7891C0EA5DD0022EDA2 /* CurrentRoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRoutineCell.swift; sourceTree = "<group>"; };
 		2FE886B91C014142004AB66E /* CreateRoutineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoutineVC.swift; sourceTree = "<group>"; };
 		2FE886BB1C015855004AB66E /* CurrentRoutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentRoutine.swift; sourceTree = "<group>"; };
-		2FE886BD1C015AA0004AB66E /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6E6B059F3445DA7741D68EF4 /* Pods-PhysioGuide_7.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhysioGuide_7.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7.release.xcconfig"; sourceTree = "<group>"; };
 		889AA6AAA55FAD65420352E4 /* Pods_PhysioGuide_7.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhysioGuide_7.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95015AB61BF67A0200E358D6 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -243,6 +245,8 @@
 				2FE886B91C014142004AB66E /* CreateRoutineVC.swift */,
 				2FE886BB1C015855004AB66E /* CurrentRoutine.swift */,
 				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
+				2FCAB7891C0EA5DD0022EDA2 /* CurrentRoutineCell.swift */,
+				2FCAB7871C0EA4990022EDA2 /* CurrentRoutineTVC.swift */,
 				D4E9D8251C0AAEBE00877D4B /* ExerciseArray.swift */,
 				D4E9D8271C0AAF7E00877D4B /* ExerciseClass.swift */,
 				D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */,
@@ -252,7 +256,6 @@
 				2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */,
 				2F3398641C02E49300B22C38 /* ExerciseListTVCCell.swift */,
 				2F3398601C02DD9400B22C38 /* Exercise.swift */,
-				2FE886BD1C015AA0004AB66E /* CollectionViewCell.swift */,
 				2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */,
 				2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */,
 				2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */,
@@ -593,9 +596,10 @@
 				2F9C35E51BEC5AF600FF14B3 /* LogInVC.swift in Sources */,
 				D4E9D8241C0A7B6A00877D4B /* PlayVideoViewController.swift in Sources */,
 				D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */,
-				2FE886BE1C015AA0004AB66E /* CollectionViewCell.swift in Sources */,
+				2FCAB7881C0EA4990022EDA2 /* CurrentRoutineTVC.swift in Sources */,
 				2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */,
 				2FE886BA1C014142004AB66E /* CreateRoutineVC.swift in Sources */,
+				2FCAB78A1C0EA5DD0022EDA2 /* CurrentRoutineCell.swift in Sources */,
 				95015AB71BF67A0200E358D6 /* Account.swift in Sources */,
 				2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */,
 				2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */,
