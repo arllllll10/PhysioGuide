@@ -24,13 +24,13 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return false
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     @IBAction func ExitKeyboard(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
@@ -38,29 +38,65 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     
     var arrayOfUsername: [String] = ["arlene", "rohm", "scott","thomas"]
     var arrayOfPassword: [String] = ["arlene", "rohm", "scott","thomas"]
-
+    
     
     @IBAction func LogInButtom(sender: AnyObject) {
-        let username=usernameUITextField.text!
-        let password=passwardUITextField.text!
+        let user=usernameUITextField.text!
+        let pass=passwardUITextField.text!
+        let accountClass = Account();
+        //var count = 0;
+        let mm : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuVC")
+        
+        
         
         //check for empty information
-        if (username.isEmpty || password.isEmpty)
+        if (user.isEmpty || pass.isEmpty)
         { //display alert to tell user fill in the information
             displayAlertMessage ("All fields are required")
             return
         }
-        if(arrayOfUsername.contains(username))
+        
+        if(!(user.isEmpty) && !(pass.isEmpty))
         {
-            if( arrayOfUsername.indexOf(username) != arrayOfPassword.indexOf(password))
-            {   // Login is successfull
-                displayAlertMessage ("username or password failed")
-                return
-            }
+            var state: Int = -1
+            
+            // calls to Account, asks if the username and password match a record in the database
+            // pushes to the Main Menu if successful
+            accountClass.checkPassword(user, password: pass, completionHandler:  { value in
+                 state = value
+                 //print("something  \(state)")
+                if state == 0 {
+                    self.displayAlertMessage ("Username or password failed")
+                    return
+                } else if(state == 1){
+                    self.showViewController(mm as! UIViewController, sender: mm)
+                    return
+                }
+                else {
+                    self.displayAlertMessage("No response from server")
+                }
+            })
+            
+            /*while(state == -1 && count < 10)
+            {
+                count++
+                print(count)
+                print("state is")
+                print(state)
+                if state == 0 {
+                    displayAlertMessage ("username or password failed")
+                    return
+                } else if(state == 1){
+                    print("show next page")
+                    return
+                }
+                else {
+                    print("repeating")
+                }
+            }*/
+            
         }
-        if (!arrayOfUsername.contains(username)){
-            displayAlertMessage ("username or password failed")
-            return}
+        
     }
     
     func displayAlertMessage(UserMessage :String)
@@ -70,7 +106,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         alert.addAction(passCondition)
         self.presentViewController (alert, animated : true, completion: nil);
     }
-
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if range.length + range.location > usernameUITextField.text!.characters.count{
             return false

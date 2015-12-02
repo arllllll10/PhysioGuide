@@ -9,17 +9,74 @@
 //  different error checks.
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class Account{
+    
+    /*var identity: [String:AnyObject] = [
+    "username": "something",
+    "password": "something"
+    ]*/
+    var arrRes = [String:AnyObject]()
+    var something = [String:AnyObject]()
+    var valid :Int = -1
+    //var count : Int  = 0
+    
+    
+    func setValid(num :Int)
+    {
+        valid = num
+    }
     
     // vars i can't think of at the moment
     
     // func checkUsername(username : String) -> bool
-    // check if the current username exists, return a bool 
+    // check if the current username exists, return a bool
     // for "invalid username test" and account creation
     
     
-    // func checkPassword(username : String, password : String) -> bool
+    // Rohm - Pings the server and checks if the username and password exist. THE CULMINATION OF 5 DAYS OF DATABASE, SERVER, PHP, JSON TORTURE. YES, OH GOD YES.
+    func checkPassword(username : String, password : String, completionHandler: (Int) -> Void)
+    {
+        
+        print(username + password)
+        let identity: [String:String] = ["username":username , "password":password];
+        
+        
+        Alamofire
+            .request(.POST, "http://52.27.94.207/checkUser.php", parameters : identity, encoding: ParameterEncoding.URL)
+            .validate()
+            .responseJSON {
+                (responseData) in
+                
+                        let swiftyJsonVar = JSON(responseData.result.value!)
+                        let value = swiftyJsonVar["status"].int!
+                        self.setValid(value)
+                
+                
+                            if swiftyJsonVar["status"].int! == 1 {
+                                print("Autheticated")
+                                //return
+                            }else if swiftyJsonVar["status"].int! == 0
+                            {
+                                print("Not authenticated")
+                            }else {
+                                print("no reply")
+                            }
+                        completionHandler(value)
+                    }
+        
+                
+                
+                
+    }
+        
+
+    
+    
+    
+    // func checkPassword(username : String, password : String)
     // check if the current username and password match the existing
     // username and password
     
