@@ -36,23 +36,47 @@ class AccountCreationVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func SignUpButton(sender: AnyObject)
     {
-        let username=UsernameUITextField.text!
-        let password=passwordUItextField.text!
+        let user=UsernameUITextField.text!
+        let pass=passwordUItextField.text!
         let confirmpassword=ConfirmPasswordUITextField.text!
+        let accountClass = Account()
     
         //check for empty information
-        if (username.isEmpty || password.isEmpty || confirmpassword.isEmpty )
+        if (user.isEmpty || pass.isEmpty || confirmpassword.isEmpty )
         { //display alert to tell user fill in the information
             displayAlertMessage ("All fields are required")
             return
         }
     
         //check password confirmation
-        if (password != confirmpassword)
+        if (pass != confirmpassword)
         {   //display alert
             displayAlertMessage ("Password confirmation failed")
             return
         }
+        
+        if (pass == confirmpassword && !user.isEmpty)
+        {
+            var state : Int = -1
+            let mm : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuVC")
+            
+            
+            accountClass.addUser(user, password: pass, completionHandler: { added in
+                state = added
+                if state == 0 {
+                    self.displayAlertMessage ("Username exists")
+                    return
+                } else if(state == 1){
+                    self.showViewController(mm as! UIViewController, sender: mm)
+                    return
+                }
+                else {
+                    self.displayAlertMessage("No response from server")
+                }
+            })
+            
+        }
+        
     }
     
     func displayAlertMessage(UserMessage :String)

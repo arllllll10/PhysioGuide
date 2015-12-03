@@ -20,14 +20,12 @@ class Account{
     ]*/
     var arrRes = [String:AnyObject]()
     var something = [String:AnyObject]()
-    var valid :Int = -1
+    
     //var count : Int  = 0
     
+   
     
-    func setValid(num :Int)
-    {
-        valid = num
-    }
+    
     
     // vars i can't think of at the moment
     
@@ -52,11 +50,12 @@ class Account{
                 
                         let swiftyJsonVar = JSON(responseData.result.value!)
                         let value = swiftyJsonVar["status"].int!
-                        self.setValid(value)
+                
                 
                 
                             if swiftyJsonVar["status"].int! == 1 {
                                 print("Autheticated")
+                                
                                 //return
                             }else if swiftyJsonVar["status"].int! == 0
                             {
@@ -73,7 +72,32 @@ class Account{
     }
         
 
-    
+    func addUser(username : String, password: String, completionHandler: (Int) -> Void)
+    {
+        print(username + password)
+        let identity: [String:String] = ["username": username , "password" : password]
+        
+        Alamofire
+            .request(.POST, "http://52.27.94.207/insert.php", parameters : identity, encoding: ParameterEncoding.URL)
+            .validate()
+            .responseJSON {
+                (responseData) in
+                    let swiftyJsonVarAdded = JSON(responseData.result.value!)
+                    let added = swiftyJsonVarAdded["status"].int!
+                
+                if added == 1 {
+                    print("Added to db")
+                } else if added == 0 {
+                    print("Already exists")
+                } else {
+                    print("No response")
+                }
+                completionHandler(added)
+                
+        }
+        
+        
+    }
     
     
     // func checkPassword(username : String, password : String)

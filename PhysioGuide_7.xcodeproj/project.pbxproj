@@ -28,6 +28,7 @@
 		9521D8B31BEF230B008F71C9 /* RoutineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */; };
 		953851061BF171C5009BC801 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953851051BF171C5009BC801 /* Routines.swift */; };
 		9571ADE31BF168410058FC04 /* RunRoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571ADE21BF168410058FC04 /* RunRoutineVC.swift */; };
+		CA6E62161C10524F000DF4A6 /* LocalSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E62151C10524F000DF4A6 /* LocalSave.swift */; };
 		D44D6D991C0AC6A400AEE63B /* backExtension.png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D661C0AC6A400AEE63B /* backExtension.png */; };
 		D44D6D9A1C0AC6A400AEE63B /* backExtension(machine).png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D671C0AC6A400AEE63B /* backExtension(machine).png */; };
 		D44D6D9B1C0AC6A400AEE63B /* benchPress.png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D681C0AC6A400AEE63B /* benchPress.png */; };
@@ -127,6 +128,7 @@
 		953851051BF171C5009BC801 /* Routines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 		953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhysioGuide_7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7.debug.xcconfig"; sourceTree = "<group>"; };
 		9571ADE21BF168410058FC04 /* RunRoutineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunRoutineVC.swift; sourceTree = "<group>"; };
+		CA6E62151C10524F000DF4A6 /* LocalSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalSave.swift; sourceTree = "<group>"; };
 		D44D6D661C0AC6A400AEE63B /* backExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backExtension.png; path = icon/backExtension.png; sourceTree = "<group>"; };
 		D44D6D671C0AC6A400AEE63B /* backExtension(machine).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backExtension(machine).png"; path = "icon/backExtension(machine).png"; sourceTree = "<group>"; };
 		D44D6D681C0AC6A400AEE63B /* benchPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = benchPress.png; path = icon/benchPress.png; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				2F9C35E41BEC5AF600FF14B3 /* LogInVC.swift */,
 				95015AB61BF67A0200E358D6 /* Account.swift */,
 				2F9C36021BEC5B3000FF14B3 /* MainMenuVC.swift */,
+				CA6E62151C10524F000DF4A6 /* LocalSave.swift */,
 				2F9C36041BEC5C4B00FF14B3 /* AccountCreationVC.swift */,
 				2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */,
 				953851051BF171C5009BC801 /* Routines.swift */,
@@ -593,6 +596,7 @@
 				D4E9D8241C0A7B6A00877D4B /* PlayVideoViewController.swift in Sources */,
 				D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */,
 				2FCAB7881C0EA4990022EDA2 /* CurrentRoutineTVC.swift in Sources */,
+				CA6E62161C10524F000DF4A6 /* LocalSave.swift in Sources */,
 				2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */,
 				2FE886BA1C014142004AB66E /* CreateRoutineVC.swift in Sources */,
 				2FCAB78A1C0EA5DD0022EDA2 /* CurrentRoutineCell.swift in Sources */,

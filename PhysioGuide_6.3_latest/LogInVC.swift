@@ -8,11 +8,14 @@
 //  Description:
 
 import UIKit
+import CoreData
 
 class LogInVC: UIViewController, UITextFieldDelegate {
     //Mark: Propertities
     @IBOutlet weak var usernameUITextField: UITextField!
     @IBOutlet weak var passwardUITextField: UITextField!
+    var storedUser = [NSManagedObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -69,6 +72,8 @@ class LogInVC: UIViewController, UITextFieldDelegate {
                     self.displayAlertMessage ("Username or password failed")
                     return
                 } else if(state == 1){
+                    //self.saveName(user)
+                    LocalSave.sharedLocalSave.localUser = user
                     self.showViewController(mm as! UIViewController, sender: mm)
                     return
                 }
@@ -77,27 +82,12 @@ class LogInVC: UIViewController, UITextFieldDelegate {
                 }
             })
             
-            /*while(state == -1 && count < 10)
-            {
-                count++
-                print(count)
-                print("state is")
-                print(state)
-                if state == 0 {
-                    displayAlertMessage ("username or password failed")
-                    return
-                } else if(state == 1){
-                    print("show next page")
-                    return
-                }
-                else {
-                    print("repeating")
-                }
-            }*/
+            
             
         }
         
     }
+    
     
     func displayAlertMessage(UserMessage :String)
     {
