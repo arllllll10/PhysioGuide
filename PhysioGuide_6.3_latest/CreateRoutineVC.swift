@@ -12,7 +12,12 @@ import UIKit
 
 class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDelegate {
     
-    // MARK: Vars
+    // MARK: Properties
+    
+    //references to the container view controllers
+    private var embeddedViewController1: ExerciseListTVC!
+    private var embeddedViewController2: CurrentRoutineTVC!
+    //
     
     @IBOutlet weak var ListContainer: UIView!
     @IBOutlet weak var CurrentRoutineContainer: UIView!
@@ -66,6 +71,23 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
     
     @IBAction func createRoutine(sender: UIButton) {
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc  = segue.destinationViewController as? ExerciseListTVC where segue.identifier == "ExerciseListSegue" {
+            self.embeddedViewController1 = vc
+        }
+        if let vc = segue.destinationViewController as? CurrentRoutineTVC where segue.identifier == "CurrentRoutineSegue" {
+            self.embeddedViewController2 = vc
+        }
+    }
+    
+    func myfunc() {
+        self.embeddedViewController2.myfunc()
+    }
+    
+    func addExercise(e: Exercise) -> Void {
+        self.embeddedViewController2.addExercise(e)
     }
     
 }

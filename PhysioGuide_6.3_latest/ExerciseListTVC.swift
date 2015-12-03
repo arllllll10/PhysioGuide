@@ -11,6 +11,8 @@ import UIKit
 class ExerciseListTVC: UITableViewController {
     // MARK: Properties
     
+    internal var parentViewController1: CreateRoutineVC!
+    
     var exercises = [Exercise]()
     
     func loadSampleExercises() {
@@ -59,5 +61,23 @@ class ExerciseListTVC: UITableViewController {
         return cell
     }
     
+    
+    
+    //make a reference for parentViewController1 so that I can call functions from it
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "ExerciseListSegue" {
+            self.parentViewController1 = vc
+        }
+    }
+    
+    //do something when selected, like add the cell to the CurrentRoutineTVC
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        //let selected = exercises[indexPath.row]
+        //self.parentViewController1.addExercise(selected)
+        //self.parentViewController1.myfunc()
+        //these dont work currently, trying to test passing data between view controllers in containers. They would
+        //use the embedded segue to do so.
+    }    
     
 }

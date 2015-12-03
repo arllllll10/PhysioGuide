@@ -11,6 +11,8 @@ import UIKit
 class CurrentRoutineTVC: UITableViewController {
     // MARK: Properties
     
+    internal var parentViewController1: CreateRoutineVC!
+    
     var exercises = [Exercise]()
     
     /*
@@ -59,6 +61,23 @@ class CurrentRoutineTVC: UITableViewController {
         
         return cell
     }
+    
+    //make a reference for parentViewController1 so that I can call functions from it
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "CurrentRoutineSegue" {
+            self.parentViewController1 = vc
+        }
+    }
+    
+    func myfunc() {
+        print("plain")
+    }
+    
+    func addExercise(e: Exercise) -> Void {
+        //do something
+        print("yayyaya")
+    }
+    
     
     
 }
