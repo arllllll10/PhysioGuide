@@ -81,11 +81,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
                     self.displayAlertMessage("No response from server")
                 }
             })
-            
-            
-            
         }
-        
     }
     
     
@@ -97,13 +93,13 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         self.presentViewController (alert, animated : true, completion: nil);
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    /*func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if range.length + range.location > usernameUITextField.text!.characters.count{
             return false
         }
         let NewLength = usernameUITextField.text!.characters.count + string.characters.count - range.length
-        return NewLength<=10
+        return NewLength<=20
     }
-    
+    */
     
 }
