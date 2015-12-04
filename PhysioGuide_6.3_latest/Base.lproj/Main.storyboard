@@ -717,15 +717,15 @@
             <objects>
                 <tableViewController title="Current Routine TVC" id="hwr-Jf-CEw" customClass="CurrentRoutineTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="mMj-BO-Tp0">
-                        <rect key="frame" x="0.0" y="0.0" width="187" height="609"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentRoutineCell" rowHeight="90" id="Y1Y-oA-4li" customClass="CurrentRoutineCell" customModule="PhysioGuide_7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="187" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y1Y-oA-4li" id="Bge-kQ-Rqo">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOX-Wa-yeV">
@@ -812,7 +812,7 @@
             <objects>
                 <tableViewController id="nSK-JW-oOz" customClass="RoutineTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iln-Lz-SBt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1011,7 +1011,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pld-uc-QOI"/>
         <segue reference="X8c-TN-u3t"/>
+        <segue reference="FHN-VE-7X7"/>
     </inferredMetricsTieBreakers>
 </document>
