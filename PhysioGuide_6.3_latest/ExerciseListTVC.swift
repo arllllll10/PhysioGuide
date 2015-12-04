@@ -11,7 +11,8 @@ import UIKit
 class ExerciseListTVC: UITableViewController {
     // MARK: Properties
     
-    internal var parentViewController1: CreateRoutineVC!
+    //internal var parentViewController1: CreateRoutineVC! //not using right now, trying delegate
+    var delegate: ContainerViewControllerProtocol? //seems to be a header file reference
     
     var exercises = [Exercise]()
     
@@ -62,22 +63,28 @@ class ExerciseListTVC: UITableViewController {
     }
     
     
-    
+    /* Deciding not to use this version of prepareForSegue method (which uses parentviewcontroller), it wasn't working out.
     //make a reference for parentViewController1 so that I can call functions from it
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "ExerciseListSegue" {
+            print("herE\nasd\nasdn\nsdn\ns\nda\nd\nsndn\n")
             self.parentViewController1 = vc
+            print("herE\nasd\nasdn\nsdn\ns\nda\nd\nsndn\n")
         }
-    }
+    }*/
     
     //do something when selected, like add the cell to the CurrentRoutineTVC
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        //let selected = exercises[indexPath.row]
-        //self.parentViewController1.addExercise(selected)
-        //self.parentViewController1.myfunc()
-        //these dont work currently, trying to test passing data between view controllers in containers. They would
-        //use the embedded segue to do so.
-    }    
+        let index = indexPath.row // This is the specified row of the table list. Starts from 0, goes to exercises.count-1
+        print("You've selected \(exercises[index].name).")
+        //use delegate to pass information to the parent, CreateRoutineVC, which will then pass to CurrentRoutineTVC
+        self.delegate?.addExercise(exercises[index]) // Passing the entire exercise object which includes its image, name, and youtube link
+    }
     
+    
+}
+
+protocol ContainerViewControllerProtocol {
+    func addExercise(e: Exercise)
 }

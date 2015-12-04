@@ -10,7 +10,7 @@
 import UIKit
 
 
-class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDelegate {
+class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDelegate, ContainerViewControllerProtocol {
     
     // MARK: Properties
     
@@ -74,6 +74,18 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ExerciseListSegue" {
+            let containerViewController = segue.destinationViewController as! ExerciseListTVC
+            containerViewController.delegate = self
+        }
+        //parent attempt
+        if let vc = segue.destinationViewController as? CurrentRoutineTVC where segue.identifier == "CurrentRoutineSegue" {
+            self.embeddedViewController2 = vc
+        }
+    }
+    
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc  = segue.destinationViewController as? ExerciseListTVC where segue.identifier == "ExerciseListSegue" {
             self.embeddedViewController1 = vc
         }
@@ -81,13 +93,16 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
             self.embeddedViewController2 = vc
         }
     }
+    */
     
-    func myfunc() {
-        self.embeddedViewController2.myfunc()
-    }
     
     func addExercise(e: Exercise) -> Void {
         self.embeddedViewController2.addExercise(e)
     }
+    
+    /*
+    func addExercise(e: Exercise) {
+        //pass information to CurrentRoutineTVC so they can make a new cell
+    }*/
     
 }
