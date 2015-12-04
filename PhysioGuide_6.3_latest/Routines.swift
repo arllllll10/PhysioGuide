@@ -12,6 +12,8 @@
 
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 // might need to pass down the username from login, don't know if the app "knows"
 // it at this point innately
@@ -25,9 +27,28 @@ class Routines{
     var exerciseList: [String] = [""]
     
     
-    // func retrieveRoutines(username : String)
     // retrieves the routines the username has created and are available by default
     // displays them on the routines screen.
+    func retrieveRoutines(username : String, completionHandler: (JSON) -> Void){
+        print(username)
+        let identity: [String:String] = ["username":username];
+        
+        
+        Alamofire
+            .request(.POST, "http://52.27.94.207/showRoutines.php", parameters : identity, encoding: ParameterEncoding.URL)
+            .validate()
+            .responseJSON {
+                (responseData) in
+                
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                //print(swiftyJsonVar)
+                
+                completionHandler(swiftyJsonVar)
+        }
+        
+        
+    }
     
     
     // func deleteRoutine(routineID : NSInteger)
