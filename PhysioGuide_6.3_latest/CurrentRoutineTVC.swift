@@ -14,6 +14,7 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
     //internal var parentViewController1: CreateRoutineVC!
     
     var exercises = [Exercise]()
+
     
     /*
     func loadSampleExercises() {
@@ -115,27 +116,47 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        /*
-        let index = indexPath.row // This is the specified row of the table list. Starts from 0, goes to exercises.count-1
+        //let's try to get the data from the cell instead of something else ayyy
+        //let index = indexPath.row // This is the specified row of the table list. Starts from 0, goes to exercises.count-1
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! CurrentRoutineCell
+        print("cell name: \(cell.name.text)")
         //print("You've selected \(exercises[index].name).")
         for x in exercises {
             print(x.name)
         }
         print(exercises.count)
-        */
+        if cell.icon.image != nil {
+            print("has an image")
+        }
+        
     }
     
     
     func addExercise(e: Exercise) -> Void {
-        //do something
-        //print("addExercise() ran inside currentRoutineTVC, neat")
-        //make a new cell and update the table
-        //can i do this?
-        //print(
+        
         let newIndexPath = NSIndexPath(forRow: exercises.count, inSection: 0)
         exercises.append(e)
-        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom) //is that it?
-        self.tableView.reloadData()
+        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom) // this creates a new row for a cell but not a new cell, returns void
+        
+        //test code below
+            
+        //let cellIdentifier = "CurrentRoutineCell" //maybe not important, I don't think I do the dequeue here..
+        let cell = tableView.cellForRowAtIndexPath(newIndexPath) as! CurrentRoutineCell // this should create a cell for the recently added row and make it of type CurrentRoutineCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: newIndexPath) as! CurrentRoutineCell
+        // Fetches the appropriate exerecise for the data source layout.
+        let exercise = exercises[newIndexPath.row] //should be the most recently added one. newIndexPath.row should also be == exercises.count-1 because if there is 1 exercise in our routine it will be displayed on the first row "0", let's check
+        print("exercises.count: \(exercises.count)\nnewIndexPath.row: \(newIndexPath.row)") //confirmed
+            
+        cell.name.text = exercise.name
+        cell.icon.image = exercise.icon
+        
+        //somehow how to get this cell to be updated or something, it isn't working out as I planned
+        
+        //will this even do anything
+
+        
+        
+        //self.tableView.reloadData()
     }
     
     
