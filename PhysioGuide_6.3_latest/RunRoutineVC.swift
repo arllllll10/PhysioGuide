@@ -10,25 +10,49 @@
 //  routine acceptance from previous screen.
 
 import UIKit
+import YouTubePlayer
 
 class RunRoutineVC: UIViewController {
     
-    @IBOutlet var label1: UILabel!
-    @IBOutlet var label2: UILabel!
-   
-    var label1Text = String()
-    var label2Text = String()
+    @IBOutlet weak var VideoInRoutine: YouTubePlayerView!
     
+    //-------------------Need Modify--------------//
+    //here should input an link which is the current exercise run in routine
+    var linkString: String!
+    //the properties (name, icon, link) for multiples exercise should be done later
+    var labelText = String()
+    //-------------------Need Modify--------------//
+
+    @IBOutlet weak var imageForCurrentExercise: UIImageView!
+    @IBOutlet weak var NameForCurrentExercise: UILabel!
+    @IBOutlet weak var NextExerciseName: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        label1.text = label1Text
-        label2.text = label2Text
-        
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
-    
-    
+//     e.g. there is an array OR dictionary
+//    then can use a for loop to change imageForCurrentExercise, NameForCurrentExercise,NextExerciseName
+//    but first need get size , e.g. n
+//
+//the name of icon should be the same as labelText (for convienience)
+//    for (var i = 0; i < n; i++){
+//        VideoInRoutine.loadVideoID(linkString[i])
+//        VideoInRoutine.play()
+//        NameForCurrentExercise.text = labelText[i]
+//        imageForCurrentExercise.image= UIImage(named: labelText[i])
+//        if (i != (n-1))
+//            NextExerciseName.text= labelText[i+1]
+//        else
+//            NextExerciseName.text= "This is your last one!"
+//    }
+//
+
     
     
 }

@@ -1,0 +1,84 @@
+//
+//  AccelerometerDetectionViewController.swift
+//  PhysioGuide_7
+//
+//  Created by Arlene、 on 2015-12-05.
+//  Copyright © 2015 Team STAR. All rights reserved.
+//
+
+import UIKit
+import CoreMotion
+
+class AccelerometerDetectionViewController: UIViewController {
+
+    var currentMaxAccX: Double = 0.0
+    var currentMaxAccY: Double = 0.0
+    var currentMaxAccZ: Double = 0.0
+    
+    var motionManager = CMMotionManager()
+    
+    @IBOutlet weak var accX: UILabel!
+    @IBOutlet weak var accY: UILabel!
+    @IBOutlet weak var accZ: UILabel!
+    @IBOutlet weak var maxAccX: UILabel!
+    @IBOutlet weak var maxAccY: UILabel!
+    @IBOutlet weak var maxAccZ: UILabel!
+    
+    @IBAction func resetMaxValues(){
+        currentMaxAccX = 0
+        currentMaxAccY = 0
+        currentMaxAccZ = 0
+    }
+    
+    override func viewDidLoad() {
+        self.resetMaxValues()
+        
+        //set motionManager Properties
+        //below the variable (like 0.2) is the time interval that how often to update a new value
+        //0.2 represent 0.2 second
+        motionManager.accelerometerUpdateInterval = 0.2
+        
+        //collect data
+        /*motionManager.startAccelerometerUpdatesToQueue (NSOperationQueue(), withHandler: { (accelerometerData: CMAccelerometerData!, error: NSError!) in
+            self.outputAccelerationData(accelerometerData.acceleration)
+            if (error != nil){
+                print ("\(error)")
+            }
+        })*/
+        
+        let _:CMAccelerometerData!
+        let _:NSError!
+        if (motionManager.accelerometerAvailable){
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: {
+            accelerometerData, error in
+                //let acceleration = accelerometerData!.acceleration
+                //self.outputAccelerationData(acceleration)
+                self.outputAccelerationData(accelerometerData!.acceleration)
+            })
+        }
+        super.viewDidLoad()
+        
+    }
+
+    
+    func outputAccelerationData (acceleration : CMAcceleration){
+        accX?.text = "\(acceleration.x)"
+        if fabs(acceleration.x) > fabs(currentMaxAccX){
+            currentMaxAccX = acceleration.x}
+        accY?.text = "\(acceleration.y)"
+        if fabs(acceleration.y) > fabs(currentMaxAccY){
+            currentMaxAccY = acceleration.y}
+        accZ?.text = "\(acceleration.z)"
+        if fabs(acceleration.z) > fabs(currentMaxAccZ){
+            currentMaxAccZ = acceleration.z}
+        maxAccX?.text = "\(currentMaxAccX)"
+        maxAccY?.text = "\(currentMaxAccY)"
+        maxAccZ?.text = "\(currentMaxAccZ)"
+        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+ 
+}
