@@ -57,10 +57,20 @@ class Routines{
     
     // func createRoutine(routineName : String, exerciseList : [String])
     // adds a new routine to the server from the create routine screen.
+    func createRoutine(aNewRoutine : [String:String], completionHandler: (Int) -> Void){
+        Alamofire
+            .request(.POST, "http://52.27.94.207/addRoutine.php", parameters : aNewRoutine, encoding: ParameterEncoding.URL)
+            .validate()
+            .responseJSON{
+                (responseData) in
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                let confirmation = swiftyJsonVar["status"].int!
+                completionHandler(confirmation)
+        }
+        
+    }
     
     
-    // func addDefaultRoutines()
-    // adds the default basic routines to the user's database
     
     
     // func checkRoutine(routineName : String) -> bool
