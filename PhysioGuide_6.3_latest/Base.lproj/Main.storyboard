@@ -565,7 +565,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wG6-RF-P6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-629" y="1072"/>
+            <point key="canvasLocation" x="-631" y="1072"/>
         </scene>
         <!--CreateRountineVC-->
         <scene sceneID="4hq-3d-hzG">
@@ -576,32 +576,26 @@
                         <viewControllerLayoutGuide type="bottom" id="uBp-vO-OvT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lrN-2s-FQv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlH-cY-UdJ">
-                                <rect key="frame" x="282" y="570" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlH-cY-UdJ">
+                                <rect key="frame" x="170" y="637" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="nameRoutine:" destination="M5T-F7-Hqd" eventType="touchUpInside" id="Rmk-Wm-epK"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="799-xn-uqn">
-                                <rect key="frame" x="0.0" y="20" width="300" height="542"/>
-                                <connections>
-                                    <segue destination="8mi-Zd-nTt" kind="embed" identifier="ExerciseListSegue" id="IVn-Yi-iE0"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-cM-zcu">
-                                <rect key="frame" x="300" y="20" width="300" height="542"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-cM-zcu">
+                                <rect key="frame" x="188" y="44" width="187" height="585"/>
                                 <connections>
                                     <segue destination="hwr-Jf-CEw" kind="embed" identifier="CurrentRoutineSegue" id="O4E-b4-Scu"/>
                                 </connections>
                             </containerView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-ap-SRX">
-                                <rect key="frame" x="186" y="182" width="228" height="147"/>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-ap-SRX">
+                                <rect key="frame" x="74" y="182" width="228" height="147"/>
                                 <subviews>
-                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-7z-YlA">
+                                    <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-7z-YlA">
                                         <rect key="frame" x="91" y="103" width="46" height="30"/>
                                         <state key="normal" title="Create"/>
                                         <connections>
@@ -609,12 +603,12 @@
                                             <segue destination="Ogi-as-DHk" kind="show" id="X8c-TN-u3t"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxA-7f-rYY">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxA-7f-rYY">
                                         <rect key="frame" x="15" y="59" width="199" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your routine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPU-sa-iTj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name your routine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPU-sa-iTj">
                                         <rect key="frame" x="44" y="20" width="141" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -622,37 +616,18 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.95482113486842102" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="centerY" secondItem="hxk-ap-SRX" secondAttribute="centerY" id="0bI-N4-RaR"/>
-                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="leading" secondItem="hxk-ap-SRX" secondAttribute="leading" constant="15" id="9Kf-Gk-neK"/>
-                                    <constraint firstItem="KPU-sa-iTj" firstAttribute="top" secondItem="hxk-ap-SRX" secondAttribute="top" constant="20" id="GcU-GW-yIA"/>
-                                    <constraint firstItem="fHb-7z-YlA" firstAttribute="top" secondItem="IxA-7f-rYY" secondAttribute="bottom" constant="14" id="S1p-fF-7Hq"/>
-                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="centerX" secondItem="KPU-sa-iTj" secondAttribute="centerX" id="Ybw-3A-rQi"/>
-                                    <constraint firstItem="KPU-sa-iTj" firstAttribute="leading" secondItem="hxk-ap-SRX" secondAttribute="leading" constant="44" id="emq-ca-LH9"/>
-                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="top" secondItem="KPU-sa-iTj" secondAttribute="bottom" constant="18" id="qg8-Et-qBG"/>
-                                    <constraint firstItem="fHb-7z-YlA" firstAttribute="centerX" secondItem="hxk-ap-SRX" secondAttribute="centerX" id="smX-Px-B0t"/>
-                                    <constraint firstItem="IxA-7f-rYY" firstAttribute="centerX" secondItem="fHb-7z-YlA" secondAttribute="centerX" id="xAD-7y-gAl"/>
-                                </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="799-xn-uqn">
+                                <rect key="frame" x="0.0" y="44" width="188" height="585"/>
+                                <connections>
+                                    <segue destination="8mi-Zd-nTt" kind="embed" identifier="ExerciseListSegue" id="IVn-Yi-iE0"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="bottom" secondItem="uBp-vO-OvT" secondAttribute="top" id="0Rg-5H-e0h"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="top" secondItem="799-xn-uqn" secondAttribute="bottom" constant="8" symbolic="YES" id="3ei-FZ-6R4"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="centerX" secondItem="lrN-2s-FQv" secondAttribute="centerX" id="5CU-x2-r3e"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="centerX" secondItem="hxk-ap-SRX" secondAttribute="centerX" id="6XT-Y2-m5J"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="width" secondItem="ftD-cM-zcu" secondAttribute="width" id="6t5-sp-6Xk"/>
-                            <constraint firstItem="hxk-ap-SRX" firstAttribute="top" secondItem="Je4-UN-zQL" secondAttribute="bottom" constant="162" id="8h2-oB-BPd"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="top" secondItem="Je4-UN-zQL" secondAttribute="bottom" id="Cs0-Xt-NU4"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="centerX" secondItem="ftD-cM-zcu" secondAttribute="centerX" id="Dc9-iF-aJR"/>
-                            <constraint firstItem="wlH-cY-UdJ" firstAttribute="top" secondItem="ftD-cM-zcu" secondAttribute="bottom" constant="8" symbolic="YES" id="GiQ-A1-3Pa"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="leading" secondItem="799-xn-uqn" secondAttribute="trailing" id="Wnk-yE-tU0"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="top" secondItem="ftD-cM-zcu" secondAttribute="top" id="e29-HD-Tg2"/>
-                            <constraint firstAttribute="trailing" secondItem="ftD-cM-zcu" secondAttribute="trailing" id="m4o-fE-gA8"/>
-                            <constraint firstItem="ftD-cM-zcu" firstAttribute="leading" secondItem="lrN-2s-FQv" secondAttribute="leading" constant="300" id="q9G-pa-4Ry"/>
-                            <constraint firstItem="799-xn-uqn" firstAttribute="leading" secondItem="lrN-2s-FQv" secondAttribute="leading" id="vyX-Z9-99K"/>
-                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="CurrentRoutineContainer" destination="ftD-cM-zcu" id="HpE-IR-LhH"/>
                         <outlet property="ListContainer" destination="799-xn-uqn" id="var-xw-j1J"/>
@@ -666,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0e-Zt-Ads" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="1086"/>
+            <point key="canvasLocation" x="27.5" y="1105.5"/>
         </scene>
         <!--Routines-->
         <scene sceneID="g0W-be-ASe">
@@ -742,21 +717,21 @@
             <objects>
                 <tableViewController title="Current Routine TVC" id="hwr-Jf-CEw" customClass="CurrentRoutineTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="mMj-BO-Tp0">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="542"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentRoutineCell" rowHeight="90" id="Y1Y-oA-4li" customClass="CurrentRoutineCell" customModule="PhysioGuide_7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="300" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y1Y-oA-4li" id="Bge-kQ-Rqo">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOX-Wa-yeV">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrM-Q3-sqe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Exercise name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrM-Q3-sqe">
                                             <rect key="frame" x="98" y="34" width="174" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="174" id="Djg-bd-zfG"/>
@@ -788,7 +763,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzz-Nq-5Qw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="1789"/>
+            <point key="canvasLocation" x="109.5" y="1858.5"/>
         </scene>
         <!--RunRoutineVC-->
         <scene sceneID="N1W-VU-Cch">
@@ -837,7 +812,7 @@
             <objects>
                 <tableViewController id="nSK-JW-oOz" customClass="RoutineTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iln-Lz-SBt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="464"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1037,6 +1012,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="X8c-TN-u3t"/>
-        <segue reference="Pld-uc-QOI"/>
+        <segue reference="FHN-VE-7X7"/>
     </inferredMetricsTieBreakers>
 </document>
