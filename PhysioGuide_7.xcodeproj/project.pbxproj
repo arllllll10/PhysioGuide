@@ -428,6 +428,7 @@
 				TargetAttributes = {
 					2F9C35DC1BEC5AF600FF14B3 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 8YSP42Z639;
 					};
 					2F9C35F11BEC5AF600FF14B3 = {
 						CreatedOnToolsVersion = 6.3;
@@ -751,6 +752,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamSTAR.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PhysioGuide_7;
@@ -769,6 +771,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = PhysioGuide_6.3_latest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teamSTAR.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PhysioGuide_7;

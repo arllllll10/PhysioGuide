@@ -720,6 +720,13 @@
                                     <segue destination="nSK-JW-oOz" kind="embed" identifier="routineInternalSegue" id="cr7-74-Bkp"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-fA-dj0">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="R11-Cn-b2Q" kind="show" id="hA5-JU-zfL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -853,6 +860,10 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSb-Bz-59K">
+                                <rect key="frame" x="271" y="468" width="76" height="30"/>
+                                <state key="normal" title="Detail Data"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -878,7 +889,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxL-6K-DwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834.5" y="1858.5"/>
+            <point key="canvasLocation" x="842.5" y="1870.5"/>
         </scene>
         <!--Accelerometer Detection View Controller-->
         <scene sceneID="inY-dD-BYl">
@@ -941,37 +952,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQS-r6-yOp">
-                                <rect key="frame" x="159" y="112" width="42" height="21"/>
+                                <rect key="frame" x="159" y="112" width="196" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtR-B2-i6f">
-                                <rect key="frame" x="159" y="149" width="42" height="21"/>
+                                <rect key="frame" x="159" y="149" width="196" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nio-rY-bXC">
-                                <rect key="frame" x="159" y="187" width="42" height="21"/>
+                                <rect key="frame" x="159" y="187" width="196" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gny-pC-duH">
-                                <rect key="frame" x="193" y="225" width="42" height="21"/>
+                                <rect key="frame" x="193" y="225" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfX-ev-CzQ">
-                                <rect key="frame" x="193" y="263" width="42" height="21"/>
+                                <rect key="frame" x="193" y="263" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLV-C7-4hB">
-                                <rect key="frame" x="193" y="299" width="42" height="21"/>
+                                <rect key="frame" x="193" y="299" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -981,12 +992,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="accX" destination="JQS-r6-yOp" id="4YI-1H-6d3"/>
-                        <outlet property="accY" destination="RtR-B2-i6f" id="tbi-a3-Eoz"/>
-                        <outlet property="accZ" destination="Nio-rY-bXC" id="9dd-MV-ABa"/>
-                        <outlet property="macAccX" destination="Gny-pC-duH" id="ZM5-JS-2eo"/>
-                        <outlet property="macAccY" destination="CfX-ev-CzQ" id="yko-G1-Pl9"/>
-                        <outlet property="macAccZ" destination="kLV-C7-4hB" id="oPc-GJ-ZOB"/>
+                        <outlet property="accX" destination="JQS-r6-yOp" id="9lT-lR-iv1"/>
+                        <outlet property="accY" destination="RtR-B2-i6f" id="69b-XC-NVG"/>
+                        <outlet property="accZ" destination="Nio-rY-bXC" id="p4p-I0-Xpg"/>
+                        <outlet property="maxAccX" destination="Gny-pC-duH" id="5ia-hq-VTw"/>
+                        <outlet property="maxAccY" destination="CfX-ev-CzQ" id="AcX-JD-De4"/>
+                        <outlet property="maxAccZ" destination="kLV-C7-4hB" id="eyz-2I-h1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ek-Me-D3K" userLabel="First Responder" sceneMemberID="firstResponder"/>

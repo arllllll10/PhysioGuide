@@ -62,21 +62,18 @@ class AccelerometerDetectionViewController: UIViewController {
 
     
     func outputAccelerationData (acceleration : CMAcceleration){
-        accX?.text = "\(acceleration.x).2fg"
+        accX?.text = "\(acceleration.x)"
         if fabs(acceleration.x) > fabs(currentMaxAccX){
             currentMaxAccX = acceleration.x}
-        accY?.text = "\(acceleration.y).2fg"
+        accY?.text = "\(acceleration.y)"
         if fabs(acceleration.y) > fabs(currentMaxAccY){
             currentMaxAccY = acceleration.y}
-        accZ?.text = "\(acceleration.z).2fg"
+        accZ?.text = "\(acceleration.z)"
         if fabs(acceleration.z) > fabs(currentMaxAccZ){
             currentMaxAccZ = acceleration.z}
-        maxAccX?.text = "\(currentMaxAccX).2fg"
-        maxAccY?.text = "\(currentMaxAccY).2fg"
-        maxAccZ?.text = "\(currentMaxAccZ).2fg"
-
-        
-        
+        maxAccX?.text = "\(currentMaxAccX)"
+        maxAccY?.text = "\(currentMaxAccY)"
+        maxAccZ?.text = "\(currentMaxAccZ)"
         
     }
     override func didReceiveMemoryWarning() {
