@@ -39,12 +39,23 @@ class AccelerometerDetectionViewController: UIViewController {
         motionManager.accelerometerUpdateInterval = 0.2
         
         //collect data
-        motionManager.startAccelerometerUpdatesToQueue (NSOperationQueue.currentQueue(), withHandler: { (acceletometerData : CMAccelerometerData!, error: NSError!) -> Void in
-            self.outputAccelerationData(acceletometerData.acceleration)
+        /*motionManager.startAccelerometerUpdatesToQueue (NSOperationQueue(), withHandler: { (accelerometerData: CMAccelerometerData!, error: NSError!) in
+            self.outputAccelerationData(accelerometerData.acceleration)
             if (error != nil){
                 print ("\(error)")
             }
-        })
+        })*/
+        
+        let _:CMAccelerometerData!
+        let _:NSError!
+        if (motionManager.accelerometerAvailable){
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: {
+            accelerometerData, error in
+                //let acceleration = accelerometerData!.acceleration
+                //self.outputAccelerationData(acceleration)
+                self.outputAccelerationData(accelerometerData!.acceleration)
+            })
+        }
         super.viewDidLoad()
         
     }

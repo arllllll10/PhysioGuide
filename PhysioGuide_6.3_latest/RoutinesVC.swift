@@ -52,20 +52,19 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
     // Rohm - enables variables to be passed to the container object, and retrived from
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "routineInternalSegue"{
             let vc = segue.destinationViewController as! RoutineTVC
             vc.selectedIndex = routineIndex
             vc.delegate = self
         }
         
-        /*if segue.identifier == "routineRunSeque"{
+        if segue.identifier == "routineRunSeque"{
             let vc = segue.destinationViewController as! RunRoutineVC
-            //vc.label1Text = exercises[0]
-            //vc.label2Text = exercises[1]
-        }*/
-        
-    }
+            vc.label1Text = exercises[0]
+            vc.label2Text = exercises[1]
+        }
+    }*/
     
     @IBAction func runRoutineButton(sender: AnyObject) {
         
