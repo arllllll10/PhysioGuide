@@ -62,7 +62,7 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
         if segue.identifier == "routineRunSeque"{
             let vc = segue.destinationViewController as! RunRoutineVC
             vc.label1Text = exercises[0]
-            vc.label2Text = exercises[1]
+            //vc.label2Text = exercises[1]
         }
         
     }

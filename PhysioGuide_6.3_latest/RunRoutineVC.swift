@@ -10,25 +10,36 @@
 //  routine acceptance from previous screen.
 
 import UIKit
+import YouTubePlayer
 
 class RunRoutineVC: UIViewController {
     
-    @IBOutlet var label1: UILabel!
-    @IBOutlet var label2: UILabel!
-   
-    var label1Text = String()
-    var label2Text = String()
+    @IBOutlet weak var VideoInRoutine: YouTubePlayerView!
     
+    //-------------------Need Modify--------------//
+    //here should input an link which is the current exercise run in routine
+    var linkString: String!
+    //the properties (name, icon, link) for multiples exercise should be done later
+    var label1Text = String()
+    //-------------------Need Modify--------------//
+
+    
+    @IBOutlet weak var imageForCurrentExercise: UIImageView!
+
+    @IBOutlet weak var NameForCurrentExercise: UILabel!
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        label1.text = label1Text
-        label2.text = label2Text
-        
+        VideoInRoutine.loadVideoID(linkString)
+        VideoInRoutine.play()
+        NameForCurrentExercise.text = label1Text
     }
     
-    
-    
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     
 }
