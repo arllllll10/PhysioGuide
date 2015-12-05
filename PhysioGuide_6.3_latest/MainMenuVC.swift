@@ -44,7 +44,8 @@ class MainMenuVC: UIViewController {
                 
             }
             
-            print("Total lines in \(self.myRoutines[0]["routineName"]!)")
+            // myRoutines[0] - myRoutines[myRoutines.count-1] contains all of the routine lists
+            //print("Total lines in \(self.myRoutines[0]["routineName"]!)")
         })
         
        
