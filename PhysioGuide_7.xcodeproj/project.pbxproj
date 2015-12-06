@@ -92,6 +92,7 @@
 		D4E9D8241C0A7B6A00877D4B /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */; };
 		D4E9D8261C0AAEBE00877D4B /* ExerciseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9D8251C0AAEBE00877D4B /* ExerciseArray.swift */; };
 		D4E9D8281C0AAF7E00877D4B /* ExerciseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9D8271C0AAF7E00877D4B /* ExerciseClass.swift */; };
+		D4F40A831C14CB7F00C0C168 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F40A821C14CB7F00C0C168 /* HealthManager.swift */; };
 		D4FFDD201C037A840022F22E /* YouTubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFDD1F1C037A840022F22E /* YouTubePlayer.framework */; };
 		D4FFDD231C037B700022F22E /* Pods_PhysioGuide_7.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FFDD221C037B700022F22E /* Pods_PhysioGuide_7.framework */; };
 /* End PBXBuildFile section */
@@ -199,6 +200,7 @@
 		D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		D4E9D8251C0AAEBE00877D4B /* ExerciseArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseArray.swift; sourceTree = "<group>"; };
 		D4E9D8271C0AAF7E00877D4B /* ExerciseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseClass.swift; sourceTree = "<group>"; };
+		D4F40A821C14CB7F00C0C168 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		D4FFDD1F1C037A840022F22E /* YouTubePlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer.framework; path = Carthage/Build/iOS/YouTubePlayer.framework; sourceTree = "<group>"; };
 		D4FFDD221C037B700022F22E /* Pods_PhysioGuide_7.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PhysioGuide_7.framework; path = "Pods/../build/Debug-iphoneos/Pods_PhysioGuide_7.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,6 +276,7 @@
 				D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */,
 				2F9C36081BEC5C9100FF14B3 /* ExercisesVC.swift */,
 				2F3398601C02DD9400B22C38 /* Exercise.swift */,
+				D4F40A821C14CB7F00C0C168 /* HealthManager.swift */,
 				CAA8A2EB1C1457A700269EA6 /* Calories.swift */,
 				CAA8A2E91C14424C00269EA6 /* GraphView.swift */,
 				2F9C360A1BEC5C9B00FF14B3 /* StatsVC.swift */,
@@ -627,6 +630,7 @@
 				2FCAB78A1C0EA5DD0022EDA2 /* CurrentRoutineCell.swift in Sources */,
 				95015AB71BF67A0200E358D6 /* Account.swift in Sources */,
 				2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */,
+				D4F40A831C14CB7F00C0C168 /* HealthManager.swift in Sources */,
 				2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */,
 				9571ADE31BF168410058FC04 /* RunRoutineVC.swift in Sources */,
 				2FD0B1A81C13E10900D18180 /* RoutineCell.swift in Sources */,

@@ -47,12 +47,9 @@ completionHandler(added)
             .responseJSON {
                 (responseData) in
                 let swiftyJsonVar = JSON(responseData.result.value!)
-                
                 //print(swiftyJsonVar)
-                
                 completionHandler(swiftyJsonVar)
         }
-        
         
     }
 
