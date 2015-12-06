@@ -86,6 +86,7 @@
 		D44D6DCB1C0AC6A400AEE63B /* wristFlexion.png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D981C0AC6A400AEE63B /* wristFlexion.png */; };
 		D461DAD41C06D96E003166F0 /* UpdatedExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */; };
 		D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */; };
+		D497158A1C143BFB00917BFF /* AccelerationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49715891C143BFB00917BFF /* AccelerationClass.swift */; };
 		D4E91BDE1C13635F009ABB9A /* AccelerometerDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E91BDD1C13635F009ABB9A /* AccelerometerDetectionViewController.swift */; };
 		D4E91BE01C13640D009ABB9A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E91BDF1C13640D009ABB9A /* CoreMotion.framework */; };
 		D4E9D8241C0A7B6A00877D4B /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */; };
@@ -192,6 +193,7 @@
 		D44D6D981C0AC6A400AEE63B /* wristFlexion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wristFlexion.png; path = icon/wristFlexion.png; sourceTree = "<group>"; };
 		D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseViewController.swift; sourceTree = "<group>"; };
 		D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseTVC.swift; sourceTree = "<group>"; };
+		D49715891C143BFB00917BFF /* AccelerationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerationClass.swift; sourceTree = "<group>"; };
 		D4E91BDD1C13635F009ABB9A /* AccelerometerDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerDetectionViewController.swift; sourceTree = "<group>"; };
 		D4E91BDF1C13640D009ABB9A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				9571ADE21BF168410058FC04 /* RunRoutineVC.swift */,
 				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
 				D4E91BDD1C13635F009ABB9A /* AccelerometerDetectionViewController.swift */,
+				D49715891C143BFB00917BFF /* AccelerationClass.swift */,
 				2FE886B91C014142004AB66E /* CreateRoutineVC.swift */,
 				2FCAB7871C0EA4990022EDA2 /* CurrentRoutineTVC.swift */,
 				2FCAB7891C0EA5DD0022EDA2 /* CurrentRoutineCell.swift */,
@@ -617,6 +620,7 @@
 				D4E9D8241C0A7B6A00877D4B /* PlayVideoViewController.swift in Sources */,
 				D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */,
 				2FCAB7881C0EA4990022EDA2 /* CurrentRoutineTVC.swift in Sources */,
+				D497158A1C143BFB00917BFF /* AccelerationClass.swift in Sources */,
 				CA6E62161C10524F000DF4A6 /* LocalSave.swift in Sources */,
 				2F9C36051BEC5C4B00FF14B3 /* AccountCreationVC.swift in Sources */,
 				2FE886BA1C014142004AB66E /* CreateRoutineVC.swift in Sources */,
