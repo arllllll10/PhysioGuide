@@ -6,15 +6,46 @@
 //  Date created : 2015-11-08.
 //  Copyright (c) 2015 Team STAR. All rights reserved.
 //  Description:
-//  Version 0.1 : Rohm Laxton : Created a view controller and implimented the 
+//  Version 0.1 : Rohm Laxton : Created a view controller and implimented the
 //  routine acceptance from previous screen.
+//  Version 0.2 : Thomas Breen : Added some logic for determining what to do at each element in the routine array. Need to load the routine from server before this will run.
 
 import UIKit
 import YouTubePlayer
 
 class RunRoutineVC: UIViewController {
     
+    var index = 0 // The index used to select elements in the routine array.
+    var routine = [Exercise]()
+    
+    
+    
+    
+    //let's make a sample routine.
+    // ***** Sample ******
+    func loadSampleExercises() {
+        //make for loop to grab all exercises from server and include them to the exercises array
+        
+        let icon1 = UIImage(named: "Squat")
+        let exercise1 = Exercise(name: "Squat", icon: icon1, link: "10yQ6m7w__E")!
+        
+        let icon2 = UIImage(named: "bicepsCurl")
+        let exercise2 = Exercise(name: "Biceps Curl", icon: icon2, link: "nj4qeipu6ic")!
+        
+        let icon3 = UIImage(named: "CalfRaise")
+        let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "YF_OLR7tC70")!
+        
+        routine += [exercise1, exercise2, exercise3]
+    }
+    // ***** Sample ******
+    
+    
     @IBOutlet weak var VideoInRoutine: YouTubePlayerView!
+    @IBOutlet weak var currIcon: UIImageView!
+    @IBOutlet weak var currName: UILabel!
+    var currLink: String!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var nextName: UILabel!
     
     //-------------------Need Modify--------------//
     //here should input an link which is the current exercise run in routine
@@ -22,13 +53,24 @@ class RunRoutineVC: UIViewController {
     //the properties (name, icon, link) for multiples exercise should be done later
     var labelText = String()
     //-------------------Need Modify--------------//
-
-    @IBOutlet weak var imageForCurrentExercise: UIImageView!
-    @IBOutlet weak var NameForCurrentExercise: UILabel!
-    @IBOutlet weak var NextExerciseName: UILabel!
-  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadSampleExercises()
+        
+        //load in the routine from server
+        /*
+        for exercise in serverArray {
+        let e = Exercise(name: exercise.name, icon: UIImage(named: exercise.name), link: exercise.link)!
+        routine.append[e]
+        }
+        */
+        //finished loading
+        
+        // Load the information for the inital and next exercise.
+        updateInfo()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,23 +78,55 @@ class RunRoutineVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//     e.g. there is an array OR dictionary
-//    then can use a for loop to change imageForCurrentExercise, NameForCurrentExercise,NextExerciseName
-//    but first need get size , e.g. n
-//
-//the name of icon should be the same as labelText (for convienience)
-//    for (var i = 0; i < n; i++){
-//        VideoInRoutine.loadVideoID(linkString[i])
-//        VideoInRoutine.play()
-//        NameForCurrentExercise.text = labelText[i]
-//        imageForCurrentExercise.image= UIImage(named: labelText[i])
-//        if (i != (n-1))
-//            NextExerciseName.text= labelText[i+1]
-//        else
-//            NextExerciseName.text= "This is your last one!"
-//    }
-//
-
+    @IBAction func next(sender: UIButton) {
+        
+        
+        let Routines : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("RoutinesVC")
+        
+        
+        index++ //Go to the next exercise in the routine.
+        if index < routine.count { // Don't try to update if we're out of bounds.
+            updateInfo()
+            
+        } else { // If we are out of bounds that means the Finish button was clicked, so return to the RunRoutines view controller.
+            
+            print("index: \(index)")
+            print("routine.count: \(routine.count)")
+            self.showViewController(Routines as! UIViewController, sender: Routines)
+        }
+    }
+    
+    func updateInfo() {
+        currIcon.image = routine[index].icon
+        currName.text = routine[index].name
+        currLink = routine[index].link
+        if index >= routine.count-1 { // The array starts at 0 and has routine.count elements. When it reaches element routine.count-1, the next element is out of bounds.
+            // Then there is no next exercise.
+            nextName.text = ""
+            nextButton.setTitle("Finish", forState: .Normal)
+        } else {
+            nextName.text = routine[index+1].name
+        }
+    }
+    
+    
+    //     e.g. there is an array OR dictionary
+    //    then can use a for loop to change imageForCurrentExercise, NameForCurrentExercise,NextExerciseName
+    //    but first need get size , e.g. n
+    //
+    //the name of icon should be the same as labelText (for convienience)
+    //    for (var i = 0; i < n; i++){
+    //        VideoInRoutine.loadVideoID(linkString[i])
+    //        VideoInRoutine.play()
+    //        NameForCurrentExercise.text = labelText[i]
+    //        imageForCurrentExercise.image= UIImage(named: labelText[i])
+    //        if (i != (n-1))
+    //            NextExerciseName.text= labelText[i+1]
+    //        else
+    //            NextExerciseName.text= "This is your last one!"
+    //    }
+    //
+    
     
     
 }

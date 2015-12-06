@@ -62,16 +62,20 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         doneSelectingExercisesButton.userInteractionEnabled = false
         ListContainer.userInteractionEnabled = false
         CurrentRoutineContainer.userInteractionEnabled = false
+        
+        //perhaps the create button is bugged somehow
+        createButton.hidden = false
+        createButton.userInteractionEnabled = true
+        
         //fade them as well to let them know
+        /*
         doneSelectingExercisesButton.alpha = 0.4
         ListContainer.alpha = 0.4
         CurrentRoutineContainer.alpha = 0.4
-
+        */
     }
     
-    @IBAction func createRoutine(sender: UIButton) {
-        
-    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ExerciseListSegue" {
@@ -86,12 +90,12 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
     
     /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let vc  = segue.destinationViewController as? ExerciseListTVC where segue.identifier == "ExerciseListSegue" {
-            self.embeddedViewController1 = vc
-        }
-        if let vc = segue.destinationViewController as? CurrentRoutineTVC where segue.identifier == "CurrentRoutineSegue" {
-            self.embeddedViewController2 = vc
-        }
+    if let vc  = segue.destinationViewController as? ExerciseListTVC where segue.identifier == "ExerciseListSegue" {
+    self.embeddedViewController1 = vc
+    }
+    if let vc = segue.destinationViewController as? CurrentRoutineTVC where segue.identifier == "CurrentRoutineSegue" {
+    self.embeddedViewController2 = vc
+    }
     }
     */
     
@@ -100,9 +104,11 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         self.embeddedViewController2.addExercise(e)
     }
     
-    /*
-    func addExercise(e: Exercise) {
-        //pass information to CurrentRoutineTVC so they can make a new cell
-    }*/
+    var newRoutine = [Exercise]() // the empty exercise array to store the new routine in. Get the exercises from CurrentRoutineTVC
+    @IBAction func createRoutine(sender: UIButton) {
+        print("I was pressed")
+        //need to send the current routine info to the server here.
+        newRoutine = self.embeddedViewController2.saveRoutine() //this can now be passed to the run routine page or to the server
+    }
     
 }

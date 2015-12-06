@@ -17,6 +17,8 @@ class ExerciseListTVC: UITableViewController {
     var exercises = [Exercise]()
     
     func loadSampleExercises() {
+        //make for loop to grab all exercises from server and include them to the exercises array
+        
         let icon1 = UIImage(named: "Title")
         let exercise1 = Exercise(name: "Squat", icon: icon1, link: "youtube.com/squatexample")!
         
@@ -40,6 +42,10 @@ class ExerciseListTVC: UITableViewController {
     //how many sections should be in the table view controller? Perhaps 3, one for each of Strech/Strength/Cardio
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1 // Currently I don't have any way of know which section an exercise would be in. Need to add some logic in a different function and also an attribute to the object (exercise.swift) being placed into the array so that they can be dequeued into the correct section.
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Exercises"
     }
     
     //how many rows are in each section. Currently placing the number of exercises to be safe - could be different though.
@@ -66,11 +72,11 @@ class ExerciseListTVC: UITableViewController {
     /* Deciding not to use this version of prepareForSegue method (which uses parentviewcontroller), it wasn't working out.
     //make a reference for parentViewController1 so that I can call functions from it
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "ExerciseListSegue" {
-            print("herE\nasd\nasdn\nsdn\ns\nda\nd\nsndn\n")
-            self.parentViewController1 = vc
-            print("herE\nasd\nasdn\nsdn\ns\nda\nd\nsndn\n")
-        }
+    if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "ExerciseListSegue" {
+    print("herE\nasd\nasdn\nsdn\ns\nda\nd\nsndn\n")
+    self.parentViewController1 = vc
+    print("herE\nasd\nasdn\nsdn\ns\nda\nd\nsndn\n")
+    }
     }*/
     
     //do something when selected, like add the cell to the CurrentRoutineTVC

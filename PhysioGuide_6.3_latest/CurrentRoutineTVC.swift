@@ -14,21 +14,21 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
     //internal var parentViewController1: CreateRoutineVC!
     
     var exercises = [Exercise]()
-
+    
     
     /*
     func loadSampleExercises() {
-        let icon1 = UIImage(named: "Title")
-        let exercise1 = Exercise(name: "Squat", icon: icon1, link: "youtube.com/squatexample")!
-        
-        let icon2 = UIImage(named: "Title")
-        let exercise2 = Exercise(name: "Lunge", icon: icon2, link: "youtube.com/lungeexample")!
-        
-        let icon3 = UIImage(named: "Title")
-        let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "youtube.com/joggingexample")!
-        
-        exercises += [exercise1, exercise2, exercise3]
-        
+    let icon1 = UIImage(named: "Title")
+    let exercise1 = Exercise(name: "Squat", icon: icon1, link: "youtube.com/squatexample")!
+    
+    let icon2 = UIImage(named: "Title")
+    let exercise2 = Exercise(name: "Lunge", icon: icon2, link: "youtube.com/lungeexample")!
+    
+    let icon3 = UIImage(named: "Title")
+    let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "youtube.com/joggingexample")!
+    
+    exercises += [exercise1, exercise2, exercise3]
+    
     }
     */
     override func viewDidLoad() {
@@ -101,18 +101,24 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
     /*
     //make a reference for parentViewController1 so that I can call functions from it
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "CurrentRoutineSegue" {
-            self.parentViewController1 = vc
-        }
+    if let vc = segue.destinationViewController as? CreateRoutineVC where segue.identifier == "CurrentRoutineSegue" {
+    self.parentViewController1 = vc
+    }
     }*/
     /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "CurrentRoutineSegue" {
-            let pvc = segue.destinationViewController as! CreateRoutineVC
-            //pvc.delegate = self
-        }
+    if segue.identifier == "CurrentRoutineSegue" {
+    let pvc = segue.destinationViewController as! CreateRoutineVC
+    //pvc.delegate = self
     }
-*/
+    }
+
+    */
+    
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Current Routine"
+    }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -136,29 +142,14 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
         
         let newIndexPath = NSIndexPath(forRow: exercises.count, inSection: 0)
         exercises.append(e)
-        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom) // this creates a new row for a cell but not a new cell, returns void
         
-        //test code below
-            
-        //let cellIdentifier = "CurrentRoutineCell" //maybe not important, I don't think I do the dequeue here..
-        let cell = tableView.cellForRowAtIndexPath(newIndexPath) as! CurrentRoutineCell // this should create a cell for the recently added row and make it of type CurrentRoutineCell
-        //let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: newIndexPath) as! CurrentRoutineCell
-        // Fetches the appropriate exerecise for the data source layout.
-        let exercise = exercises[newIndexPath.row] //should be the most recently added one. newIndexPath.row should also be == exercises.count-1 because if there is 1 exercise in our routine it will be displayed on the first row "0", let's check
-        print("exercises.count: \(exercises.count)\nnewIndexPath.row: \(newIndexPath.row)") //confirmed
-            
-        cell.name.text = exercise.name
-        cell.icon.image = exercise.icon
-        
-        //somehow how to get this cell to be updated or something, it isn't working out as I planned
-        
-        //will this even do anything
-
-        
-        
-        //self.tableView.reloadData()
+        tableView.rowHeight = 90
+        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom) // this creates a new row and cell.
     }
     
+    func saveRoutine() -> [Exercise] {
+        return exercises
+    }
     
     
 }
