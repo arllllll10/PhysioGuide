@@ -26,14 +26,14 @@ class RunRoutineVC: UIViewController {
     func loadSampleExercises() {
         //make for loop to grab all exercises from server and include them to the exercises array
         
-        let icon1 = UIImage(named: "Squat")
-        let exercise1 = Exercise(name: "Squat", icon: icon1, link: "10yQ6m7w__E")!
+        //let icon1 = UIImage(named: "Squat")
+        let exercise1 = Exercise(name: "Squat", link: "10yQ6m7w__E")!
         
-        let icon2 = UIImage(named: "bicepsCurl")
-        let exercise2 = Exercise(name: "Biceps Curl", icon: icon2, link: "nj4qeipu6ic")!
+        //let icon2 = UIImage(named: "bicepsCurl")
+        let exercise2 = Exercise(name: "Biceps Curl", link: "nj4qeipu6ic")!
         
-        let icon3 = UIImage(named: "CalfRaise")
-        let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "YF_OLR7tC70")!
+        //let icon3 = UIImage(named: "CalfRaise")
+        let exercise3 = Exercise(name: "Jogging", link: "YF_OLR7tC70")!
         
         routine += [exercise1, exercise2, exercise3]
     }
