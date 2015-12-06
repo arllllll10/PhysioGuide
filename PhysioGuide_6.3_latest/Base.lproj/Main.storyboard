@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bce-f4-BT5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bce-f4-BT5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -107,7 +107,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="182" y="-341"/>
+            <point key="canvasLocation" x="599.5" y="-317.5"/>
         </scene>
         <!--Stats-->
         <scene sceneID="kuZ-KO-orj">
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k79-iJ-SPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="-333"/>
+            <point key="canvasLocation" x="1714.5" y="-897.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="HQQ-f8-PHV">
@@ -303,7 +303,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spp-jm-Ert" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544" y="-573"/>
+            <point key="canvasLocation" x="2207.5" y="-519.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="a5n-5f-v66">
@@ -337,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ4-aP-a3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2406" y="-573"/>
+            <point key="canvasLocation" x="2732.5" y="-519.5"/>
         </scene>
         <!--LogInVC-->
         <scene sceneID="ufC-wZ-h7g">
@@ -453,7 +453,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="643.5" y="366.5"/>
+            <point key="canvasLocation" x="75.5" y="-317.5"/>
         </scene>
         <!--MainMenuVC-->
         <scene sceneID="WK9-Z9-0nO">
@@ -541,34 +541,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thQ-cf-oOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="345"/>
+            <point key="canvasLocation" x="1222.5" y="-59.5"/>
         </scene>
         <!--Exercise ListTVC-->
         <scene sceneID="u4p-J4-GB3">
             <objects>
                 <tableViewController id="8mi-Zd-nTt" customClass="ExerciseListTVC" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="DOK-xV-mEg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseListTVCCell" rowHeight="90" id="cdU-EH-bUH" customClass="ExerciseListTVCCell" customModule="PhysioGuide_7" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdU-EH-bUH" id="igv-5y-WZh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1YO-9B-jvs">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1YO-9B-jvs">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="bJB-vz-aqn"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-Oa-EMB">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-Oa-EMB">
                                             <rect key="frame" x="98" y="34" width="174" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1YO-9B-jvs" firstAttribute="centerY" secondItem="VYE-Oa-EMB" secondAttribute="centerY" id="2bz-c0-hDu"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="VYE-Oa-EMB" secondAttribute="trailing" constant="95" id="JEb-g7-po2"/>
+                                        <constraint firstItem="VYE-Oa-EMB" firstAttribute="leading" secondItem="1YO-9B-jvs" secondAttribute="trailing" constant="8" symbolic="YES" id="Nvs-Pf-8aK"/>
+                                        <constraint firstItem="1YO-9B-jvs" firstAttribute="leading" secondItem="igv-5y-WZh" secondAttribute="leading" id="bYh-oI-ggk"/>
+                                        <constraint firstItem="1YO-9B-jvs" firstAttribute="top" secondItem="igv-5y-WZh" secondAttribute="top" id="iLL-Yg-gHO"/>
+                                        <constraint firstItem="VYE-Oa-EMB" firstAttribute="centerY" secondItem="igv-5y-WZh" secondAttribute="centerY" id="o3c-V0-YTM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="icon" destination="1YO-9B-jvs" id="pcT-yz-4d5"/>
@@ -581,11 +592,11 @@
                             <outlet property="delegate" destination="8mi-Zd-nTt" id="Qjk-RR-Um5"/>
                         </connections>
                     </tableView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wG6-RF-P6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-631" y="1072"/>
+            <point key="canvasLocation" x="-295.5" y="1670.5"/>
         </scene>
         <!--CreateRountineVC-->
         <scene sceneID="4hq-3d-hzG">
@@ -685,7 +696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0e-Zt-Ads" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.5" y="1105.5"/>
+            <point key="canvasLocation" x="241.5" y="827.5"/>
         </scene>
         <!--RoutineVC-->
         <scene sceneID="g0W-be-ASe">
@@ -699,7 +710,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4I5-GI-B9p">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4I5-GI-B9p">
                                 <rect key="frame" x="270" y="617" width="85" height="30"/>
                                 <state key="normal" title="Run Routine">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -715,17 +726,7 @@
                                     <segue destination="nSK-JW-oOz" kind="embed" identifier="routineInternalSegue" id="cr7-74-Bkp"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-fA-dj0">
-                                <rect key="frame" x="164" y="617" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="crg-wg-5Z7"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="R11-Cn-b2Q" kind="show" id="hA5-JU-zfL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-6c-6fQ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-6c-6fQ">
                                 <rect key="frame" x="20" y="617" width="88" height="30"/>
                                 <state key="normal" title="New Routine">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -738,15 +739,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xTB-K0-aw9" firstAttribute="top" secondItem="ldn-8K-Xbu" secondAttribute="bottom" id="46A-YE-w9y"/>
-                            <constraint firstItem="4I5-GI-B9p" firstAttribute="baseline" secondItem="ihq-fA-dj0" secondAttribute="baseline" id="5Ps-vb-iBw"/>
                             <constraint firstAttribute="trailing" secondItem="xTB-K0-aw9" secondAttribute="trailing" id="ENR-hx-wXq"/>
                             <constraint firstItem="xTB-K0-aw9" firstAttribute="leading" secondItem="CT6-Mq-4pt" secondAttribute="leading" id="O6u-Pf-lOx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4I5-GI-B9p" secondAttribute="trailing" constant="4" id="Ojg-a0-MdI"/>
-                            <constraint firstItem="ihq-fA-dj0" firstAttribute="leading" secondItem="Tok-6c-6fQ" secondAttribute="trailing" constant="56" id="RRb-jH-FUk"/>
                             <constraint firstItem="Tok-6c-6fQ" firstAttribute="leading" secondItem="CT6-Mq-4pt" secondAttribute="leadingMargin" constant="4" id="aQ0-JJ-BFF"/>
-                            <constraint firstItem="ihq-fA-dj0" firstAttribute="baseline" secondItem="Tok-6c-6fQ" secondAttribute="baseline" id="c5y-Se-Yi1"/>
-                            <constraint firstItem="4I5-GI-B9p" firstAttribute="leading" secondItem="ihq-fA-dj0" secondAttribute="trailing" constant="60" id="gfB-jP-X9h"/>
-                            <constraint firstItem="xTB-K0-aw9" firstAttribute="centerX" secondItem="ihq-fA-dj0" secondAttribute="centerX" id="jwr-NO-XT6"/>
                             <constraint firstAttribute="bottom" secondItem="Tok-6c-6fQ" secondAttribute="bottom" constant="20" symbolic="YES" id="mjs-MM-NNn"/>
                             <constraint firstItem="Tok-6c-6fQ" firstAttribute="top" secondItem="xTB-K0-aw9" secondAttribute="bottom" constant="8" symbolic="YES" id="oNg-hp-poc"/>
                         </constraints>
@@ -774,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVD-AO-WQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842.5" y="1085.5"/>
+            <point key="canvasLocation" x="842.5" y="827.5"/>
         </scene>
         <!--Current Routine TVC-->
         <scene sceneID="3tx-Uf-Lny">
@@ -818,7 +814,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzz-Nq-5Qw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.5" y="1858.5"/>
+            <point key="canvasLocation" x="241.5" y="1670.5"/>
         </scene>
         <!--RunRoutineVC-->
         <scene sceneID="N1W-VU-Cch">
@@ -897,7 +893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxL-6K-DwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842.5" y="1870.5"/>
+            <point key="canvasLocation" x="842.5" y="1670.5"/>
         </scene>
         <!--Accelerometer Detection View Controller-->
         <scene sceneID="inY-dD-BYl">
@@ -1094,7 +1090,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ek-Me-D3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439.5" y="1858.5"/>
+            <point key="canvasLocation" x="1449.5" y="1670.5"/>
         </scene>
         <!--RoutineTVC-->
         <scene sceneID="TlL-KQ-QSp">
@@ -1140,7 +1136,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0u-8p-G1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549.5" y="1085.5"/>
+            <point key="canvasLocation" x="1449.5" y="827.5"/>
         </scene>
         <!--Updated Exercise View Controller-->
         <scene sceneID="yg7-Po-irp">
@@ -1220,7 +1216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZhI-AK-FHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="394"/>
+            <point key="canvasLocation" x="2207.5" y="239.5"/>
         </scene>
         <!--Play Video View Controller-->
         <scene sceneID="06j-U9-1cg">
@@ -1254,7 +1250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wN-wY-fRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733" y="394"/>
+            <point key="canvasLocation" x="2732.5" y="239.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="snR-Pk-niS">
@@ -1273,11 +1269,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIS-PZ-liy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330" y="320"/>
+            <point key="canvasLocation" x="-474.5" y="-317.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X8c-TN-u3t"/>
-        <segue reference="FHN-VE-7X7"/>
+        <segue reference="Q7H-iV-co2"/>
+        <segue reference="xYT-ai-JfY"/>
     </inferredMetricsTieBreakers>
 </document>
