@@ -99,7 +99,7 @@ class AccelerationClass {
         maxRotZ = currentMaxRotZ
     }
 
-   /* //the following is the sudo code for RunRoutine page
+    //the following is the sudo code for RunRoutine page
     //the following code is specifically for the exercise which need accelerometer or gyroscope
     //e.g. biscep curl
     //for run routine page
@@ -110,7 +110,7 @@ class AccelerationClass {
         currentAcc = acceleration.x
         if (currentAcc > )
     }
-    */
+    
     
     
     

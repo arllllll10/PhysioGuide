@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k79-iJ-SPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.5" y="-333.5"/>
+            <point key="canvasLocation" x="1714.5" y="-891.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="HQQ-f8-PHV">
@@ -1081,6 +1081,25 @@
             </objects>
             <point key="canvasLocation" x="842.5" y="1670.5"/>
         </scene>
+        <!--Calory Calculate View Controller-->
+        <scene sceneID="1Ah-ob-S4O">
+            <objects>
+                <viewController id="djg-wl-Bsf" customClass="CaloryCalculateViewController" customModule="PhysioGuide_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ofg-AM-FXf"/>
+                        <viewControllerLayoutGuide type="bottom" id="U9b-47-nvO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZjO-3W-opS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EL1-YA-2uJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.5" y="1670.5"/>
+        </scene>
         <!--Accelerometer Detection View Controller-->
         <scene sceneID="inY-dD-BYl">
             <objects>
@@ -1276,7 +1295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ek-Me-D3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449.5" y="1670.5"/>
+            <point key="canvasLocation" x="2207.5" y="1670.5"/>
         </scene>
         <!--RoutineTVC-->
         <scene sceneID="TlL-KQ-QSp">
@@ -1460,6 +1479,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="X8c-TN-u3t"/>
-        <segue reference="xYT-ai-JfY"/>
+        <segue reference="FHN-VE-7X7"/>
     </inferredMetricsTieBreakers>
 </document>

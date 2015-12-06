@@ -10,7 +10,6 @@
 import UIKit
 
 
-
 class RoutinesVC: UIViewController, RoutineTVCProtocol {
     
     var routineIndex : NSInteger?
@@ -18,8 +17,7 @@ class RoutinesVC: UIViewController, RoutineTVCProtocol {
     
     @IBOutlet var runRoutineButton: UIButton!
     @IBOutlet weak var routinesContainer: UIView!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
