@@ -14,6 +14,7 @@ import CoreData
 struct DefaultsKeys
 {
     static let localUser = ""
+
     
 }
 
@@ -22,6 +23,7 @@ class LocalSave {
     static let sharedLocalSave = LocalSave()
     
     var localUser: String?
+
     
     var goToBackgroundObserver: AnyObject?
     
@@ -30,6 +32,7 @@ class LocalSave {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         localUser = defaults.objectForKey(DefaultsKeys.localUser) as! String?
+
         
         goToBackgroundObserver = NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationDidEnterBackgroundNotification,
             object: nil,

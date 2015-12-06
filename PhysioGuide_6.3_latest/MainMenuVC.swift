@@ -17,6 +17,11 @@ class MainMenuVC: UIViewController {
     // new scripts getCalorie(username) setCalorie(username, calorie) getPerformance(username, exID) setPerformance(username, exid, metricValue)
     //var storedUser = [NSManagedObject]()
     //let localData = LocalSave()
+    
+    var myCalorieData : [[String:String]] = []
+    var calorieShell : [String:String] = ["username" : "", "calorie" : "", "date": ""]
+    var cals : [Int] = []
+    
     var arrData :JSON = []
     var myRoutines: [[String:String]] = []
     let exerciseDict: [String:String] = ["1" : "Back Extensions", "2" : "Biceps Curl", "3" : "Calf Raise", "4" : "Cat Stretch", "5" : "Crunch", "6" : "Front and Back Neck Stretch", "7" : "Back Hyperextensions", "8" : "Jogging", "9" : "Jumping Jacks", "10" : "Knees to Chest", "11" : "Lateral Raise", "12" : "Leg Raises", "13" : "Lunges", "14" : "Modified Hurdler's Stretch", "15" : "Push-ups", "16" : "Quadriceps", "17" : "Reclined Hamstrings", "18" : "Runner's Lunge", "19" : "Russian Twist", "20" : "Shoulders Overhead", "21" : "Shoulders Posterior", "22" : "Shoulder Shrugs", "23" : "Side Hip Abductor", "24" : "Side Lunge", "25" : "Side Neck", "26" : "Side Trunk", "27" : "Spinal Twist", "28" : "Squats", "29" : "Upright Row", "30" : "Wall Calf Stretch"]
@@ -52,7 +57,46 @@ class MainMenuVC: UIViewController {
             //print("Total lines in \(self.myRoutines[0]["routineName"]!)")
         })
         
-       
+        let caloriesClass = Calories()
+        caloriesClass.getCalories(LocalSave.sharedLocalSave.localUser!, completionHandler: {
+            swiftyJsonVar in
+            
+            for thingy in swiftyJsonVar
+            {
+                let aCalData = thingy.1
+                //username
+                //calorie
+                //date
+                
+                for subThingy in aCalData
+                {
+                    self.calorieShell[subThingy.0] = subThingy.1.string
+                }
+                self.myCalorieData.append(self.calorieShell)
+            }
+            
+            
+            
+            var index = 0
+            
+            while(index < self.myCalorieData.count)
+            {
+                
+                if(self.myCalorieData[index]["calorie"] != "")
+                {
+                    let someNum : Int? = Int(self.myCalorieData[index]["calorie"]!)
+                    self.cals.append(someNum!)
+                    
+                }
+                
+                
+                index++
+                
+            }
+            
+            
+            
+        })
         
     }
     
@@ -62,6 +106,12 @@ class MainMenuVC: UIViewController {
     }
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Statsview" {
+            let destController = segue.destinationViewController as! StatsVC
+            destController.calList = cals
+        }
+       
+    }
     
 }

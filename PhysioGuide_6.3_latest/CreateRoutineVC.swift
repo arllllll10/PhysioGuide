@@ -127,22 +127,7 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
             inc++
         }
         print (routineBuilder)
-/*accountClass.checkPassword(user, password: pass, completionHandler:  { value in
-state = value
-//print("something  \(state)")
-if state == 0 {
-self.displayAlertMessage ("Username or password failed")
-return
-} else if(state == 1){
-//self.saveName(user)
-LocalSave.sharedLocalSave.localUser = user
-self.showViewController(mm as! UIViewController, sender: mm)
-return
-}
-else {
-self.displayAlertMessage("No response from server")
-}
-})*/
+
 
         routineClass.createRoutine(routineBuilder, completionHandler: { confirmation in
 
