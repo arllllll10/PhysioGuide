@@ -103,13 +103,13 @@ class AccelerationClass {
     //the following code is specifically for the exercise which need accelerometer or gyroscope
     //e.g. biscep curl
     //for run routine page
-    var exerciseName : String
+    /*var exerciseName : String
     var currentAcc1 : Double
     var currentAcc0 : Double
     if (exerciseName == "Biscep Curl"){
         currentAcc = acceleration.x
         if (currentAcc > )
-    }
+    }*/
     
     
     
