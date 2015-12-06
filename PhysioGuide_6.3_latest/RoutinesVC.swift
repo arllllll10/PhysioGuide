@@ -11,12 +11,14 @@ import UIKit
 
 
 
-class RoutinesVC: UIViewController, RoutineTVCDelegate {
+class RoutinesVC: UIViewController, RoutineTVCProtocol {
     
     var routineIndex : NSInteger?
     var exercises : [String] = ["", ""]
     
     @IBOutlet var runRoutineButton: UIButton!
+    @IBOutlet weak var routinesContainer: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +67,21 @@ class RoutinesVC: UIViewController, RoutineTVCDelegate {
             vc.label2Text = exercises[1]
         }
     }*/
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "RoutineInternalSegue" {
+            let routinesContainer = segue.destinationViewController as! RoutineTVC
+            routinesContainer.delegate = self
+        }
+    }
+    
+    
+    func selectRoutine(selectedRoutine: String) -> Void {
+        //do something meaningful with this one
+        let s = selectedRoutine // Here is the name of the routine which will be used in RunRoutineVC.
+        print("The routine name is \(s)")
+        print("\n\n\n\n\n\n\nYES I WAS CALLED\n\n\n\n\n\n")
+    }
     
     @IBAction func runRoutineButton(sender: AnyObject) {
         
