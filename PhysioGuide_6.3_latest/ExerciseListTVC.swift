@@ -11,6 +11,8 @@ import UIKit
 class ExerciseListTVC: UITableViewController {
     // MARK: Properties
     
+    let exerciseDict: [String:String] = ["1" : "Back Extensions", "2" : "Biceps Curl", "3" : "Calf Raise", "4" : "Cat Stretch", "5" : "Crunch", "6" : "Front and Back Neck Stretch", "7" : "Back Hyperextensions", "8" : "Jogging", "9" : "Jumping Jacks", "10" : "Knees to Chest", "11" : "Lateral Raise", "12" : "Leg Raises", "13" : "Lunges", "14" : "Modified Hurdler's Stretch", "15" : "Push-ups", "16" : "Quadriceps", "17" : "Reclined Hamstrings", "18" : "Runner's Lunge", "19" : "Russian Twist", "20" : "Shoulders Overhead", "21" : "Shoulders Posterior", "22" : "Shoulder Shrugs", "23" : "Side Hip Abductor", "24" : "Side Lunge", "25" : "Side Neck", "26" : "Side Trunk", "27" : "Spinal Twist", "28" : "Squats", "29" : "Upright Row", "30" : "Wall Calf Stretch"]
+    
     //internal var parentViewController1: CreateRoutineVC! //not using right now, trying delegate
     var delegate: ContainerViewControllerProtocol? //seems to be a header file reference
     
@@ -19,17 +21,14 @@ class ExerciseListTVC: UITableViewController {
     func loadSampleExercises() {
         //make for loop to grab all exercises from server and include them to the exercises array
         
-        let icon1 = UIImage(named: "Title")
-        let exercise1 = Exercise(name: "Squat", icon: icon1, link: "youtube.com/squatexample")!
-        
-        let icon2 = UIImage(named: "Title")
-        let exercise2 = Exercise(name: "Lunge", icon: icon2, link: "youtube.com/lungeexample")!
-        
-        let icon3 = UIImage(named: "Title")
-        let exercise3 = Exercise(name: "Jogging", icon: icon3, link: "youtube.com/joggingexample")!
-        
-        exercises += [exercise1, exercise2, exercise3]
-        
+        var inc : Int = 1
+        while(inc < 31)
+        {
+            let ref = String(inc)
+            let anExercise = Exercise(name: exerciseDict[ref]!, link: "youtube.com/squatexample")!
+            exercises.append(anExercise)
+            inc++
+        }
     }
     
     override func viewDidLoad() {

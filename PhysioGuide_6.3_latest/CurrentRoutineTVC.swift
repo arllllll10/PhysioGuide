@@ -14,7 +14,7 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
     //internal var parentViewController1: CreateRoutineVC!
     
     var exercises = [Exercise]()
-    
+    // var exercises : [String : String] = ["routineName" : "", "exID1" : "", "exID2" : "", "exID3" : "", "exID4" : "", "exID5" : "", "exID6" : "", "exID7" : "", "exID8" : "", "exID9" : "", "exID10" : "", "exID11" : "", "exID12" : "", "exID13" : "", "exID14" : "", "exID15" : "", "exID16" : "", "exID17" : "", "exID18" : "", "exID19" : "", "exID20" : ""]
     
     /*
     func loadSampleExercises() {

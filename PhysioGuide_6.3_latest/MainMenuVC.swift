@@ -13,6 +13,8 @@ import SwiftyJSON
 
 class MainMenuVC: UIViewController {
     
+    
+    // new scripts getCalorie(username) setCalorie(username, calorie) getPerformance(username, exID) setPerformance(username, exid, metricValue)
     //var storedUser = [NSManagedObject]()
     //let localData = LocalSave()
     var arrData :JSON = []

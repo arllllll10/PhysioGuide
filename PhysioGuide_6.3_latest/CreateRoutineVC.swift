@@ -15,6 +15,7 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
     // MARK: Properties
     
     //references to the container view controllers
+    let routineClass = Routines()
     private var embeddedViewController1: ExerciseListTVC!
     private var embeddedViewController2: CurrentRoutineTVC!
     //
@@ -109,6 +110,50 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         print("I was pressed")
         //need to send the current routine info to the server here.
         newRoutine = self.embeddedViewController2.saveRoutine() //this can now be passed to the run routine page or to the server
+        var inc : Int = 0
+        var routineBuilder : [String:String] = ["routineName" : routineName.text!, "username" : LocalSave.sharedLocalSave.localUser!]
+        
+        while(inc < 20 )
+        {
+            while(inc < newRoutine.count){
+                let val = String(inc + 1)
+            
+                routineBuilder["exID"+val] = newRoutine[inc].id
+                print (newRoutine[inc].name)
+                inc++
+            }
+            let val = String(inc+1)
+            routineBuilder["exID"+val] = "0"
+            inc++
+        }
+        print (routineBuilder)
+/*accountClass.checkPassword(user, password: pass, completionHandler:  { value in
+state = value
+//print("something  \(state)")
+if state == 0 {
+self.displayAlertMessage ("Username or password failed")
+return
+} else if(state == 1){
+//self.saveName(user)
+LocalSave.sharedLocalSave.localUser = user
+self.showViewController(mm as! UIViewController, sender: mm)
+return
+}
+else {
+self.displayAlertMessage("No response from server")
+}
+})*/
+
+        routineClass.createRoutine(routineBuilder, completionHandler: { confirmation in
+
+            if(confirmation == 1)
+            {
+                print("Holy shit it worked!")
+            }else{
+                print("Broked")
+            }
+        })
+        
     }
     
 }

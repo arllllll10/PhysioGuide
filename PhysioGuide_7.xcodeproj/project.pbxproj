@@ -30,6 +30,7 @@
 		953851061BF171C5009BC801 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953851051BF171C5009BC801 /* Routines.swift */; };
 		9571ADE31BF168410058FC04 /* RunRoutineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571ADE21BF168410058FC04 /* RunRoutineVC.swift */; };
 		CA6E62161C10524F000DF4A6 /* LocalSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E62151C10524F000DF4A6 /* LocalSave.swift */; };
+		CAD714491C13C05700023C63 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD714481C13C05700023C63 /* Stats.swift */; };
 		D44D6D991C0AC6A400AEE63B /* backExtension.png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D661C0AC6A400AEE63B /* backExtension.png */; };
 		D44D6D9A1C0AC6A400AEE63B /* backExtension(machine).png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D671C0AC6A400AEE63B /* backExtension(machine).png */; };
 		D44D6D9B1C0AC6A400AEE63B /* benchPress.png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D681C0AC6A400AEE63B /* benchPress.png */; };
@@ -133,6 +134,7 @@
 		953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhysioGuide_7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhysioGuide_7/Pods-PhysioGuide_7.debug.xcconfig"; sourceTree = "<group>"; };
 		9571ADE21BF168410058FC04 /* RunRoutineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunRoutineVC.swift; sourceTree = "<group>"; };
 		CA6E62151C10524F000DF4A6 /* LocalSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalSave.swift; sourceTree = "<group>"; };
+		CAD714481C13C05700023C63 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		D44D6D661C0AC6A400AEE63B /* backExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backExtension.png; path = icon/backExtension.png; sourceTree = "<group>"; };
 		D44D6D671C0AC6A400AEE63B /* backExtension(machine).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backExtension(machine).png"; path = "icon/backExtension(machine).png"; sourceTree = "<group>"; };
 		D44D6D681C0AC6A400AEE63B /* benchPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = benchPress.png; path = icon/benchPress.png; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				2F9C35E91BEC5AF600FF14B3 /* Images.xcassets */,
 				2F9C35EB1BEC5AF600FF14B3 /* LaunchScreen.xib */,
 				2F9C35E01BEC5AF600FF14B3 /* Supporting Files */,
+				CAD714481C13C05700023C63 /* Stats.swift */,
 			);
 			path = PhysioGuide_6.3_latest;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				2FD0B1A81C13E10900D18180 /* RoutineCell.swift in Sources */,
 				D4E9D8281C0AAF7E00877D4B /* ExerciseClass.swift in Sources */,
 				2F3398691C02E5AC00B22C38 /* ExerciseListTVC.swift in Sources */,
+				CAD714491C13C05700023C63 /* Stats.swift in Sources */,
 				2F9C360B1BEC5C9B00FF14B3 /* StatsVC.swift in Sources */,
 				D4E91BDE1C13635F009ABB9A /* AccelerometerDetectionViewController.swift in Sources */,
 				2F9C36031BEC5B3000FF14B3 /* MainMenuVC.swift in Sources */,
