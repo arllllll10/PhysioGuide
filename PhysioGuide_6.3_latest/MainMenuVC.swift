@@ -78,31 +78,69 @@ class MainMenuVC: UIViewController {
                 self.myCalorieData.append(self.calorieShell)
             }
             
-            
-            CalSave.sharedCalSave.cal1 = self.myCalorieData[0]["calorie"]
+            /*var calArray : [AnyObject] = [CalSave.sharedCalSave.cal1, CalSave.sharedCalSave.cal2, CalSave.sharedCalSave.cal3
+            , CalSave.sharedCalSave.cal4, CalSave.sharedCalSave.cal5]
+            */
+            /*CalSave.sharedCalSave.cal1 = self.myCalorieData[0]["calorie"]
             CalSave.sharedCalSave.cal2 = self.myCalorieData[1]["calorie"]
             CalSave.sharedCalSave.cal3 = self.myCalorieData[2]["calorie"]
             CalSave.sharedCalSave.cal4 = self.myCalorieData[3]["calorie"]
             CalSave.sharedCalSave.cal5 = self.myCalorieData[4]["calorie"]
+            */
             
+            let numOfEntries = self.myCalorieData.count
+            if(numOfEntries > 0){
+                CalSave.sharedCalSave.cal1 = self.myCalorieData[0]["calorie"]
+                
+            } else {
+                CalSave.sharedCalSave.cal1 = ""
+                
+            }
+            
+            if(numOfEntries > 1){
+                CalSave.sharedCalSave.cal2 = self.myCalorieData[1]["calorie"]
+                
+            } else {
+                CalSave.sharedCalSave.cal2 = ""
+                
+            }
+            
+            if(numOfEntries > 2){
+                CalSave.sharedCalSave.cal3 = self.myCalorieData[2]["calorie"]
+                
+            } else {
+                CalSave.sharedCalSave.cal3 = ""
+                
+            }
+            if(numOfEntries > 3){
+                CalSave.sharedCalSave.cal4 = self.myCalorieData[3]["calorie"]
+                
+            } else {
+                CalSave.sharedCalSave.cal4 = ""
+                
+            }
+            if(numOfEntries > 4){
+                CalSave.sharedCalSave.cal5 = self.myCalorieData[4]["calorie"]
+                
+            } else {
+                CalSave.sharedCalSave.cal5 = ""
+                
+            }
             
             
             /*var index = 0
-            var someArray : [String] = ["","","","",""]
-            while(index < self.myCalorieData.count)
+            while(index < 5)
             {
-                
-                if(self.myCalorieData[index]["calorie"] != "")
+                calArray[index] = ""
+                if(index < self.myCalorieData.count)
                 {
-                    someArray[index] =
-                    
+                    calArray[index] = self.myCalorieData[index]["calorie"]!
+                
+                
                 }
-                
-                
                 index++
                 
             }*/
-            
             
             
         })
@@ -115,12 +153,12 @@ class MainMenuVC: UIViewController {
     }
     
     
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Statsview" {
-            let destController = segue.destinationViewController as! StatsVC
-            destController.calList = cals
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "RoutinesView" {
+            let destController = segue.destinationViewController as! RoutinesVC
+            destController.routinesUpdated = myRoutines
         }
        
-    }*/
+    }
     
 }

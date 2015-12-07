@@ -25,20 +25,24 @@ class GraphView: UIView {
     
     override func drawRect(rect: CGRect) {
         
-        let numsInStr : [String] = [CalSave.sharedCalSave.cal1!, CalSave.sharedCalSave.cal2!, CalSave.sharedCalSave.cal3!, CalSave.sharedCalSave.cal4!, CalSave.sharedCalSave.cal5!]
+        let numsInStr : [String?] = [CalSave.sharedCalSave.cal1, CalSave.sharedCalSave.cal2, CalSave.sharedCalSave.cal3, CalSave.sharedCalSave.cal4, CalSave.sharedCalSave.cal5]
         var index = 0;
         
         while (index < 5)
         {
+            print("Stepped into loop")
             if(numsInStr[index] != "")
             {
                 
-                let calVal : Int? = Int(numsInStr[index])
+                let calVal : Int? = Int(numsInStr[index]!)
+                print("Adding \(calVal) to array")
                 graphPoints.append(calVal!)
                 
             }
             index++
         }
+        
+        
         
         let width = rect.width
         let height = rect.height
@@ -93,6 +97,10 @@ class GraphView: UIView {
         // set up the points line
         var graphPath = UIBezierPath()
         // Line start
+        if (graphPoints.count == 0) {
+            print("no cal data found")
+            
+        }else {
         graphPath.moveToPoint(CGPoint(x:columnXPoint(0), y:columnYPoint(graphPoints[0])))
         
         // add points for each item in the graphPoints array
@@ -160,7 +168,7 @@ class GraphView: UIView {
         
         linePath.lineWidth = 1.0
         linePath.stroke()
-        
+        }
         
         
     }

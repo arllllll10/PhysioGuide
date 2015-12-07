@@ -21,15 +21,44 @@ class RunRoutineVC: UIViewController {
     
     var index = 0 // The index used to select elements in the routine array.
     var routine = [Exercise]() // Can use this array to store the exercises if we're going that route.
+    var routinesUpdated : [[String:String]] = []
+    var routineRef : Int = 0
     
+    let exerciseDict: [String:String] = ["1" : "Back Extensions", "2" : "Biceps Curl", "3" : "Calf Raise", "4" : "Cat Stretch", "5" : "Crunch", "6" : "Front and Back Neck Stretch", "7" : "Back Hyperextensions", "8" : "Jogging", "9" : "Jumping Jacks", "10" : "Knees to Chest", "11" : "Lateral Raise", "12" : "Leg Raises", "13" : "Lunges", "14" : "Modified Hurdler's Stretch", "15" : "Push-ups", "16" : "Quadriceps", "17" : "Reclined Hamstrings", "18" : "Runner's Lunge", "19" : "Russian Twist", "20" : "Shoulders Overhead", "21" : "Shoulders Posterior", "22" : "Shoulder Shrugs", "23" : "Side Hip Abductor", "24" : "Side Lunge", "25" : "Side Neck", "26" : "Side Trunk", "27" : "Spinal Twist", "28" : "Squats", "29" : "Upright Row", "30" : "Wall Calf Stretch"]
     
+        let exMetricDict: [String:String] = ["1" : "none", "2" : "Pounds", "3" : "none", "4" : "none", "5" : "Count", "6" : "none", "7" : "Pounds", "8" : "Duration", "9" : "none", "10" : "none", "11" : "Pounds", "12" : "none", "13" : "Pounds", "14" : "none", "15" : "Count", "16" : "none", "17" : "none", "18" : "none", "19" : "Pounds", "20" : "none", "21" : "none", "22" : "Pounds", "23" : "none", "24" : "none", "25" : "none", "26" : "none", "27" : "none", "28" : "Pounds", "29" : "Pounds", "30" : "none"]
     
     
     //let's make a sample routine.
     // ***** Sample ******
     func loadSampleExercises() {
         //make for loop to grab all exercises from server and include them to the exercises array
+
         
+        var index1 = 0
+        //determine my routine number
+        while(index1 < routinesUpdated.count)
+        {
+            if(routineName == routinesUpdated[index1]["routineName"]){
+                routineRef = index1
+            }
+            index1++
+        }
+        
+        var index2 = 1
+        while(index2 < 21 && routinesUpdated[routineRef]["exID\(index2)"] != "0")
+        {
+            let myExercise : String! = exerciseDict[routinesUpdated[routineRef]["exID\(index2)"]!]
+            print("printing out my current exercise name: \(myExercise)")
+
+            
+            let exerciseN = Exercise(name: myExercise, link: "www.youtube.com/something")
+            //Exercise(name: exerciseDict[routinesUpdated[routineRef]["exID\(index2)"]!]!, link: "")
+            routine.append(exerciseN!)
+            index2++
+        }
+        
+        /*
         //let icon1 = UIImage(named: "Squat")
         let exercise1 = Exercise(name: "Squat", link: "10yQ6m7w__E")!
         
@@ -39,7 +68,7 @@ class RunRoutineVC: UIViewController {
         //let icon3 = UIImage(named: "CalfRaise")
         let exercise3 = Exercise(name: "Jogging", link: "YF_OLR7tC70")!
         
-        routine += [exercise1, exercise2, exercise3]
+        routine += [exercise1, exercise2, exercise3]*/
     }
     // ***** Sample ******
     
@@ -51,14 +80,31 @@ class RunRoutineVC: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var nextName: UILabel!
     
+    //metric UI elements
+    @IBOutlet weak var metricName: UILabel!
+    @IBOutlet weak var metricValue: UILabel!
+    @IBOutlet weak var smallInc: UIButton!
+    @IBOutlet weak var largeInc: UIButton!
+    @IBOutlet weak var smallDec: UIButton!
+    @IBOutlet weak var largeDec: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        metricValue.text = "0"
         
         loadSampleExercises() // Comment this out or delete when we can fetch the routines from the server.
         let e = routine[index]
         let link = e.link
         YoutubePlayer.loadVideoID(link)
+        
+        metricName.hidden = true
+        metricValue.hidden = true
+        smallInc.hidden = true
+        largeInc.hidden = true
+        smallDec.hidden = true
+        largeDec.hidden = true
         
         //load in the routine from server. This below is pseudo-code kind of to help me think. It can be removed once it is done properly.
         /*
@@ -78,8 +124,73 @@ class RunRoutineVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func largeIncA(sender: AnyObject) {
+        var val : Int = Int(metricValue.text!)!
+        val += 5
+        metricValue.text = String(val)
+    }
+
+    @IBAction func smallincA(sender: AnyObject) {
+        var val : Int = Int(metricValue.text!)!
+        val += 1
+        metricValue.text = String(val)
+    }
+    
+    @IBAction func smallDeCA(sender: AnyObject) {
+        var val : Int = Int(metricValue.text!)!
+        val -= 1
+        if(val < 0)
+        {
+            val = 0
+        }
+        metricValue.text = String(val)
+    }
+    
+    @IBAction func largeDecA(sender: AnyObject) {
+        var val : Int = Int(metricValue.text!)!
+        val -= 5
+        if(val < 0)
+        {
+            val = 0
+        }
+        metricValue.text = String(val)
+    }
+    
     @IBAction func next(sender: UIButton) {
         
+        if(currName.text == "Jogging")
+        {
+            let jC = JoggingCalc()
+            let val : Int = Int(metricValue.text!)!
+            let calsBurned : String = String(jC.calcCalories(val))
+            let calsBurnedDoub : Double = Double(metricValue.text!)!
+            let currentDate = NSDate()
+            
+            let hk = HealthManager()
+            
+            hk.saveCalorySample(calsBurnedDoub, date: currentDate)
+            
+            var state : Int = -1
+            let calSend = Calories()
+            calSend.addCalories(calsBurned, completionHandler: { value in
+                state = value
+                //print("something  \(state)")
+                if state == 0 {
+                    print("Server rejected connection")
+                    return
+                } else if(state == 1){
+                    //self.saveName(user)
+                    print("Server accepted connection")
+                    return
+                }
+                else {
+                    print("No response from server")
+                }
+            })
+ 
+            
+        }
         
         let Routines : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("RoutinesVC")
         
@@ -105,6 +216,27 @@ class RunRoutineVC: UIViewController {
     func updateInfo() {
         currIcon.image = routine[index].icon
         currName.text = routine[index].name
+        let id = routine[index].id
+        if(exMetricDict[id!] != "none")
+        {
+            metricName.hidden = false
+            metricValue.hidden = false
+            smallInc.hidden = false
+            largeInc.hidden = false
+            smallDec.hidden = false
+            largeDec.hidden = false
+            metricName.text = exMetricDict[id!]
+            metricValue.text = "0"
+            
+        }else {
+            metricName.hidden = true
+            metricValue.hidden = true
+            smallInc.hidden = true
+            largeInc.hidden = true
+            smallDec.hidden = true
+            largeDec.hidden = true
+        }
+        
         currLink = routine[index].link
         self.title = routineName
         if index >= routine.count-1 { // The array starts at 0 and has routine.count elements. When it reaches element routine.count-1, the next element is out of bounds.

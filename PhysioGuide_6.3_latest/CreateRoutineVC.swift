@@ -135,7 +135,7 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
             {
                 print("Holy shit it worked!")
             }else{
-                print("Broked")
+                print("Broked, contact rohm")
             }
         })
         

@@ -45,17 +45,19 @@ class RoutineTVC: UITableViewController {
     
     // Need an array to hold all of the routines.
     var routines = [String]() // What data type does this array hold? Normally I would store Exercise objects in it, this time I store __?
-    
+    var routinesUpdated : [[String:String]] = []
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //sample
-        let easy = "easy"
-        let medium = "medium"
-        let hard = "hard"
-        routines += [easy, medium, hard]
+        var index = 0
+        while(index < routinesUpdated.count){
+                routines.append(routinesUpdated[index]["routineName"]!)
+            index++
+        }
+        
 
     }
 

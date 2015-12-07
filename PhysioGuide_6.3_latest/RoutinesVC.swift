@@ -15,6 +15,7 @@ class RoutinesVC: UIViewController, RoutineTVCProtocol {
     var routineIndex : NSInteger?
     var exercises : [String] = ["", ""]
     var selectedRoutineName: String!
+    var routinesUpdated : [[String:String]] = []
     
     @IBOutlet var runRoutineButton: UIButton!
     @IBOutlet weak var routinesContainer: UIView!
@@ -71,10 +72,13 @@ class RoutinesVC: UIViewController, RoutineTVCProtocol {
         if segue.identifier == "routineInternalSegue" {
             let routinesContainer = segue.destinationViewController as! RoutineTVC
             routinesContainer.delegate = self
+            //routinesContainer.routines = ["something", "another thing", "one last thing"]
+            routinesContainer.routinesUpdated = routinesUpdated
         }
         if segue.identifier == "routineRunSeque" {
             let vc = segue.destinationViewController as! RunRoutineVC
             vc.routineName = selectedRoutineName
+            vc.routinesUpdated = routinesUpdated
         }
     }
     
