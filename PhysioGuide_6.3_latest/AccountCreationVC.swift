@@ -90,12 +90,12 @@ class AccountCreationVC: UIViewController, UITextFieldDelegate {
         self.presentViewController (alert, animated : true, completion: nil);
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    /*func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if range.length + range.location > UsernameUITextField.text!.characters.count{
             return false
         }
         let NewLength = UsernameUITextField.text!.characters.count + string.characters.count - range.length
-        return NewLength<=10
-    }
+        return NewLength <= 25
+    }*/
 
 }
