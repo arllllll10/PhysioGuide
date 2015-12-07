@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-nF-HGx" userLabel="Container View">
-                                <rect key="frame" x="37" y="106" width="300" height="300"/>
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUU-LU-vjY" customClass="GraphView" customModule="PhysioGuide_7" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="300" height="250"/>
@@ -246,7 +246,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Iip-nF-HGx" firstAttribute="top" secondItem="3rq-QL-E9i" secondAttribute="bottom" constant="86" id="7s1-94-JS7"/>
+                            <constraint firstItem="Iip-nF-HGx" firstAttribute="centerY" secondItem="ZnL-qH-wbx" secondAttribute="centerY" id="40b-6B-YBn"/>
                             <constraint firstItem="Iip-nF-HGx" firstAttribute="centerX" secondItem="ZnL-qH-wbx" secondAttribute="centerX" id="yzk-QX-RBJ"/>
                         </constraints>
                     </view>
@@ -808,7 +808,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lunge" translatesAutoresizingMaskIntoConstraints="NO" id="vwQ-Z9-Oty">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="vwQ-Z9-Oty">
                                 <rect key="frame" x="77" y="133" width="220" height="220"/>
                             </imageView>
                         </subviews>
@@ -1605,7 +1605,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Lunge" width="157" height="193"/>
+        <image name="Title" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Q7H-iV-co2"/>
