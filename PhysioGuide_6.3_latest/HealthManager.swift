@@ -11,24 +11,25 @@ import HealthKit
 
 class HealthManager
 {
-    let healthKitStore : HKHealthStore = HKHealthStore()
-    
-    func authorizeHealthKit(completion :((success: Bool, error:NSError!)-> Void)!)
+    let healthKitStore:HKHealthStore = HKHealthStore()
+    func authorizeHealthKit(completion: ((success:Bool, error:NSError!) -> Void)!)
     {
-        let healthKitTypesToRead : Set = [HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed)!, HKObjectType.workoutType()]
+        let healthKitTypesToRead : Set = [HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed)!]
         
-        let healthKitTypesToWrite : Set = [HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed)!, HKObjectType.workoutType()]
+        let healthKitTypesToWrite : Set = [HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed)!]
         
+        // 3. If the store is not available (for instance, iPad) return an error and don't go on.
         if !HKHealthStore.isHealthDataAvailable()
         {
-            let error = NSError(domain:"CMPT275_G6", code: 2, userInfo: [NSLocalizedDescriptionKey:"HealthKit is not available in this Device"])
-            if(completion != nil)
+            let error = NSError(domain: "com.teamSTAR.PhysioGuide-7", code: 2, userInfo: [NSLocalizedDescriptionKey:"HealthKit is not available in this Device"])
+            if( completion != nil )
             {
                 completion(success:false, error:error)
             }
-            return
+            return;
         }
         
+        // 4.  Request HealthKit authorizatio
         healthKitStore.requestAuthorizationToShareTypes(healthKitTypesToWrite ,
             readTypes: healthKitTypesToRead)
             {(success, error) -> Void in
@@ -37,8 +38,8 @@ class HealthManager
                     completion(success:success, error:error)
                 }
         }
+        
     }
-    
     
     func saveCalorySample(calory : Double, date :NSDate)
     {

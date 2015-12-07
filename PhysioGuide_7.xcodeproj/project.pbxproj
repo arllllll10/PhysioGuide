@@ -88,6 +88,8 @@
 		D461DAD41C06D96E003166F0 /* UpdatedExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */; };
 		D461DAD61C070AC0003166F0 /* UpdatedExerciseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */; };
 		D497158A1C143BFB00917BFF /* AccelerationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49715891C143BFB00917BFF /* AccelerationClass.swift */; };
+		D4A95F1E1C155AE600CF377B /* SettingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A95F1D1C155AE600CF377B /* SettingPageTableViewController.swift */; };
+		D4A95F201C155B2400CF377B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A95F1F1C155B2400CF377B /* HealthKit.framework */; };
 		D4E91BDE1C13635F009ABB9A /* AccelerometerDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E91BDD1C13635F009ABB9A /* AccelerometerDetectionViewController.swift */; };
 		D4E91BE01C13640D009ABB9A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E91BDF1C13640D009ABB9A /* CoreMotion.framework */; };
 		D4E9D8241C0A7B6A00877D4B /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */; };
@@ -198,6 +200,9 @@
 		D461DAD31C06D96E003166F0 /* UpdatedExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseViewController.swift; sourceTree = "<group>"; };
 		D461DAD51C070AC0003166F0 /* UpdatedExerciseTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedExerciseTVC.swift; sourceTree = "<group>"; };
 		D49715891C143BFB00917BFF /* AccelerationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerationClass.swift; sourceTree = "<group>"; };
+		D4A95F1D1C155AE600CF377B /* SettingPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingPageTableViewController.swift; sourceTree = "<group>"; };
+		D4A95F1F1C155B2400CF377B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		D4A95F211C155B2900CF377B /* PhysioGuide_7.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PhysioGuide_7.entitlements; sourceTree = "<group>"; };
 		D4E91BDD1C13635F009ABB9A /* AccelerometerDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerDetectionViewController.swift; sourceTree = "<group>"; };
 		D4E91BDF1C13640D009ABB9A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		D4E9D8231C0A7B6A00877D4B /* PlayVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A95F201C155B2400CF377B /* HealthKit.framework in Frameworks */,
 				D4E91BE01C13640D009ABB9A /* CoreMotion.framework in Frameworks */,
 				D4FFDD231C037B700022F22E /* Pods_PhysioGuide_7.framework in Frameworks */,
 				D4FFDD201C037A840022F22E /* YouTubePlayer.framework in Frameworks */,
@@ -233,6 +239,7 @@
 		2F9C35D41BEC5AF600FF14B3 = {
 			isa = PBXGroup;
 			children = (
+				D4A95F211C155B2900CF377B /* PhysioGuide_7.entitlements */,
 				D44D6D651C0AC67800AEE63B /* Icon */,
 				2F9C35DF1BEC5AF600FF14B3 /* PhysioGuide_6.3_latest */,
 				2F9C35F51BEC5AF600FF14B3 /* PhysioGuide_6.3_latestTests */,
@@ -267,6 +274,7 @@
 				2FD0B1A71C13E10900D18180 /* RoutineCell.swift */,
 				9571ADE21BF168410058FC04 /* RunRoutineVC.swift */,
 				2F9C35E61BEC5AF600FF14B3 /* Main.storyboard */,
+				D4A95F1D1C155AE600CF377B /* SettingPageTableViewController.swift */,
 				D4F40A821C14CB7F00C0C168 /* HealthManager.swift */,
 				D4F40A8C1C14DA2100C0C168 /* CaloryCalculateViewController.swift */,
 				D4E91BDD1C13635F009ABB9A /* AccelerometerDetectionViewController.swift */,
@@ -322,6 +330,7 @@
 		78203992197FE254FADA0CDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4A95F1F1C155B2400CF377B /* HealthKit.framework */,
 				D4E91BDF1C13640D009ABB9A /* CoreMotion.framework */,
 				D4FFDD221C037B700022F22E /* Pods_PhysioGuide_7.framework */,
 				D4FFDD1F1C037A840022F22E /* YouTubePlayer.framework */,
@@ -453,6 +462,11 @@
 					2F9C35DC1BEC5AF600FF14B3 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 8YSP42Z639;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					2F9C35F11BEC5AF600FF14B3 = {
 						CreatedOnToolsVersion = 6.3;
@@ -638,6 +652,7 @@
 				2FCAB78A1C0EA5DD0022EDA2 /* CurrentRoutineCell.swift in Sources */,
 				95015AB71BF67A0200E358D6 /* Account.swift in Sources */,
 				2F9C35E31BEC5AF600FF14B3 /* AppDelegate.swift in Sources */,
+				D4A95F1E1C155AE600CF377B /* SettingPageTableViewController.swift in Sources */,
 				D4F40A831C14CB7F00C0C168 /* HealthManager.swift in Sources */,
 				2F9C36071BEC5C8000FF14B3 /* RoutinesVC.swift in Sources */,
 				9571ADE31BF168410058FC04 /* RunRoutineVC.swift in Sources */,
@@ -777,6 +792,7 @@
 			baseConfigurationReference = 953EC7B332A3AB3C57F7D14A /* Pods-PhysioGuide_7.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhysioGuide_7.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -796,6 +812,7 @@
 			baseConfigurationReference = 6E6B059F3445DA7741D68EF4 /* Pods-PhysioGuide_7.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PhysioGuide_7.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
