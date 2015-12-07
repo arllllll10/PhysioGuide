@@ -13,7 +13,7 @@ import SwiftyJSON
 class GraphView: UIView {
 
     // have to get the data from calories into here
-    var graphPoints:[Int]! = [400,200,250,300,500]
+    var graphPoints:[Int] = []
     
     @IBInspectable var startColor : UIColor = UIColor.blueColor()
     @IBInspectable var endColor : UIColor = UIColor.greenColor()
@@ -25,7 +25,20 @@ class GraphView: UIView {
     
     override func drawRect(rect: CGRect) {
         
+        let numsInStr : [String] = [CalSave.sharedCalSave.cal1!, CalSave.sharedCalSave.cal2!, CalSave.sharedCalSave.cal3!, CalSave.sharedCalSave.cal4!, CalSave.sharedCalSave.cal5!]
+        var index = 0;
         
+        while (index < 5)
+        {
+            if(numsInStr[index] != "")
+            {
+                
+                let calVal : Int? = Int(numsInStr[index])
+                graphPoints.append(calVal!)
+                
+            }
+            index++
+        }
         
         let width = rect.width
         let height = rect.height

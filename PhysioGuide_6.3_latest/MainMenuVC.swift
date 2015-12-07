@@ -60,6 +60,7 @@ class MainMenuVC: UIViewController {
         })
         
         let caloriesClass = Calories()
+        //let calorieSave = CalSave()
         caloriesClass.getCalories(LocalSave.sharedLocalSave.localUser!, completionHandler: {
             swiftyJsonVar in
             
@@ -78,23 +79,29 @@ class MainMenuVC: UIViewController {
             }
             
             
+            CalSave.sharedCalSave.cal1 = self.myCalorieData[0]["calorie"]
+            CalSave.sharedCalSave.cal2 = self.myCalorieData[1]["calorie"]
+            CalSave.sharedCalSave.cal3 = self.myCalorieData[2]["calorie"]
+            CalSave.sharedCalSave.cal4 = self.myCalorieData[3]["calorie"]
+            CalSave.sharedCalSave.cal5 = self.myCalorieData[4]["calorie"]
             
-            var index = 0
             
+            
+            /*var index = 0
+            var someArray : [String] = ["","","","",""]
             while(index < self.myCalorieData.count)
             {
                 
                 if(self.myCalorieData[index]["calorie"] != "")
                 {
-                    let someNum : Int? = Int(self.myCalorieData[index]["calorie"]!)
-                    self.cals.append(someNum!)
+                    someArray[index] =
                     
                 }
                 
                 
                 index++
                 
-            }
+            }*/
             
             
             

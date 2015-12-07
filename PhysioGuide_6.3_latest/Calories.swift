@@ -53,6 +53,29 @@ completionHandler(added)
         
     }
 
-
+    
+    func addCalories(calories : String, completionHandler: (Int) -> Void)
+    {
+        let identity: [String:String] = ["username" : LocalSave.sharedLocalSave.localUser!, "calorie" : calories]
+        
+        Alamofire.request(.POST, "http://52.27.94.207/setCalorie.php", parameters : identity, encoding: ParameterEncoding.URL)
+            .validate()
+            .responseJSON {
+                (responseData) in
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                let added = swiftyJsonVar["status"].int!
+                
+                if added == 1 {
+                    print("Added to db")
+                } else if added == 0 {
+                    print("Error")
+                } else {
+                    print("No response")
+                }
+                completionHandler(added)
+        }
+        
+    }
 
 }
