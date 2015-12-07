@@ -14,6 +14,7 @@ import UIKit
 import YouTubePlayer
 
 class RunRoutineVC: UIViewController {
+    @IBOutlet weak var YoutubePlayer: YouTubePlayerView!
     
     var index = 0 // The index used to select elements in the routine array.
     var routine = [Exercise]()
@@ -47,18 +48,15 @@ class RunRoutineVC: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var nextName: UILabel!
     
-    //-------------------Need Modify--------------//
-    //here should input an link which is the current exercise run in routine
-    var linkString: String!
-    //the properties (name, icon, link) for multiples exercise should be done later
-    var labelText = String()
-    //-------------------Need Modify--------------//
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadSampleExercises()
+        let e = routine[index]
+        let link = e.link
+        YoutubePlayer.loadVideoID(link)
+        //YoutubePlayer.play()
         
         //load in the routine from server
         /*
@@ -87,6 +85,14 @@ class RunRoutineVC: UIViewController {
         index++ //Go to the next exercise in the routine.
         if index < routine.count { // Don't try to update if we're out of bounds.
             updateInfo()
+            
+            let e = routine[index]
+            let link = e.link
+            
+            YoutubePlayer.hidden = true
+            YoutubePlayer.loadVideoID(link)
+            YoutubePlayer.clear() // stop the previous video from playing
+            
             
         } else { // If we are out of bounds that means the Finish button was clicked, so return to the RunRoutines view controller.
             
@@ -127,6 +133,12 @@ class RunRoutineVC: UIViewController {
     //    }
     //
     
+    @IBAction func playvid(sender: AnyObject) {
+        
+        //YoutubePlayer.loadVideoID(link)
+        YoutubePlayer.play()
+        YoutubePlayer.hidden = false
+    }
     
     
 }

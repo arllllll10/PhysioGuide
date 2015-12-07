@@ -21,7 +21,7 @@ class Exercise {
     var name: String
     var icon: UIImage?
     var link: String // the URL
-    var id: String
+    var id: String?
     
     // MARK Initialization
     
@@ -29,7 +29,7 @@ class Exercise {
         self.name = name
         self.icon = UIImage(named: "pushUp") //name
         self.link = link
-        self.id = exIDDict[name]!
+        self.id = exIDDict[name]
         
         print (exerciseDict.values)
         
