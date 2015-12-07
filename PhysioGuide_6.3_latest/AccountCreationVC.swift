@@ -18,6 +18,9 @@ class AccountCreationVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UsernameUITextField.delegate = self
+        passwordUItextField.delegate = self
+        ConfirmPasswordUITextField.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +62,7 @@ class AccountCreationVC: UIViewController, UITextFieldDelegate {
         {
             var state : Int = -1
             let mm : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuVC")
-            
+            LocalSave.sharedLocalSave.localUser = user
             
             accountClass.addUser(user, password: pass, completionHandler: { added in
                 state = added

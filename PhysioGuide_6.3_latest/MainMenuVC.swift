@@ -22,6 +22,7 @@ class MainMenuVC: UIViewController {
     var calorieShell : [String:String] = ["username" : "", "calorie" : "", "date": ""]
     var cals : [Int] = []
     
+    @IBOutlet weak var titleLabel: UILabel!
     var arrData :JSON = []
     var myRoutines: [[String:String]] = []
     let exerciseDict: [String:String] = ["1" : "Back Extensions", "2" : "Biceps Curl", "3" : "Calf Raise", "4" : "Cat Stretch", "5" : "Crunch", "6" : "Front and Back Neck Stretch", "7" : "Back Hyperextensions", "8" : "Jogging", "9" : "Jumping Jacks", "10" : "Knees to Chest", "11" : "Lateral Raise", "12" : "Leg Raises", "13" : "Lunges", "14" : "Modified Hurdler's Stretch", "15" : "Push-ups", "16" : "Quadriceps", "17" : "Reclined Hamstrings", "18" : "Runner's Lunge", "19" : "Russian Twist", "20" : "Shoulders Overhead", "21" : "Shoulders Posterior", "22" : "Shoulder Shrugs", "23" : "Side Hip Abductor", "24" : "Side Lunge", "25" : "Side Neck", "26" : "Side Trunk", "27" : "Spinal Twist", "28" : "Squats", "29" : "Upright Row", "30" : "Wall Calf Stretch"]
@@ -32,7 +33,8 @@ class MainMenuVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let myUser: String! = LocalSave.sharedLocalSave.localUser
-        print("Did it work \(myUser)")
+        //print("Did it work \(myUser)")
+        titleLabel.text = "Welcome \(myUser)"
         
         let routine = Routines()
         routine.retrieveRoutines(myUser, completionHandler: { swiftyJsonVar in
