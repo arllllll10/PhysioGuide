@@ -926,6 +926,12 @@
                                     <segue destination="8mi-Zd-nTt" kind="embed" identifier="ExerciseListSegue" id="IVn-Yi-iE0"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-cM-zcu">
+                                <rect key="frame" x="188" y="20" width="187" height="585"/>
+                                <connections>
+                                    <segue destination="hwr-Jf-CEw" kind="embed" identifier="CurrentRoutineSegue" id="O4E-b4-Scu"/>
+                                </connections>
+                            </containerView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-ap-SRX">
                                 <rect key="frame" x="74" y="182" width="228" height="147"/>
                                 <subviews>
@@ -934,7 +940,6 @@
                                         <state key="normal" title="Create"/>
                                         <connections>
                                             <action selector="createRoutine:" destination="M5T-F7-Hqd" eventType="touchUpInside" id="cXg-0p-87C"/>
-                                            <segue destination="Ogi-as-DHk" kind="show" id="X8c-TN-u3t"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxA-7f-rYY">
@@ -960,12 +965,6 @@
                                     <constraint firstItem="fHb-7z-YlA" firstAttribute="centerX" secondItem="KPU-sa-iTj" secondAttribute="centerX" id="t0F-E3-eYY"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftD-cM-zcu">
-                                <rect key="frame" x="188" y="20" width="187" height="585"/>
-                                <connections>
-                                    <segue destination="hwr-Jf-CEw" kind="embed" identifier="CurrentRoutineSegue" id="O4E-b4-Scu"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1694,7 +1693,4 @@
     <resources>
         <image name="Title" width="300" height="300"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Q7H-iV-co2"/>
-    </inferredMetricsTieBreakers>
 </document>

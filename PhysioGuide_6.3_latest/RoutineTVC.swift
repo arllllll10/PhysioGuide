@@ -53,6 +53,7 @@ class RoutineTVC: UITableViewController {
         
         //sample
         var index = 0
+        routines.removeAll()
         while(index < routinesUpdated.count){
                 routines.append(routinesUpdated[index]["routineName"]!)
             index++

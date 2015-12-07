@@ -33,9 +33,18 @@ class MainMenuVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let myUser: String! = LocalSave.sharedLocalSave.localUser
+        
         //print("Did it work \(myUser)")
         titleLabel.text = "Welcome \(myUser)"
+        loadData()
+    }
+    
+    func loadData()
+    {
+        let myUser: String! = LocalSave.sharedLocalSave.localUser
         
+        myRoutines.removeAll()
+        myCalorieData.removeAll()
         let routine = Routines()
         routine.retrieveRoutines(myUser, completionHandler: { swiftyJsonVar in
             self.arrData = swiftyJsonVar
@@ -131,19 +140,20 @@ class MainMenuVC: UIViewController {
             /*var index = 0
             while(index < 5)
             {
-                calArray[index] = ""
-                if(index < self.myCalorieData.count)
-                {
-                    calArray[index] = self.myCalorieData[index]["calorie"]!
-                
-                
-                }
-                index++
-                
+            calArray[index] = ""
+            if(index < self.myCalorieData.count)
+            {
+            calArray[index] = self.myCalorieData[index]["calorie"]!
+            
+            
+            }
+            index++
+            
             }*/
             
             
         })
+        
         
     }
     
@@ -154,6 +164,7 @@ class MainMenuVC: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "RoutinesView" {
             let destController = segue.destinationViewController as! RoutinesVC
             destController.routinesUpdated = myRoutines

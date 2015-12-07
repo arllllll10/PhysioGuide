@@ -139,6 +139,14 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
             }
         })
         
+        let mm = MainMenuVC()
+        mm.loadData()
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let vc : UIViewController = mainSB.instantiateViewControllerWithIdentifier("MainMenuVC")
+        self.navigationController!.pushViewController(vc,animated:true)
+        
+        
     }
     
 }

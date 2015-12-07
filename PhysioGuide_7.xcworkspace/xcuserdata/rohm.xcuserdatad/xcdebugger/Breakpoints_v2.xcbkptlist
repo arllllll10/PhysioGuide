@@ -71,54 +71,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhysioGuide_6.3_latest/MainMenuVC.swift"
-            timestampString = "471141256.22371"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PhysioGuide_7.MainMenuVC.viewDidLoad (PhysioGuide_7.MainMenuVC)() -&gt; ()"
-                  moduleName = "PhysioGuide_7"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rohm/Desktop/PhysWed/PhysioGuide/PhysioGuide_6.3_latest/MainMenuVC.swift"
-                  timestampString = "470896182.925739"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "1058">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PhysioGuide_7.MainMenuVC.(viewDidLoad (PhysioGuide_7.MainMenuVC) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "PhysioGuide_7"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rohm/Desktop/PhysWed/PhysioGuide/PhysioGuide_6.3_latest/MainMenuVC.swift"
-                  timestampString = "470896182.931044"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "820">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PhysioGuide_6.3_latest/Calories.swift"
             timestampString = "471161717.157157"
             startingColumnNumber = "9223372036854775807"
