@@ -44,9 +44,9 @@ class HealthManager
     func saveCalorySample(calory : Double, date :NSDate, dur: Int)
     {
         let durInSeconds :NSTimeInterval = Double(dur) * 60.0
-        let gmtOffset : NSTimeInterval = Double(4800.0)
+        let gmtOffset : NSTimeInterval = Double(8*60*60)
         //let caloryType     = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDietaryEnergyConsumed)!
-        let caloryQuantity = HKQuantity(unit: HKUnit.calorieUnit(), doubleValue: calory)
+        let caloryQuantity = HKQuantity(unit: HKUnit.kilocalorieUnit(), doubleValue: calory)
         //let calorySample   = HKQuantitySample(type: caloryType, quantity: caloryQuantity, startDate: date, endDate: date)
         let start = date.dateByAddingTimeInterval(-(durInSeconds+gmtOffset))
         let durDouble = Double(dur)
