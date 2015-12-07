@@ -15,9 +15,12 @@ import YouTubePlayer
 
 class RunRoutineVC: UIViewController {
     @IBOutlet weak var YoutubePlayer: YouTubePlayerView!
+    @IBOutlet weak var playButton: UIButton!
+    
+    var routineName: String! // Gets defined in the prepareForSegue function in RoutinesVC. Use this string to load the exercises with the server.
     
     var index = 0 // The index used to select elements in the routine array.
-    var routine = [Exercise]()
+    var routine = [Exercise]() // Can use this array to store the exercises if we're going that route.
     
     
     
@@ -52,13 +55,12 @@ class RunRoutineVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleExercises()
+        loadSampleExercises() // Comment this out or delete when we can fetch the routines from the server.
         let e = routine[index]
         let link = e.link
         YoutubePlayer.loadVideoID(link)
-        //YoutubePlayer.play()
         
-        //load in the routine from server
+        //load in the routine from server. This below is pseudo-code kind of to help me think. It can be removed once it is done properly.
         /*
         for exercise in serverArray {
         let e = Exercise(name: exercise.name, icon: UIImage(named: exercise.name), link: exercise.link)!
@@ -89,15 +91,13 @@ class RunRoutineVC: UIViewController {
             let e = routine[index]
             let link = e.link
             
-            YoutubePlayer.hidden = true
             YoutubePlayer.loadVideoID(link)
-            YoutubePlayer.clear() // stop the previous video from playing
+            YoutubePlayer.hidden = true
+            YoutubePlayer.clear() // Supposedly stops and clears the youtube player's screen. Unfortunately it doesn't kill the player hmm..
+            playButton.hidden = false
             
             
         } else { // If we are out of bounds that means the Finish button was clicked, so return to the RunRoutines view controller.
-            
-            print("index: \(index)")
-            print("routine.count: \(routine.count)")
             self.showViewController(Routines as! UIViewController, sender: Routines)
         }
     }
@@ -106,6 +106,7 @@ class RunRoutineVC: UIViewController {
         currIcon.image = routine[index].icon
         currName.text = routine[index].name
         currLink = routine[index].link
+        self.title = routineName
         if index >= routine.count-1 { // The array starts at 0 and has routine.count elements. When it reaches element routine.count-1, the next element is out of bounds.
             // Then there is no next exercise.
             nextName.text = ""
@@ -135,9 +136,10 @@ class RunRoutineVC: UIViewController {
     
     @IBAction func playvid(sender: AnyObject) {
         
-        //YoutubePlayer.loadVideoID(link)
+        //YoutubePlayer.loadVideoID(link) // Don't need to load the video when this is selected as it has already started loading in viewDidLoad() or next()
         YoutubePlayer.play()
         YoutubePlayer.hidden = false
+        playButton.hidden = true
     }
     
     
