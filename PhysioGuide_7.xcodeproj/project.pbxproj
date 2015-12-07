@@ -32,6 +32,7 @@
 		CA6E62161C10524F000DF4A6 /* LocalSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6E62151C10524F000DF4A6 /* LocalSave.swift */; };
 		CAA8A2EA1C14424C00269EA6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8A2E91C14424C00269EA6 /* GraphView.swift */; };
 		CAA8A2EC1C1457A700269EA6 /* Calories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8A2EB1C1457A700269EA6 /* Calories.swift */; };
+		CAA8A2EE1C15247B00269EA6 /* JoggingCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8A2ED1C15247B00269EA6 /* JoggingCalc.swift */; };
 		CAD714491C13C05700023C63 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD714481C13C05700023C63 /* Stats.swift */; };
 		D44D6D991C0AC6A400AEE63B /* backExtension.png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D661C0AC6A400AEE63B /* backExtension.png */; };
 		D44D6D9A1C0AC6A400AEE63B /* backExtension(machine).png in Resources */ = {isa = PBXBuildFile; fileRef = D44D6D671C0AC6A400AEE63B /* backExtension(machine).png */; };
@@ -141,6 +142,7 @@
 		CA6E62151C10524F000DF4A6 /* LocalSave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalSave.swift; sourceTree = "<group>"; };
 		CAA8A2E91C14424C00269EA6 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		CAA8A2EB1C1457A700269EA6 /* Calories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calories.swift; sourceTree = "<group>"; };
+		CAA8A2ED1C15247B00269EA6 /* JoggingCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoggingCalc.swift; sourceTree = "<group>"; };
 		CAD714481C13C05700023C63 /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		D44D6D661C0AC6A400AEE63B /* backExtension.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backExtension.png; path = icon/backExtension.png; sourceTree = "<group>"; };
 		D44D6D671C0AC6A400AEE63B /* backExtension(machine).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backExtension(machine).png"; path = "icon/backExtension(machine).png"; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				2F9C36041BEC5C4B00FF14B3 /* AccountCreationVC.swift */,
 				2F9C36061BEC5C8000FF14B3 /* RoutinesVC.swift */,
 				953851051BF171C5009BC801 /* Routines.swift */,
+				CAA8A2ED1C15247B00269EA6 /* JoggingCalc.swift */,
 				9521D8B21BEF230B008F71C9 /* RoutineTVC.swift */,
 				2FD0B1A71C13E10900D18180 /* RoutineCell.swift */,
 				9571ADE21BF168410058FC04 /* RunRoutineVC.swift */,
@@ -618,6 +621,7 @@
 				D4E9D8261C0AAEBE00877D4B /* ExerciseArray.swift in Sources */,
 				2F9C36091BEC5C9100FF14B3 /* ExercisesVC.swift in Sources */,
 				D461DAD41C06D96E003166F0 /* UpdatedExerciseViewController.swift in Sources */,
+				CAA8A2EE1C15247B00269EA6 /* JoggingCalc.swift in Sources */,
 				CAA8A2EC1C1457A700269EA6 /* Calories.swift in Sources */,
 				953851061BF171C5009BC801 /* Routines.swift in Sources */,
 				2F3398611C02DD9400B22C38 /* Exercise.swift in Sources */,

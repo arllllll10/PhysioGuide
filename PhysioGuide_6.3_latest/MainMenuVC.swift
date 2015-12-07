@@ -108,12 +108,12 @@ class MainMenuVC: UIViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Statsview" {
             let destController = segue.destinationViewController as! StatsVC
             destController.calList = cals
         }
        
-    }
+    }*/
     
 }
