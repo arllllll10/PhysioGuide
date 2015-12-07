@@ -220,6 +220,7 @@ class RunRoutineVC: UIViewController {
     
     @IBOutlet weak var testingSpeed: UIButton!
     @IBOutlet weak var stopTesting: UIButton!
+    @IBOutlet weak var testingDetail: UIButton!
     
     func updateInfo() {
         currIcon.image = routine[index].icon
@@ -246,9 +247,11 @@ class RunRoutineVC: UIViewController {
         if (exerciseDict[id!] != "Biceps Curl"){
             testingSpeed.hidden = true
             stopTesting.hidden = true
+            testingDetail.hidden = true
         }else{
             testingSpeed.hidden = false
             stopTesting.hidden = false
+            testingDetail.hidden = false
         }
        
         
