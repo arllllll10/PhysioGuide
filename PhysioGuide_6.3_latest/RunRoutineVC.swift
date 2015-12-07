@@ -169,7 +169,7 @@ class RunRoutineVC: UIViewController {
             
             let hk = HealthManager()
             
-            hk.saveCalorySample(calsBurnedDoub, date: currentDate)
+            hk.saveCalorySample(calsBurnedDoub, date: currentDate, dur: val)
             
             var state : Int = -1
             let calSend = Calories()
