@@ -35,7 +35,7 @@ class AccelerationClass {
     var maxRotX: Double = 0.0
     var maxRotY: Double = 0.0
     var maxRotZ: Double = 0.0
-
+    
     func resetMaxValues()
     {
         currentMaxAccX = 0
@@ -52,14 +52,20 @@ class AccelerationClass {
         motionManager.gyroUpdateInterval=0.2
         let _:CMAccelerometerData!
         let _:NSError!
-        if (motionManager.accelerometerAvailable){ motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: {
+        //print("running")
+        if (motionManager.accelerometerAvailable){ dispatch_get_main_queue(motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: {
             accelerometerData, error in
             //let acceleration = accelerometerData!.acceleration
             //self.outputAccelerationData(acceleration)
+            if(error != nil){
+                print(error?.localizedDescription)
+                return
+            }
+            print("aaa")
             self.outputAccelerationData(accelerometerData!.acceleration)
-            })
+        }))
         }
-    
+        
         let _:CMGyroData!
         let _:NSError!
         if (motionManager.gyroAvailable){
@@ -70,6 +76,7 @@ class AccelerationClass {
     }
     
     func outputAccelerationData (acceleration : CMAcceleration){
+        print("accx should be set to \(acceleration.x)")
         accX = acceleration.x
         if fabs(acceleration.x) > fabs(currentMaxAccX){
             currentMaxAccX = acceleration.x}
@@ -98,7 +105,7 @@ class AccelerationClass {
         maxRotY = currentMaxRotY
         maxRotZ = currentMaxRotZ
     }
-
+    
     //the following is the sudo code for RunRoutine page
     //the following code is specifically for the exercise which need accelerometer or gyroscope
     //e.g. biscep curl
@@ -107,8 +114,8 @@ class AccelerationClass {
     var currentAcc1 : Double
     var currentAcc0 : Double
     if (exerciseName == "Biscep Curl"){
-        currentAcc = acceleration.x
-        if (currentAcc > )
+    currentAcc = acceleration.x
+    if (currentAcc > )
     }*/
     
     

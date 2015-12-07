@@ -293,39 +293,49 @@ class RunRoutineVC: UIViewController {
     }
     
     
+    
     // @IBOutlet weak var timerLabel: UILabel!
     let temp :AccelerationClass = AccelerationClass()
     var timerCount = 0
-    var timer = NSTimer()
-    var timerRunning = false
-    
+    var timer : NSTimer?
+    var currentAccx1 : Double!
+    var currentAccx2 : Double!
     @IBAction func StartCountingSpeed(sender: UIButton) {
-        let currentAccx1 = temp.accX
-        
-        if (timerRunning == false){
-            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
-            timerRunning = true
-            temp.getValue()
-            let currentAccx2 = temp.accX
-            print("flows to here")
-            if (timerCount < 3  &&  fabs(currentAccx2 - currentAccx1) > 0.9 ){
-                self.displayAlertMessage ("you moves too fast")
-                print ("lalala")
-            }
-        }
+        currentAccx1 = temp.accX
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
         
     }
     
     @IBAction func StopTestingSpeed(sender: UIButton) {
-        if (timerRunning == true){
-            timer.invalidate()
-            timerRunning = false
+        if(timer != nil){
+            timer!.invalidate()
+            timer = nil
         }
     }
     
     func counting(){
         timerCount += 1
         //timerLabel.text = "\(timerCount)"
+        currentAccx2 = temp.accX
+        print("currentAccx2 is \(currentAccx2)")
+        temp.getValue()
+        NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("updateaccx2"), userInfo: nil, repeats: false)
+        print("currentAccx2 is \(currentAccx2)")
+        print("flows to here")
+        print (currentAccx2)
+        print (currentAccx1)
+        if (timerCount <
+            3  &&  fabs(currentAccx2 - currentAccx1) > 0.9 ){
+                self.displayAlertMessage ("you moves too fast")
+                print ("lalala")
+        }
+        if(timerCount >= 3){
+            timerCount = 0
+        }
+    }
+    
+    func updateaccx2(){
+        currentAccx2 = temp.accX
     }
     //message to tell user hold phone in hand
     func displayAlertMessageNotice(UserMessage :String)
