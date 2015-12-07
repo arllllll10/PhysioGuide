@@ -95,8 +95,7 @@ class RoutineTVC: UITableViewController {
     {
         let index = indexPath.row // This is the specified row of the table list. Starts from 0, goes to routines.count-1
         //print("You've selected \(routines[index].name).")
-        self.delegate?.selectRoutine("easy")
-        print("gets called in routinetvc")
+        self.delegate?.selectRoutine(routines[index])
     }
     
 
@@ -104,5 +103,5 @@ class RoutineTVC: UITableViewController {
 }
 
 protocol RoutineTVCProtocol {
-    func selectRoutine(selectedRoutine: String) -> Void //temp name, it can be anything.
+    func selectRoutine(selectedRoutine: String) -> Void
 }

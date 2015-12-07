@@ -14,6 +14,7 @@ class RoutinesVC: UIViewController, RoutineTVCProtocol {
     
     var routineIndex : NSInteger?
     var exercises : [String] = ["", ""]
+    var selectedRoutineName: String!
     
     @IBOutlet var runRoutineButton: UIButton!
     @IBOutlet weak var routinesContainer: UIView!
@@ -67,22 +68,26 @@ class RoutinesVC: UIViewController, RoutineTVCProtocol {
     }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "RoutineInternalSegue" {
+        if segue.identifier == "routineInternalSegue" {
             let routinesContainer = segue.destinationViewController as! RoutineTVC
             routinesContainer.delegate = self
+        }
+        if segue.identifier == "routineRunSeque" {
+            let vc = segue.destinationViewController as! RunRoutineVC
+            vc.routineName = selectedRoutineName
         }
     }
     
     
-    func selectRoutine(selectedRoutine: String) -> Void {
-        //do something meaningful with this one
-        let s = selectedRoutine // Here is the name of the routine which will be used in RunRoutineVC.
+    func selectRoutine(s: String) -> Void { // Here is the name of the routine which will be used in RunRoutineVC.
         print("The routine name is \(s)")
-        print("\n\n\n\n\n\n\nYES I WAS CALLED\n\n\n\n\n\n")
+        // Show the Run button, need to tell RunRoutineVC that this is the name of the routine.
+        runRoutineButton.hidden = false // Allow user to run the selected routine.
+        selectedRoutineName = s // Store the name passed from RoutineTVC in a global variable so that I can use it in prepareForSegue.
     }
     
     @IBAction func runRoutineButton(sender: AnyObject) {
-        
+        runRoutineButton.hidden = true // Hide the button so that the user is forced to select a routine again if they hit Back in the RunRoutineVC (kind of a hack).
     }
     
     
