@@ -218,6 +218,10 @@ class RunRoutineVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var testingSpeed: UIButton!
+    @IBOutlet weak var stopTesting: UIButton!
+    @IBOutlet weak var testingDetail: UIButton!
+    
     func updateInfo() {
         currIcon.image = routine[index].icon
         currName.text = routine[index].name
@@ -232,7 +236,6 @@ class RunRoutineVC: UIViewController {
             largeDec.hidden = false
             metricName.text = exMetricDict[id!]
             metricValue.text = "0"
-            
         }else {
             metricName.hidden = true
             metricValue.hidden = true
@@ -241,6 +244,16 @@ class RunRoutineVC: UIViewController {
             smallDec.hidden = true
             largeDec.hidden = true
         }
+        if (exerciseDict[id!] != "Biceps Curl"){
+            testingSpeed.hidden = true
+            stopTesting.hidden = true
+            testingDetail.hidden = true
+        }else{
+            testingSpeed.hidden = false
+            stopTesting.hidden = false
+            testingDetail.hidden = false
+        }
+       
         
         currLink = routine[index].link
         self.title = routineName
@@ -301,6 +314,13 @@ class RunRoutineVC: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func StopTestingSpeed(sender: UIButton) {
+        if (timerRunning == true){
+            timer.invalidate()
+            timerRunning = false
+        }
     }
     
     func counting(){
