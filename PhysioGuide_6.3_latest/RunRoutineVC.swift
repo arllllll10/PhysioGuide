@@ -275,4 +275,50 @@ class RunRoutineVC: UIViewController {
     }
     
     
+    // @IBOutlet weak var timerLabel: UILabel!
+    let temp :AccelerationClass = AccelerationClass()
+    var timerCount = 0
+    var timer = NSTimer()
+    var timerRunning = false
+    
+    @IBAction func StartCountingSpeed(sender: UIButton) {
+        let currentAccx1 = temp.accX
+        
+        if (timerRunning == false){
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counting"), userInfo: nil, repeats: true)
+            timerRunning = true
+            temp.getValue()
+            let currentAccx2 = temp.accX
+            print("flows to here")
+            if (timerCount < 3  &&  fabs(currentAccx2 - currentAccx1) > 0.9 ){
+                self.displayAlertMessage ("you moves too fast")
+                print ("lalala")
+            }
+        }
+        
+    }
+    
+    func counting(){
+        timerCount += 1
+        //timerLabel.text = "\(timerCount)"
+    }
+    //message to tell user hold phone in hand
+    func displayAlertMessageNotice(UserMessage :String)
+    {
+        let alert = UIAlertController (title: "Notice!", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let passCondition = UIAlertAction(title: "Copy That", style: UIAlertActionStyle.Default, handler: nil);
+        alert.addAction(passCondition)
+        self.presentViewController (alert, animated : true, completion: nil);
+    }
+    
+    //message too tell user to fast or too slow
+    func displayAlertMessage(UserMessage :String)
+    {
+        let alert = UIAlertController (title: "Alert", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let passCondition = UIAlertAction(title: "Copy That", style: UIAlertActionStyle.Default, handler: nil);
+        alert.addAction(passCondition)
+        self.presentViewController (alert, animated : true, completion: nil);
+    }
+    
 }
+
