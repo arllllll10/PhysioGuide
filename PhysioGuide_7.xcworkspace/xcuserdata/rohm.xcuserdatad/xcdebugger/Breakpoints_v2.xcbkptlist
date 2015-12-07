@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhysioGuide_6.3_latest/HealthManager.swift"
-            timestampString = "471211565.938393"
+            timestampString = "471220892.960614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "saveCalorySample(_:date:dur:)"
             landmarkType = "5">
          </BreakpointContent>
