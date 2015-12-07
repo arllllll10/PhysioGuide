@@ -160,7 +160,7 @@
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iip-nF-HGx" userLabel="Container View">
                                 <rect key="frame" x="37" y="184" width="300" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cUU-LU-vjY" customClass="GraphView" customModule="PhysioGuide_7" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUU-LU-vjY" customClass="GraphView" customModule="PhysioGuide_7" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="300" height="250"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOE-Cs-4QO">
@@ -213,6 +213,10 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="O0R-Hq-R7E"/>
+                                            <constraint firstAttribute="height" constant="250" id="upQ-uv-fFl"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                 <color key="value" red="0.0" green="0.64220580930000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,6 +228,8 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="cUU-LU-vjY" firstAttribute="centerX" secondItem="Iip-nF-HGx" secondAttribute="centerX" id="1Eu-2C-7zG"/>
+                                    <constraint firstItem="cUU-LU-vjY" firstAttribute="centerY" secondItem="Iip-nF-HGx" secondAttribute="centerY" id="ZUr-PC-LD7"/>
                                     <constraint firstAttribute="height" constant="300" id="fjC-dK-AUe"/>
                                     <constraint firstAttribute="width" constant="300" id="vs9-ZH-aA1"/>
                                 </constraints>
@@ -235,7 +241,9 @@
                             <constraint firstItem="Iip-nF-HGx" firstAttribute="centerX" secondItem="ZnL-qH-wbx" secondAttribute="centerX" id="yzk-QX-RBJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stats" id="jFy-0y-agN"/>
+                    <navigationItem key="navigationItem" title="Stats" id="jFy-0y-agN">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="UCU-7h-IQG"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="fifthLabel" destination="f9p-vo-RZ8" id="S7N-4W-Qy0"/>
