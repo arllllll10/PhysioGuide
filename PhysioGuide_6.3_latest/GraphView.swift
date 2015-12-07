@@ -97,8 +97,8 @@ class GraphView: UIView {
         // set up the points line
         var graphPath = UIBezierPath()
         // Line start
-        if (graphPoints.count == 0) {
-            print("no cal data found")
+        if (graphPoints.count == 0 || graphPoints.count == 1) {
+            print("not enough cal points found, try more Jogging routines.")
             
         }else {
         graphPath.moveToPoint(CGPoint(x:columnXPoint(0), y:columnYPoint(graphPoints[0])))

@@ -192,7 +192,7 @@ class RunRoutineVC: UIViewController {
             
         }
         
-        let Routines : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("RoutinesVC")
+        //let Routines : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("RoutinesVC")
         
         
         index++ //Go to the next exercise in the routine.
@@ -209,7 +209,12 @@ class RunRoutineVC: UIViewController {
             
             
         } else { // If we are out of bounds that means the Finish button was clicked, so return to the RunRoutines view controller.
-            self.showViewController(Routines as! UIViewController, sender: Routines)
+            //self.showViewController(Routines as! UIViewController, sender: Routines)
+            
+            
+            let mainSB = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            let vc : UIViewController = mainSB.instantiateViewControllerWithIdentifier("MainMenuVC")
+            self.navigationController!.pushViewController(vc,animated:true)
         }
     }
     
