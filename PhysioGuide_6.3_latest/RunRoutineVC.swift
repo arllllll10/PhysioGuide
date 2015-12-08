@@ -16,6 +16,22 @@ import YouTubePlayer
 class RunRoutineVC: UIViewController {
     @IBOutlet weak var YoutubePlayer: YouTubePlayerView!
     @IBOutlet weak var playButton: UIButton!
+    var hk = HealthManager(){
+        didSet{
+            hk.authorizeHealthKit { (authorized,  error) -> Void in
+                if authorized {
+                    print("HealthKit authorization received.")
+                }
+                else
+                {
+                    print("HealthKit authorization denied!")
+                    if error != nil {
+                        print("\(error)")
+                    }
+                }
+            }
+        }
+    }
     
     var routineName: String! // Gets defined in the prepareForSegue function in RoutinesVC. Use this string to load the exercises with the server.
     
@@ -26,14 +42,14 @@ class RunRoutineVC: UIViewController {
     
     let exerciseDict: [String:String] = ["1" : "Back Extensions", "2" : "Biceps Curl", "3" : "Calf Raise", "4" : "Cat Stretch", "5" : "Crunch", "6" : "Front and Back Neck Stretch", "7" : "Back Hyperextensions", "8" : "Jogging", "9" : "Jumping Jacks", "10" : "Knees to Chest", "11" : "Lateral Raise", "12" : "Leg Raises", "13" : "Lunges", "14" : "Modified Hurdler's Stretch", "15" : "Push-ups", "16" : "Quadriceps", "17" : "Reclined Hamstrings", "18" : "Runner's Lunge", "19" : "Russian Twist", "20" : "Shoulders Overhead", "21" : "Shoulders Posterior", "22" : "Shoulder Shrugs", "23" : "Side Hip Abductor", "24" : "Side Lunge", "25" : "Side Neck", "26" : "Side Trunk", "27" : "Spinal Twist", "28" : "Squats", "29" : "Upright Row", "30" : "Wall Calf Stretch"]
     
-        let exMetricDict: [String:String] = ["1" : "none", "2" : "Pounds", "3" : "none", "4" : "none", "5" : "Count", "6" : "none", "7" : "Pounds", "8" : "Duration", "9" : "none", "10" : "none", "11" : "Pounds", "12" : "none", "13" : "Pounds", "14" : "none", "15" : "Count", "16" : "none", "17" : "none", "18" : "none", "19" : "Pounds", "20" : "none", "21" : "none", "22" : "Pounds", "23" : "none", "24" : "none", "25" : "none", "26" : "none", "27" : "none", "28" : "Pounds", "29" : "Pounds", "30" : "none"]
+    let exMetricDict: [String:String] = ["1" : "none", "2" : "Pounds", "3" : "none", "4" : "none", "5" : "Count", "6" : "none", "7" : "Pounds", "8" : "Duration", "9" : "none", "10" : "none", "11" : "Pounds", "12" : "none", "13" : "Pounds", "14" : "none", "15" : "Count", "16" : "none", "17" : "none", "18" : "none", "19" : "Pounds", "20" : "none", "21" : "none", "22" : "Pounds", "23" : "none", "24" : "none", "25" : "none", "26" : "none", "27" : "none", "28" : "Pounds", "29" : "Pounds", "30" : "none"]
     
     
     //let's make a sample routine.
     // ***** Sample ******
     func loadSampleExercises() {
         //make for loop to grab all exercises from server and include them to the exercises array
-
+        
         
         var index1 = 0
         //determine my routine number
@@ -50,7 +66,7 @@ class RunRoutineVC: UIViewController {
         {
             let myExercise : String! = exerciseDict[routinesUpdated[routineRef]["exID\(index2)"]!]
             print("printing out my current exercise name: \(myExercise)")
-
+            
             
             let exerciseN = Exercise(name: myExercise, link: "www.youtube.com/something")
             //Exercise(name: exerciseDict[routinesUpdated[routineRef]["exID\(index2)"]!]!, link: "")
@@ -105,6 +121,19 @@ class RunRoutineVC: UIViewController {
         largeInc.hidden = true
         smallDec.hidden = true
         largeDec.hidden = true
+        hk.authorizeHealthKit { (authorized,  error) -> Void in
+            if authorized {
+                print("HealthKit authorization received.")
+            }
+            else
+            {
+                print("HealthKit authorization denied!")
+                if error != nil {
+                    print("\(error)")
+                }
+            }
+        }
+        
         
         //load in the routine from server. This below is pseudo-code kind of to help me think. It can be removed once it is done properly.
         /*
@@ -130,7 +159,7 @@ class RunRoutineVC: UIViewController {
         val += 5
         metricValue.text = String(val)
     }
-
+    
     @IBAction func smallincA(sender: AnyObject) {
         var val : Int = Int(metricValue.text!)!
         val += 1
@@ -167,10 +196,11 @@ class RunRoutineVC: UIViewController {
             let calsBurnedDoub : Double = Double(metricValue.text!)!
             let currentDate = NSDate()
             
-            let hk = HealthManager()
+            
+            
+            print ("\(hk.isavailable)")
             
             hk.saveCalorySample(calsBurnedDoub, date: currentDate, dur: val)
-            
             var state : Int = -1
             let calSend = Calories()
             calSend.addCalories(calsBurned, completionHandler: { value in
@@ -188,7 +218,7 @@ class RunRoutineVC: UIViewController {
                     print("No response from server")
                 }
             })
- 
+            
             
         }
         
@@ -253,7 +283,7 @@ class RunRoutineVC: UIViewController {
             stopTesting.hidden = false
             testingDetail.hidden = false
         }
-       
+        
         
         currLink = routine[index].link
         self.title = routineName
