@@ -139,16 +139,32 @@ class CurrentRoutineTVC: UITableViewController, ContainerViewControllerProtocol 
     
     
     func addExercise(e: Exercise) -> Void {
-        
-        let newIndexPath = NSIndexPath(forRow: exercises.count, inSection: 0)
-        exercises.append(e)
-        
-        tableView.rowHeight = 90
-        tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom) // this creates a new row and cell.
+        if exercises.count < 20 { // maximum 20 exercises
+            let newIndexPath = NSIndexPath(forRow: exercises.count, inSection: 0)
+            exercises.append(e)
+            
+            tableView.rowHeight = 64 // Same integer as defined in the storyboard.
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom) // this creates a new row and cell.
+            
+        } else {
+            // Ideally display an alert to let the user know that they are at the cap.
+            print("Too many exercises in this routine. The cap is 20, you have \(exercises.count)")
+            self.displayAlertMessage("Too many exercises. The cap is 20.")
+        }
     }
     
     func saveRoutine() -> [Exercise] {
         return exercises
+    }
+    
+    //testing alert
+    
+    func displayAlertMessage(UserMessage :String)
+    {
+        let alert = UIAlertController (title: "Error", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let passCondition = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil);
+        alert.addAction(passCondition)
+        self.presentViewController (alert, animated : true, completion: nil);
     }
     
     

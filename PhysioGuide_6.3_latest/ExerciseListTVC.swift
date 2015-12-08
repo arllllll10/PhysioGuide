@@ -84,7 +84,7 @@ class ExerciseListTVC: UITableViewController {
         let index = indexPath.row // This is the specified row of the table list. Starts from 0, goes to exercises.count-1
         print("You've selected \(exercises[index].name).")
         //use delegate to pass information to the parent, CreateRoutineVC, which will then pass to CurrentRoutineTVC
-        self.delegate?.addExercise(exercises[index]) // Passing the entire exercise object which includes its image, name, and youtube link
+        self.delegate?.addExercise(exercises[index]) // Passing the entire exercise object which includes its image, name, and youtube link  
     }
     
     

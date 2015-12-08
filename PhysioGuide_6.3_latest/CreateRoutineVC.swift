@@ -56,6 +56,7 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
     // MARK: Actions
     
     @IBAction func nameRoutine(sender: UIButton) {
+        if embeddedViewController2.exercises.count > 0 { // This is the number of exercises in the CurrentRoutineTVC
         //user has clicked Done button after selecting their exercises
         //show the hidden objects so the user can name their routine
         nameViewBox.hidden = false
@@ -74,6 +75,11 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         ListContainer.alpha = 0.4
         CurrentRoutineContainer.alpha = 0.4
         */
+        } else {
+            // The user didn't select any exercises, so don't allow them to make one.
+            print("You didn't select any exercises")
+            self.displayAlertMessage("You must select at least one exercise.")
+        }
     }
     
     
@@ -147,6 +153,16 @@ class CreateRoutineVC: UIViewController, UICollectionViewDelegate, UITextFieldDe
         self.navigationController!.pushViewController(vc,animated:true)
         
         
+    }
+    
+    //test alert
+    
+    func displayAlertMessage(UserMessage :String)
+    {
+        let alert = UIAlertController (title: "Error", message: UserMessage, preferredStyle: UIAlertControllerStyle.Alert);
+        let passCondition = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil);
+        alert.addAction(passCondition)
+        self.presentViewController (alert, animated : true, completion: nil);
     }
     
 }
